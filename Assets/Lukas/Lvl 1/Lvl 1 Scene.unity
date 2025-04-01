@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScore: 0
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 2079406905}
   gameOverScreen: {fileID: 1239677531}
 --- !u!4 &706447577
 Transform:
@@ -486,9 +486,37 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5480361626040978420, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
+      propertyPath: max
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480361626040978420, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
+      propertyPath: min
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480361626040978420, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480361626040978420, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
+      propertyPath: distance
+      value: 4.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480361626040978420, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
+      propertyPath: selectedAxis
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480361626040978420, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
+      propertyPath: selectedPath
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480361626040978420, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
+      propertyPath: selectedCurve
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5750164416508291345, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.056238
+      value: 5.99
       objectReference: {fileID: 0}
     - target: {fileID: 5750164416508291345, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -834,12 +862,12 @@ GameObject:
   - component: {fileID: 1239677533}
   - component: {fileID: 1239677532}
   m_Layer: 5
-  m_Name: GameOverScreen
+  m_Name: GameOverOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1239677532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,7 +965,7 @@ GameObject:
   - component: {fileID: 1255566864}
   - component: {fileID: 1255566863}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ScoreOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5273,7 +5301,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &2011919043
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5379,7 +5407,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.02}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5389,7 +5417,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.54}
   m_EdgeRadius: 0
 --- !u!114 &2011919046
 MonoBehaviour:
@@ -5424,6 +5452,10 @@ PrefabInstance:
     - target: {fileID: 1208419149617122681, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480361626040978420, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
+      propertyPath: selectedPath
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5750164416508291345, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5486,7 +5518,7 @@ GameObject:
   - component: {fileID: 2079406906}
   - component: {fileID: 2079406905}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5508,8 +5540,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: -525}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -788.4102, y: -446}
+  m_SizeDelta: {x: 345.5796, y: 113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2079406905
 MonoBehaviour:
@@ -5524,7 +5556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5533,18 +5565,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 0
+    m_MaxSize: 200
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Score
 --- !u!222 &2079406906
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5572,6 +5604,14 @@ PrefabInstance:
     - target: {fileID: 1208419149617122681, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480361626040978420, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
+      propertyPath: distance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480361626040978420, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
+      propertyPath: selectedPath
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5750164416508291345, guid: 6f6afbfe3455a2942a454fa70352dba5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5632,5 +5672,5 @@ SceneRoots:
   - {fileID: 832781465}
   - {fileID: 706447577}
   - {fileID: 1183667882}
-  - {fileID: 1239677535}
   - {fileID: 1255566866}
+  - {fileID: 1239677535}

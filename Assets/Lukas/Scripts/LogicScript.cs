@@ -4,15 +4,20 @@ using UnityEngine.SceneManagement;
 
 public class LogicScript : MonoBehaviour
 {
-    public int playerScore;
+    public int playerScore = 0;
     public Text scoreText;
     public GameObject gameOverScreen;
 
     [ContextMenu("Increase Score")]
-    public void AddScore()
+    public void AddScore(int points)
     {
-        playerScore++;
+        playerScore += points;
         scoreText.text = playerScore.ToString();
+    }
+
+    public void TickingScore()
+    {
+        AddScore(1);
     }
 
     public void RestartGame()
@@ -23,5 +28,16 @@ public class LogicScript : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
+    }
+
+    void Start()
+    {
+        scoreText.text = playerScore.ToString();
+        InvokeRepeating("TickingScore", 0f, 0.1f);
+    }
+
+    void Update()
+    {
+
     }
 }
