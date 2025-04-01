@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1208419149617122681}
   - component: {fileID: 4815241208814607607}
   - component: {fileID: 5088428122798422340}
+  - component: {fileID: 5480361626040978420}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2196170452285218203, guid: dceaa8ed7223f994da588d44ff365c04, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -148,3 +149,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  points: 50
+  logic: {fileID: 0}
+  sprite: {fileID: 0}
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &5480361626040978420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795676425868709340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4079bc5a6ab1774f9afef4719940e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedPath: 1
+  min: 2
+  max: 3

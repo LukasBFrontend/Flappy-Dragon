@@ -5,10 +5,20 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject firePrefab;
 
+    private PlayerScript playerScript;
+
+    private bool playerIsAlive;
+
+    void Start()
+    {
+        playerScript = gameObject.GetComponent<PlayerScript>();
+        playerIsAlive = playerScript.playerIsAlive;
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        playerIsAlive = playerScript.playerIsAlive;
+        if (Input.GetKeyDown(KeyCode.Mouse0) && playerIsAlive)
         {
             Shoot();
         }
