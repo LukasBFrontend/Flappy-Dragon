@@ -28,4 +28,30 @@ public class PlayerScript : MonoBehaviour
         logic.GameOver();
         playerIsAlive = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (IsHostile(collision))
+        {
+            logic.GameOver();
+            playerIsAlive = false;
+        }
+    }
+
+    private bool IsHostile(Collider2D collision)
+    {
+        string[] tagToFind = new string[] { "Ground", "Robot" };
+
+        for (int i = 0; i < tagToFind.Length; i++)
+        {
+            string testedTag = tagToFind[i];
+
+            if (!collision.CompareTag(testedTag)) continue; //return early pattern, if not the good tag, stop there and check the others
+
+            Debug.Log($"hit {testedTag}"); //improve your debug informations
+
+            return true; //if the tag is found, no need to continue looping
+        }
+
+        return false;
+    }
 }
