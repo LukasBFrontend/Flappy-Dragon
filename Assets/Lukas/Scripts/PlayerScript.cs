@@ -39,17 +39,15 @@ public class PlayerScript : MonoBehaviour
 
     private bool IsHostile(Collider2D collision)
     {
-        string[] tagToFind = new string[] { "Ground", "Robot" };
+        string[] tagToFind = new string[] { "Ground", "Robot", "Missile" };
 
         for (int i = 0; i < tagToFind.Length; i++)
         {
             string testedTag = tagToFind[i];
 
-            if (!collision.CompareTag(testedTag)) continue; //return early pattern, if not the good tag, stop there and check the others
+            if (!collision.CompareTag(testedTag)) continue;
 
-            Debug.Log($"hit {testedTag}"); //improve your debug informations
-
-            return true; //if the tag is found, no need to continue looping
+            return true;
         }
 
         return false;

@@ -162,11 +162,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6795676425868709340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4079bc5a6ab1774f9afef4719940e71, type: 3}
+  m_Script: {fileID: 11500000, guid: d8e8d7a04efd24e428d57d78239d4840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedAxis: 0
-  selectedCurve: 0
+  selectedAxis: 1
+  selectedCurve: 1
   distance: 2
   oscillationSpeed: 2
   travelSpeed: 2
