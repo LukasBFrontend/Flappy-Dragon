@@ -8,6 +8,9 @@ public class LogicScript : MonoBehaviour
     public Text scoreText;
     public GameObject gameOverScreen;
 
+    [HideInInspector]
+    public bool isGameOver = false;
+
     [ContextMenu("Increase Score")]
     public void AddScore(int points)
     {
@@ -17,17 +20,22 @@ public class LogicScript : MonoBehaviour
 
     public void TickingScore()
     {
-        AddScore(1);
+        if (!isGameOver)
+        {
+            AddScore(1);
+        }
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        isGameOver = false;
     }
 
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
+        isGameOver = true;
     }
 
     void Start()
