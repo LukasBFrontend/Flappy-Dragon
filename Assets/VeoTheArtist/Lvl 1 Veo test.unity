@@ -128,8 +128,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 1777868704}
     m_Modifications:
     - target: {fileID: 355767529674219593, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 355767529674219593, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743150437623915584, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 79bdc8bdc7697b3458cdf1b1a9774c68, type: 3}
+    - target: {fileID: 1743150437623915584, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743150437623915584, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743150437623915584, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6362572531398585812, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
       propertyPath: m_Name
@@ -16452,6 +16472,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1777868704}
     m_Modifications:
+    - target: {fileID: 355767529674219593, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743150437623915584, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 79bdc8bdc7697b3458cdf1b1a9774c68, type: 3}
+    - target: {fileID: 1743150437623915584, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743150437623915584, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743150437623915584, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6362572531398585812, guid: bfea105e853a68d4f85eea28c4b5befb, type: 3}
       propertyPath: m_Name
       value: Missile
