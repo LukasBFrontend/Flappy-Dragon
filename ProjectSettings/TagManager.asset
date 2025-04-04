@@ -7,6 +7,7 @@ TagManager:
   - Logic
   - Robot
   - Ground
+  - Missile
   layers:
   - Default
   - TransparentFX
