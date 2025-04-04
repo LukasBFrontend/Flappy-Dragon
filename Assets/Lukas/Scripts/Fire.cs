@@ -16,10 +16,30 @@ public class Fire : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Enemy enemy = hitInfo.GetComponent<Enemy>();
-        if (enemy != null)
+        if (IsHostile(hitInfo))
         {
-            enemy.TakeDamage(damage);
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+
+    }
+
+    private bool IsHostile(Collider2D collision)
+    {
+        string[] tagToFind = new string[] { "Ground", "Robot", "Missile" };
+
+        for (int i = 0; i < tagToFind.Length; i++)
+        {
+            string testedTag = tagToFind[i];
+
+            if (!collision.CompareTag(testedTag)) continue;
+
+            return true;
+        }
+
+        return false;
     }
 }
