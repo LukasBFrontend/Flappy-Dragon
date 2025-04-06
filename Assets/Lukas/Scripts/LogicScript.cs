@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LogicScript : MonoBehaviour
 {
+    [SerializeField] private AudioClip musicClip;
     public int playerScore = 0;
     public Text scoreText;
     public GameObject gameOverScreen;
@@ -40,6 +41,7 @@ public class LogicScript : MonoBehaviour
 
     void Start()
     {
+        SoundFXManager.instance.playSoundFXClip(musicClip, transform, 0.6f);
         scoreText.text = playerScore.ToString();
         InvokeRepeating("TickingScore", 0f, 0.1f);
     }

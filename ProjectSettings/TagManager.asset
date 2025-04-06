@@ -9,6 +9,8 @@ TagManager:
   - Ground
   - Missile
   - Collectable
+  - Music
+  - DontDestroy
   layers:
   - Default
   - TransparentFX
