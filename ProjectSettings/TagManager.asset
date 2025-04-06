@@ -11,6 +11,8 @@ TagManager:
   - Collectable
   - Music
   - DontDestroy
+  - SoundMenu
+  - LvlMenu
   layers:
   - Default
   - TransparentFX

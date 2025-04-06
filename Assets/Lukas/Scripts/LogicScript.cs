@@ -41,7 +41,7 @@ public class LogicScript : MonoBehaviour
 
     void Start()
     {
-        SoundFXManager.instance.playSoundFXClip(musicClip, transform, 0.6f);
+        SoundFXManager.Instance.playSoundFXClip(musicClip, transform, 0.6f);
         scoreText.text = playerScore.ToString();
         InvokeRepeating("TickingScore", 0f, 0.1f);
     }

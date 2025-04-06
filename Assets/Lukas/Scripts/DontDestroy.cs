@@ -1,16 +1,18 @@
 using UnityEngine;
 
-public class DontDestroy : MonoBehaviour
+public class Bootstrap : MonoBehaviour
 {
-    void Awake()
-    {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag(gameObject.tag);
+    private static bool alreadyExists = false;
 
-        if (objs.Length > 1)
+    private void Awake()
+    {
+        if (alreadyExists)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject); // Destroy this duplicate
+            return;
         }
 
-        DontDestroyOnLoad(this.gameObject);
+        alreadyExists = true;
+        DontDestroyOnLoad(gameObject); // Persist this GameObject
     }
 }
