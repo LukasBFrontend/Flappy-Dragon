@@ -37,24 +37,33 @@ public class EnemyMove : MonoBehaviour
     {
         if (selectedAxis == travelAxis.Y)
         {
-            transform.localPosition = new Vector2(transform.localPosition.x, Mathf.PingPong(Time.time * oscillationSpeed, max - min) + min);
+            if (selectedCurve == pathCurve.PingPong)
+            {
+                transform.localPosition = new Vector2(Mathf.PingPong(Time.time * oscillationSpeed, max - min), transform.localPosition.y + Time.deltaTime * -travelSpeed);
+            }
+            else if (selectedCurve == pathCurve.Sinus)
+            {
+                transform.localPosition = new Vector2(Mathf.Cos(Time.time * oscillationSpeed) * (max - min), transform.localPosition.y + Time.deltaTime * -travelSpeed);
+            }
+            else
+            {
+                transform.localPosition = new Vector2(transform.localPosition.x, transform.localPosition.y + Time.deltaTime * -travelSpeed);
+            }
         }
         else if (selectedAxis == travelAxis.X)
         {
-            transform.localPosition = new Vector2(Mathf.PingPong(Time.time * oscillationSpeed, max - min) + min, transform.localPosition.y);
-        }
-        else
-        {
-            if (selectedCurve == pathCurve.Sinus)
+            if (selectedCurve == pathCurve.PingPong)
             {
-                transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime, MathF.Cos(Time.time * oscillationSpeed));
+                transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime * -travelSpeed, Mathf.PingPong(Time.time * oscillationSpeed, max - min));
             }
-            else if (selectedCurve == pathCurve.PingPong)
+            else if (selectedCurve == pathCurve.Sinus)
             {
-                transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime, Mathf.PingPong(Time.time * oscillationSpeed, max - min) + min);
+                transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime * -travelSpeed, Mathf.Cos(Time.time * oscillationSpeed) * (max - min));
+            }
+            else
+            {
+                transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime * -travelSpeed, transform.localPosition.y);
             }
         }
-
-
     }
 }

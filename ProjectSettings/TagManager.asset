@@ -8,6 +8,7 @@ TagManager:
   - Robot
   - Ground
   - Missile
+  - Collectable
   layers:
   - Default
   - TransparentFX
