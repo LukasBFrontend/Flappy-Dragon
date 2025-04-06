@@ -9,6 +9,10 @@ TagManager:
   - Ground
   - Missile
   - Collectable
+  - Music
+  - DontDestroy
+  - SoundMenu
+  - LvlMenu
   layers:
   - Default
   - TransparentFX
