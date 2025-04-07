@@ -37,9 +37,14 @@ public class InputManager : MonoBehaviour
         {
             ScreenManager.Instance.OpenSoundMenu();
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && playerScript.playerIsAlive)
+        if (Input.GetKeyDown(KeyCode.Escape) && playerScript.playerIsAlive && !LogicScript.Instance.isPaused)
         {
             ScreenManager.Instance.OpenLvlMenu();
+            LogicScript.Instance.PauseGame();
+        }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            LogicScript.Instance.PauseGame();
         }
     }
 

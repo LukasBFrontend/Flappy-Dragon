@@ -5,6 +5,7 @@ public class LvlMenu : MonoBehaviour
     public void OnResumeClicked()
     {
         ScreenManager.Instance.CloseLvlMenu();
+        LogicScript.Instance.UnPauseGame();
     }
     public void OnOptionsClicked()
     {
@@ -13,5 +14,6 @@ public class LvlMenu : MonoBehaviour
     public void OnQuitClicked()
     {
         ScreenManager.Instance.QuitToMain();
+        LogicScript.Instance.UnPauseGame();
     }
 }

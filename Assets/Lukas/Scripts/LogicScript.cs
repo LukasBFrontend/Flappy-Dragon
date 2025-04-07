@@ -12,14 +12,14 @@ public class LogicScript : Singleton<LogicScript>
     [HideInInspector]
     public bool isGameOver = false;
 
-    [ContextMenu("Increase Score")]
+    [HideInInspector]
+    public bool isPaused = false;
 
     void Start()
     {
         //SoundFXManager.Instance.playSoundFXClip(musicClip, transform, 0.6f);
         if (scoreText) scoreText.text = playerScore.ToString();
 
-        Debug.Log("Start");
         if (SceneManager.GetActiveScene().name == "Lvl 1")
         {
             InvokeRepeating("TickingScore", 0f, 0.1f);
@@ -33,7 +33,7 @@ public class LogicScript : Singleton<LogicScript>
 
     public void TickingScore()
     {
-        if (!isGameOver && SceneManager.GetActiveScene().name == "Lvl 1")
+        if (!isGameOver && !isPaused && SceneManager.GetActiveScene().name == "Lvl 1")
         {
             AddScore(1);
         }
@@ -59,6 +59,18 @@ public class LogicScript : Singleton<LogicScript>
         isGameOver = true;
     }
 
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        isPaused = true;
+    }
+
+    public void UnPauseGame()
+    {
+        Time.timeScale = 1;
+        isPaused = false;
+    }
+
     private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "Lvl 1")
@@ -71,7 +83,6 @@ public class LogicScript : Singleton<LogicScript>
             }
             else
             {
-                Debug.LogWarning("Player not found in Lvl 1.");
                 scoreText = null;
             }
         }

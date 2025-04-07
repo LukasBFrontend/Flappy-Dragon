@@ -18,6 +18,8 @@ TagManager:
   - ScreenManager
   - ScoreCanvas
   - ScoreText
+  - Moving
+  - Enemy
   layers:
   - Default
   - TransparentFX

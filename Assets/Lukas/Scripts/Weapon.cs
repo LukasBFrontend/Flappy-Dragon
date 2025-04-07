@@ -18,7 +18,7 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         playerIsAlive = playerScript.playerIsAlive;
-        if (Input.GetKeyDown(KeyCode.Mouse0) && playerIsAlive)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && playerIsAlive && !LogicScript.Instance.isPaused)
         {
             Shoot();
         }
