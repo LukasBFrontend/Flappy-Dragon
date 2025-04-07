@@ -3,73 +3,120 @@ using UnityEngine.SceneManagement;
 
 public class ScreenManager : Singleton<ScreenManager>
 {
-    public GameObject startMenu;
-    public GameObject soundMenu;
-    public GameObject lvlMenu;
+    private GameObject startMenu;
+    private GameObject soundMenu;
+    private GameObject lvlMenu;
+    private GameObject gameOverMenu;
+    private GameObject scoreCanvas;
+    public event System.Action OnQuitToMain;
+    public event System.Action OnStartGame;
 
     public void StartGame()
     {
+        OnStartGame?.Invoke();
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
-
         SceneManager.LoadScene("Lvl 1");
     }
 
     private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
+        CacheMenus();
+
         if (scene.name == "Lvl 1")
         {
-            startMenu.SetActive(false);
+            HideMenu(startMenu);
+            HideMenu(gameOverMenu);
 
             SceneManager.sceneLoaded -= OnLevelFinishedLoading;
         }
         if (scene.name == "Main menu")
         {
-            lvlMenu.SetActive(false);
-            startMenu.SetActive(true);
+            HideMenu(lvlMenu);
+            HideMenu(gameOverMenu);
+            /*             HideMenu(scoreCanvas); */
+            ShowMenu(startMenu);
 
             SceneManager.sceneLoaded -= OnLevelFinishedLoading;
         }
     }
+
+    private void CacheMenus()
+    {
+        startMenu = GameObject.FindGameObjectWithTag("StartMenu");
+        soundMenu = GameObject.FindGameObjectWithTag("SoundMenu");
+        lvlMenu = GameObject.FindGameObjectWithTag("LvlMenu");
+        gameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
+        /*         scoreCanvas = GameObject.FindGameObjectWithTag("ScoreCanvas"); */
+    }
+
     public void QuitToMain()
     {
+        OnQuitToMain?.Invoke();
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
         SceneManager.LoadScene("Main menu");
     }
 
     public void OpenLvlMenu()
     {
-        if (SceneManager.GetActiveScene().name == "Lvl 1") lvlMenu.SetActive(true);
+        if (SceneManager.GetActiveScene().name == "Lvl 1") ShowMenu(lvlMenu);
     }
 
     public void CloseLvlMenu()
     {
-        lvlMenu.SetActive(false);
+        HideMenu(lvlMenu);
     }
 
     public void OpenSoundMenu()
     {
         if (startMenu)
         {
-            startMenu.SetActive(false);
+            HideMenu(startMenu);
         }
         if (lvlMenu)
         {
-            lvlMenu.SetActive(false);
+            HideMenu(lvlMenu);
         }
-        soundMenu.SetActive(true);
+        ShowMenu(soundMenu);
     }
 
     public void CloseSoundMenu()
     {
-        soundMenu.SetActive(false);
+        HideMenu(soundMenu);
 
         if (SceneManager.GetActiveScene().name == "Main menu")
         {
-            startMenu.SetActive(true);
+            ShowMenu(startMenu);
         }
         else if (SceneManager.GetActiveScene().name == "Lvl 1")
         {
-            lvlMenu.SetActive(true);
+            ShowMenu(lvlMenu);
+        }
+    }
+
+    public void ShowGameOver()
+    {
+        ShowMenu(gameOverMenu);
+    }
+
+    private void ShowMenu(GameObject menu)
+    {
+        var cg = menu.GetComponent<CanvasGroup>();
+        if (cg != null)
+        {
+            cg.alpha = 1f;
+            cg.interactable = true;
+            cg.blocksRaycasts = true;
+        }
+    }
+
+    private void HideMenu(GameObject menu)
+    {
+        var cg = menu.GetComponent<CanvasGroup>();
+        if (cg != null)
+        {
+            cg.alpha = 0f;
+            cg.interactable = false;
+            cg.blocksRaycasts = false;
         }
     }
 }

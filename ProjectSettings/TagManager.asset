@@ -13,6 +13,11 @@ TagManager:
   - DontDestroy
   - SoundMenu
   - LvlMenu
+  - GameOverMenu
+  - StartMenu
+  - ScreenManager
+  - ScoreCanvas
+  - ScoreText
   layers:
   - Default
   - TransparentFX

@@ -33,8 +33,6 @@ public class MissileTrigger : MonoBehaviour
 
             if (!collision.CompareTag(testedTag)) continue;
 
-            Debug.Log($"hit {testedTag}"); //improve your debug informations
-
             return true;
         }
 
@@ -53,7 +51,6 @@ public class MissileTrigger : MonoBehaviour
 
             if (timer <= 0)
             {
-                Debug.Log("Timer ended.");
                 timerEnabled = false;
                 activeWarningInstance.SetActive(false);
                 missileScript.isMoving = true;

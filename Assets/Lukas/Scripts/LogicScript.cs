@@ -7,12 +7,24 @@ public class LogicScript : MonoBehaviour
     [SerializeField] private AudioClip musicClip;
     public int playerScore = 0;
     public Text scoreText;
-    public GameObject gameOverScreen;
+    public GameObject scoreObject;
 
     [HideInInspector]
     public bool isGameOver = false;
 
     [ContextMenu("Increase Score")]
+
+    void Start()
+    {
+        SoundFXManager.Instance.playSoundFXClip(musicClip, transform, 0.6f);
+        scoreText.text = playerScore.ToString();
+
+        Debug.Log("Start");
+        if (SceneManager.GetActiveScene().name == "Lvl 1")
+        {
+            InvokeRepeating("TickingScore", 0f, 0.1f);
+        }
+    }
     public void AddScore(int points)
     {
         playerScore += points;
@@ -29,25 +41,56 @@ public class LogicScript : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        ScreenManager.Instance.StartGame();
         isGameOver = false;
+    }
+
+    public void QuitGame()
+    {
+        playerScore = 0;
+        isGameOver = false;
+        ScreenManager.Instance.QuitToMain();
     }
 
     public void GameOver()
     {
-        gameOverScreen.SetActive(true);
+        playerScore = 0;
+        ScreenManager.Instance.ShowGameOver();
         isGameOver = true;
     }
 
-    void Start()
+    private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        SoundFXManager.Instance.playSoundFXClip(musicClip, transform, 0.6f);
-        scoreText.text = playerScore.ToString();
-        InvokeRepeating("TickingScore", 0f, 0.1f);
+        if (scene.name == "Lvl 1")
+        {
+            scoreObject = GameObject.FindGameObjectWithTag("ScoreText");
+
+            if (scoreObject != null)
+            {
+                scoreText = scoreObject.GetComponent<Text>();
+            }
+            else
+            {
+                Debug.LogWarning("Player not found in Lvl 1.");
+                scoreText = null;
+            }
+        }
+        else
+        {
+            scoreObject = null;
+            scoreText = null;
+        }
     }
 
-    void Update()
+    void OnEnable()
     {
-
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+
 }

@@ -1,18 +1,22 @@
 using UnityEngine;
+using System.Collections.Generic;
 
-public class Bootstrap : MonoBehaviour
+public class DontDestroy : MonoBehaviour
 {
-    private static bool alreadyExists = false;
+    private static HashSet<string> existingObjects = new HashSet<string>();
 
     private void Awake()
     {
-        if (alreadyExists)
+        string key = gameObject.name;
+
+        if (existingObjects.Contains(key))
         {
-            Destroy(gameObject); // Destroy this duplicate
+            Debug.Log($"{key} was destroyed — duplicate");
+            Destroy(gameObject);
             return;
         }
 
-        alreadyExists = true;
-        DontDestroyOnLoad(gameObject); // Persist this GameObject
+        existingObjects.Add(key);
+        DontDestroyOnLoad(gameObject);
     }
 }

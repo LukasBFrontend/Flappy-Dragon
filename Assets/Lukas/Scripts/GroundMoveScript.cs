@@ -17,12 +17,5 @@ public class GroundMoveScript : MonoBehaviour
         {
             transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
         }
-
-        /* if (transform.position.x < deadZone)
-        {
-            Debug.Log("Ground deleted");
-            Destroy(gameObject);
-        } */
-
     }
 }
