@@ -5,11 +5,6 @@ public class InputManager : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     private PlayerScript playerScript;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
 
     private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
@@ -34,9 +29,6 @@ public class InputManager : MonoBehaviour
         }
     }
 
-
-
-    // Update is called once per frame
     void Update()
     {
         if (playerScript == null) return;
@@ -50,6 +42,7 @@ public class InputManager : MonoBehaviour
             ScreenManager.Instance.OpenLvlMenu();
         }
     }
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnLevelFinishedLoading;

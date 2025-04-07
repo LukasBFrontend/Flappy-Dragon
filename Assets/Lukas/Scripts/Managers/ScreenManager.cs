@@ -11,6 +11,10 @@ public class ScreenManager : Singleton<ScreenManager>
     public event System.Action OnQuitToMain;
     public event System.Action OnStartGame;
 
+    public void Start()
+    {
+        CacheMenus();
+    }
     public void StartGame()
     {
         OnStartGame?.Invoke();
@@ -24,7 +28,6 @@ public class ScreenManager : Singleton<ScreenManager>
 
         if (scene.name == "Lvl 1")
         {
-            HideMenu(startMenu);
             HideMenu(gameOverMenu);
 
             SceneManager.sceneLoaded -= OnLevelFinishedLoading;
@@ -33,7 +36,6 @@ public class ScreenManager : Singleton<ScreenManager>
         {
             HideMenu(lvlMenu);
             HideMenu(gameOverMenu);
-            /*             HideMenu(scoreCanvas); */
             ShowMenu(startMenu);
 
             SceneManager.sceneLoaded -= OnLevelFinishedLoading;

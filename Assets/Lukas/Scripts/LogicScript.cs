@@ -2,12 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LogicScript : MonoBehaviour
+public class LogicScript : Singleton<LogicScript>
 {
     [SerializeField] private AudioClip musicClip;
     public int playerScore = 0;
-    public Text scoreText;
-    public GameObject scoreObject;
+    private GameObject scoreObject;
+    private Text scoreText;
 
     [HideInInspector]
     public bool isGameOver = false;
@@ -16,8 +16,8 @@ public class LogicScript : MonoBehaviour
 
     void Start()
     {
-        SoundFXManager.Instance.playSoundFXClip(musicClip, transform, 0.6f);
-        scoreText.text = playerScore.ToString();
+        //SoundFXManager.Instance.playSoundFXClip(musicClip, transform, 0.6f);
+        if (scoreText) scoreText.text = playerScore.ToString();
 
         Debug.Log("Start");
         if (SceneManager.GetActiveScene().name == "Lvl 1")
@@ -33,7 +33,7 @@ public class LogicScript : MonoBehaviour
 
     public void TickingScore()
     {
-        if (!isGameOver)
+        if (!isGameOver && SceneManager.GetActiveScene().name == "Lvl 1")
         {
             AddScore(1);
         }
