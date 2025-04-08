@@ -152,6 +152,7 @@ MonoBehaviour:
   points: 50
   logic: {fileID: 0}
   sprite: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: d61368a8af60e914aae1d6327ae6ad33, type: 3}
   damageColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &5480361626040978420
 MonoBehaviour:

@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class MissileTrigger : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject missile;
     public GameObject missileWarning;
     private GameObject activeWarningInstance;
 
+    [SerializeField] private AudioClip missileClip;
     Missile missileScript;
     int xPosition = 10;
 
@@ -54,6 +54,7 @@ public class MissileTrigger : MonoBehaviour
                 timerEnabled = false;
                 activeWarningInstance.SetActive(false);
                 missileScript.isMoving = true;
+                SoundFXManager.Instance.playSoundFXClip(missileClip, transform, .8f);
             }
         }
 
