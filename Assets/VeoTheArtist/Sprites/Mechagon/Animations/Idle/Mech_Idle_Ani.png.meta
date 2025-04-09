@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b4fc65290332f004b8ea111dac477965
+guid: b0194430111a14f4381da010f99d98a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1974128946774002530
-    second: Mechagon_FlyAni_0
+      213: 1039106916585450176
+    second: Mechagon_IdleAni_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mechagon_FlyAni_0
+      name: Mech_Idle_Ani_0
       rect:
         serializedVersion: 2
         x: 0
@@ -126,16 +126,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e9438baae2c7a94e0800000000000000
-      internalID: -1974128946774002530
+      spriteID: 9b1017da5f9aef948a145c8ae1f40ff6
+      internalID: -2009833978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mechagon_FlyAni_1
+      name: Mech_Idle_Ani_1
       rect:
         serializedVersion: 2
         x: 32
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9437218bbd08f2c489174f30ed6a521a
-      internalID: -1320451352
+      spriteID: 512d00c2f53446d4a9a53e2a5e0a420f
+      internalID: 477831961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mechagon_FlyAni_2
+      name: Mech_Idle_Ani_2
       rect:
         serializedVersion: 2
         x: 64
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e0df1911d0c5444e80c73a326a451b2
-      internalID: -105675528
+      spriteID: 263cc74255800e14eabebe3ce9509ab4
+      internalID: -432574857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mechagon_FlyAni_3
+      name: Mech_Idle_Ani_3
       rect:
         serializedVersion: 2
         x: 96
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f763054a87108ca4395cc027d27adb32
-      internalID: 425135425
+      spriteID: ed8f7036e8887674095645b7c9ce6f7a
+      internalID: 1848582340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mechagon_FlyAni_4
+      name: Mech_Idle_Ani_4
       rect:
         serializedVersion: 2
         x: 128
@@ -216,8 +216,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2afd5dc1b99f31d41bfc0094fba83d2a
-      internalID: 2122199251
+      spriteID: cd34f24236e9434449117772d540f712
+      internalID: -160759562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mech_Idle_Ani_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655c748ebad9c6844a1939e388442c73
+      internalID: -1746954663
       vertices: []
       indices: 
       edges: []
@@ -226,7 +248,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 27bf46fd01efece4f90bc67850123d18
+    spriteID: 311156bcbbbd6534d93c80710a385e08
     internalID: 0
     vertices: []
     indices: 
@@ -236,11 +258,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mechagon_FlyAni_0: -1974128946774002530
-      Mechagon_FlyAni_1: -1320451352
-      Mechagon_FlyAni_2: -105675528
-      Mechagon_FlyAni_3: 425135425
-      Mechagon_FlyAni_4: 2122199251
+      Mech_Idle_Ani_0: -2009833978
+      Mech_Idle_Ani_1: 477831961
+      Mech_Idle_Ani_2: -432574857
+      Mech_Idle_Ani_3: 1848582340
+      Mech_Idle_Ani_4: -160759562
+      Mech_Idle_Ani_5: -1746954663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
