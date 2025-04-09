@@ -22,8 +22,6 @@ public class SoundFXManager : Singleton<SoundFXManager>
         //get length of sound FX clip
         float clipLength = audioSource.clip.length;
 
-        DontDestroyOnLoad(audioSource.gameObject);
-
         //destroy the clip after it is done playing
         Destroy(audioSource.gameObject, clipLength);
     }

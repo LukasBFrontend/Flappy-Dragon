@@ -17,6 +17,7 @@ public class LogicScript : Singleton<LogicScript>
 
     void Start()
     {
+        //SoundFXManager.Instance.playSoundFXClip(musicClip, transform, 0.6f);
         if (scoreText) scoreText.text = playerScore.ToString();
 
         if (SceneManager.GetActiveScene().name == "Lvl 1")

@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class SoundMenu : MonoBehaviour
 {
-    [SerializeField] private AudioClip backClickClip;
     public void OnMasterVolumeChanged(float level)
     {
         SoundMixerManager.Instance.SetMasterVolume(level);
@@ -17,7 +16,6 @@ public class SoundMenu : MonoBehaviour
     }
     public void OnBackButtonClicked()
     {
-        SoundFXManager.Instance.playSoundFXClip(backClickClip, transform, .3f);
         ScreenManager.Instance.CloseSoundMenu();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] private AudioClip deathClip;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Rigidbody2D rigidBody;
     public Animator animator; 
     public float jumpForce;
@@ -37,7 +37,6 @@ public class PlayerScript : MonoBehaviour
     {
         logic.GameOver();
         playerIsAlive = false;
-        SoundFXManager.Instance.playSoundFXClip(deathClip, transform, .7f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

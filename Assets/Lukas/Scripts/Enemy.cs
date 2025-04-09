@@ -6,7 +6,6 @@ public class Enemy : MonoBehaviour
     public int points = 10;
     public LogicScript logic;
     public SpriteRenderer sprite;
-    [SerializeField] private AudioClip deathClip;
 
     public Color damageColor;
     /* public GameObject deathEffect; */
@@ -29,7 +28,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        SoundFXManager.Instance.playSoundFXClip(deathClip, transform, .7f);
+        /* Instantiate(deathEffect, transform.position, Quaternion.identity); */
         Destroy(gameObject);
         logic.AddScore(points);
     }
