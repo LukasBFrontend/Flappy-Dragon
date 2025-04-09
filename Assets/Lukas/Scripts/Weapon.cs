@@ -3,11 +3,12 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
+
     public GameObject bluefirePrefab;
     //public Animator animator;
 
     private PlayerScript playerScript;
-
+    [SerializeField] private AudioClip[] fireClips;
     private bool playerIsAlive;
 
     void Start()
@@ -28,6 +29,9 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
+        int random = Random.Range(0, 3);
+        Debug.Log(random);
+        SoundFXManager.Instance.playSoundFXClip(fireClips[random], transform, 0.6f);
         Instantiate(bluefirePrefab, firePoint.position, firePoint.rotation);
         //animator.SetBool("IsShooting", true);
     }

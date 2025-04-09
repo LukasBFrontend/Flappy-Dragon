@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missile: {fileID: 4452154090513651382}
   missileWarning: {fileID: 1849399177294858976, guid: a16d803b4ae64d844909d703e4574ea0, type: 3}
+  missileClip: {fileID: 8300000, guid: 559865f4a15456a419b252efc3250bea, type: 3}
   timer: 1
 --- !u!1 &4452154090513651382
 GameObject:

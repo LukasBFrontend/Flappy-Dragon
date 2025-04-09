@@ -717,6 +717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcdf942e79e7bf74f8cdab02c319aaac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startClickClip: {fileID: 8300000, guid: e16d70644e29cb548a3fd9c6b3215aa8, type: 3}
+  optionsClickClip: {fileID: 8300000, guid: e16d70644e29cb548a3fd9c6b3215aa8, type: 3}
 --- !u!1 &1143069064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,6 +1381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundMenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1936974216926287487, guid: 6b319de39d779bf468637c274698b268, type: 3}
+      propertyPath: backClickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e16d70644e29cb548a3fd9c6b3215aa8, type: 3}
     - target: {fileID: 2022369748083555116, guid: 6b319de39d779bf468637c274698b268, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1525,15 +1531,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9064689828562240588, guid: 6b319de39d779bf468637c274698b268, type: 3}
       propertyPath: m_Color.b
-      value: 0.5849056
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9064689828562240588, guid: 6b319de39d779bf468637c274698b268, type: 3}
       propertyPath: m_Color.g
-      value: 0.5849056
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9064689828562240588, guid: 6b319de39d779bf468637c274698b268, type: 3}
       propertyPath: m_Color.r
-      value: 0.5849056
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

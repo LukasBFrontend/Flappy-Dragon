@@ -149,3 +149,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logic: {fileID: 0}
   points: 20
+  collectClip: {fileID: 8300000, guid: 5861dff1148da3548aacaa72f95768b7, type: 3}
