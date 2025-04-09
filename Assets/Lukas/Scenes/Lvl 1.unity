@@ -6545,6 +6545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathClip: {fileID: 8300000, guid: 017722ed8d6c68d4a860036c1326d680, type: 3}
   rigidBody: {fileID: 2011919042}
+  animator: {fileID: 0}
   jumpForce: 8
   logic: {fileID: 0}
   playerIsAlive: 1
@@ -6705,11 +6706,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1284266192}
-  firePrefab: {fileID: 5177218720813188394, guid: 2cda677b16c0cc2408578c7f9dd34f0d, type: 3}
+  firePrefab: {fileID: 7281376222424760152, guid: 54fe3d93368407047a2d3161c42265b3, type: 3}
   fireClips:
-  - {fileID: 8300000, guid: 556e00458301a154cbd1f38a18965238, type: 3}
-  - {fileID: 8300000, guid: 2ae0f43b70cd9c748a984c101d44f170, type: 3}
-  - {fileID: 8300000, guid: a0d22bfed1c1c08439c99ef3a70c84ff, type: 3}
+  - {fileID: 8300000, guid: 3e534113e11e6f149925e302a2946f5f, type: 3}
+  - {fileID: 8300000, guid: 3e534113e11e6f149925e302a2946f5f, type: 3}
+  - {fileID: 8300000, guid: 3e534113e11e6f149925e302a2946f5f, type: 3}
 --- !u!95 &2011919047
 Animator:
   serializedVersion: 7
@@ -6720,7 +6721,7 @@ Animator:
   m_GameObject: {fileID: 2011919040}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c24bf1d68bb78646b28b0a67fbaf2b0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

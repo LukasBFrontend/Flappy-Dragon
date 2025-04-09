@@ -6,11 +6,13 @@ public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private AudioClip deathClip;
     public Rigidbody2D rigidBody;
+    public Animator animator;
     public float jumpForce;
     public LogicScript logic;
     public bool playerIsAlive = true;
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
@@ -20,6 +22,11 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && playerIsAlive)
         {
             rigidBody.linearVelocity = Vector2.up * jumpForce;
+            animator.SetBool("IsJumping", true);
+        }
+        if (!Input.GetKeyDown(KeyCode.Space) && playerIsAlive)
+        {
+            animator.SetBool("IsJumping", false);
         }
     }
 
