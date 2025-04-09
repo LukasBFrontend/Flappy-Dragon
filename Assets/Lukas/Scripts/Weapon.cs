@@ -3,7 +3,8 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject firePrefab;
+    public GameObject bluefirePrefab;
+    //public Animator animator;
 
     private PlayerScript playerScript;
 
@@ -13,6 +14,7 @@ public class Weapon : MonoBehaviour
     {
         playerScript = gameObject.GetComponent<PlayerScript>();
         playerIsAlive = playerScript.playerIsAlive;
+        //animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -26,6 +28,7 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(firePrefab, firePoint.position, firePoint.rotation);
+        Instantiate(bluefirePrefab, firePoint.position, firePoint.rotation);
+        //animator.SetBool("IsShooting", true);
     }
 }

@@ -2770,7 +2770,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.807, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2011919044}
@@ -9655,7 +9655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1284266192}
-  firePrefab: {fileID: 5177218720813188394, guid: 2cda677b16c0cc2408578c7f9dd34f0d, type: 3}
+  bluefirePrefab: {fileID: 7281376222424760152, guid: d88e70fe480f2424c9f60d9d826fe30f, type: 3}
 --- !u!95 &2011919047
 Animator:
   serializedVersion: 7
