@@ -5,11 +5,11 @@ public class Fire : MonoBehaviour
 
     public float speed = 20;
     public int damage = 50;
-    public Rigidbody2D rigidBody;
+    private Rigidbody2D rigidBody;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        rigidBody = gameObject.GetComponent<Rigidbody2D>();
         rigidBody.linearVelocity = transform.right * speed;
     }
 

@@ -11,7 +11,6 @@ public class DontDestroy : MonoBehaviour
 
         if (existingObjects.Contains(key))
         {
-            Debug.Log($"{key} was destroyed — duplicate");
             Destroy(gameObject);
             return;
         }

@@ -2126,7 +2126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e44be3ef2f68b94da6f65d3460da8a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!4 &1055969178
 Transform:
   m_ObjectHideFlags: 0
@@ -6520,10 +6519,10 @@ GameObject:
   - component: {fileID: 2011919044}
   - component: {fileID: 2011919043}
   - component: {fileID: 2011919042}
-  - component: {fileID: 2011919041}
-  - component: {fileID: 2011919046}
   - component: {fileID: 2011919045}
   - component: {fileID: 2011919047}
+  - component: {fileID: 2011919041}
+  - component: {fileID: 2011919046}
   m_Layer: 0
   m_Name: ~Player
   m_TagString: Player
@@ -6545,9 +6544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathClip: {fileID: 8300000, guid: 017722ed8d6c68d4a860036c1326d680, type: 3}
   rigidBody: {fileID: 2011919042}
-  animator: {fileID: 0}
   jumpForce: 8
-  logic: {fileID: 0}
   playerIsAlive: 1
 --- !u!50 &2011919042
 Rigidbody2D:
@@ -7261,5 +7258,5 @@ SceneRoots:
   - {fileID: 575291206}
   - {fileID: 1252881718}
   - {fileID: 2011919044}
-  - {fileID: 1183667882}
   - {fileID: 832781465}
+  - {fileID: 1183667882}

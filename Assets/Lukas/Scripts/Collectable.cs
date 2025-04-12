@@ -15,7 +15,9 @@ public class Collectable : MonoBehaviour
         if (IsPlayer(other))
         {
             SoundFXManager.Instance.playSoundFXClip(collectClip, transform, .5f);
+
             logic.AddScore(points);
+
             Destroy(gameObject);
         }
     }

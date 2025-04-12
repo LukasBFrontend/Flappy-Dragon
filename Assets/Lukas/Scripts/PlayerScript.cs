@@ -6,10 +6,12 @@ public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private AudioClip deathClip;
     public Rigidbody2D rigidBody;
-    public Animator animator;
     public float jumpForce;
-    public LogicScript logic;
+
+    [HideInInspector]
     public bool playerIsAlive = true;
+    private Animator animator;
+    private LogicScript logic;
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
