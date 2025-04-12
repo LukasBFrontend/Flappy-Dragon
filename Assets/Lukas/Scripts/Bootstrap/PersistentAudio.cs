@@ -15,9 +15,10 @@ public class PersistentAudio : MonoBehaviour
         }
 
         instance = this;
+        lastSceneName = SceneManager.GetActiveScene().name;
+
         DontDestroyOnLoad(gameObject);
 
-        lastSceneName = SceneManager.GetActiveScene().name;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 

@@ -7,9 +7,6 @@ public class ScreenManager : Singleton<ScreenManager>
     private GameObject soundMenu;
     private GameObject lvlMenu;
     private GameObject gameOverMenu;
-    private GameObject scoreCanvas;
-    public event System.Action OnQuitToMain;
-    public event System.Action OnStartGame;
 
     public void Start()
     {
@@ -17,7 +14,6 @@ public class ScreenManager : Singleton<ScreenManager>
     }
     public void StartGame()
     {
-        OnStartGame?.Invoke();
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
         SceneManager.LoadScene("Lvl 1");
     }
@@ -34,10 +30,6 @@ public class ScreenManager : Singleton<ScreenManager>
         }
         if (scene.name == "Main menu")
         {
-            HideMenu(lvlMenu);
-            HideMenu(gameOverMenu);
-            ShowMenu(startMenu);
-
             SceneManager.sceneLoaded -= OnLevelFinishedLoading;
         }
     }
@@ -48,12 +40,10 @@ public class ScreenManager : Singleton<ScreenManager>
         soundMenu = GameObject.FindGameObjectWithTag("SoundMenu");
         lvlMenu = GameObject.FindGameObjectWithTag("LvlMenu");
         gameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
-        /*         scoreCanvas = GameObject.FindGameObjectWithTag("ScoreCanvas"); */
     }
 
     public void QuitToMain()
     {
-        OnQuitToMain?.Invoke();
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
         SceneManager.LoadScene("Main menu");
     }
@@ -102,23 +92,23 @@ public class ScreenManager : Singleton<ScreenManager>
 
     private void ShowMenu(GameObject menu)
     {
-        var cg = menu.GetComponent<CanvasGroup>();
-        if (cg != null)
+        var canvasGroup = menu.GetComponent<CanvasGroup>();
+        if (canvasGroup != null)
         {
-            cg.alpha = 1f;
-            cg.interactable = true;
-            cg.blocksRaycasts = true;
+            canvasGroup.alpha = 1f;
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
         }
     }
 
     private void HideMenu(GameObject menu)
     {
-        var cg = menu.GetComponent<CanvasGroup>();
-        if (cg != null)
+        var canvasGroup = menu.GetComponent<CanvasGroup>();
+        if (canvasGroup != null)
         {
-            cg.alpha = 0f;
-            cg.interactable = false;
-            cg.blocksRaycasts = false;
+            canvasGroup.alpha = 0f;
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
         }
     }
 }

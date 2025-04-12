@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    private GameObject player;
     private PlayerScript playerScript;
 
     private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
@@ -18,7 +18,6 @@ public class InputManager : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("Player not found in Lvl 1.");
                 playerScript = null;
             }
         }
@@ -51,25 +50,10 @@ public class InputManager : MonoBehaviour
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
-
-        if (ScreenManager.Instance != null)
-        {
-            ScreenManager.Instance.OnQuitToMain += HandleQuitToMain;
-        }
     }
 
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-
-        if (ScreenManager.Instance != null)
-        {
-            ScreenManager.Instance.OnQuitToMain -= HandleQuitToMain;
-        }
-    }
-
-    private void HandleQuitToMain()
-    {
-        Debug.Log("InputManager detected QuitToMain.");
     }
 }

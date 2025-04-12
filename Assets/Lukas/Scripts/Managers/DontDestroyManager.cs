@@ -5,7 +5,6 @@ public class DontDestroyGroup : MonoBehaviour
 {
     [Tooltip("List of GameObjects that should not be destroyed on scene load.")]
     [SerializeField] private GameObject[] persistentObjects;
-
     private static HashSet<string> preservedNames = new HashSet<string>();
 
     private void Awake()

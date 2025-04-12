@@ -7,18 +7,14 @@ public class Enemy : MonoBehaviour
     public LogicScript logic;
     public SpriteRenderer sprite;
     [SerializeField] private AudioClip deathClip;
-
     public Color damageColor;
-    /* public GameObject deathEffect; */
-    //Timer
-    float currentTimer = 0f;
-    float targetTime = 2f;
-    bool timerEnabled = false;
+    private float currentTimer = 0f;
+    private float targetTime = 2f;
+    private bool timerEnabled = false;
 
     public void TakeDamage(int damage)
     {
         health -= damage;
-
         timerEnabled = true;
 
         if (health <= 0)
@@ -30,7 +26,9 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         SoundFXManager.Instance.playSoundFXClip(deathClip, transform, .7f);
+
         Destroy(gameObject);
+
         logic.AddScore(points);
     }
 
@@ -56,15 +54,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timerEnabled)
