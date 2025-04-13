@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private AudioClip deathClip;
+    [SerializeField] private float audioVolume = 1f;
     public Rigidbody2D rigidBody;
     public float jumpForce;
 
@@ -36,7 +37,7 @@ public class PlayerScript : MonoBehaviour
     {
         logic.GameOver();
         playerIsAlive = false;
-        SoundFXManager.Instance.playSoundFXClip(deathClip, transform, .7f);
+        SoundFXManager.Instance.playSoundFXClip(deathClip, transform, audioVolume);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

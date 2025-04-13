@@ -361,6 +361,10 @@ PrefabInstance:
       value: CutsceneSlide 2
       objectReference: {fileID: 0}
     - target: {fileID: 7377105079183994239, guid: 453387da59619c241b2c13afeaa8e2ae, type: 3}
+      propertyPath: m_Text
+      value: SLIDE 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377105079183994239, guid: 453387da59619c241b2c13afeaa8e2ae, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -557,6 +561,10 @@ PrefabInstance:
     - target: {fileID: 6123838632200699544, guid: 453387da59619c241b2c13afeaa8e2ae, type: 3}
       propertyPath: m_Name
       value: CutsceneSlide 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377105079183994239, guid: 453387da59619c241b2c13afeaa8e2ae, type: 3}
+      propertyPath: m_Text
+      value: SLIDE 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -943,6 +951,10 @@ PrefabInstance:
     - target: {fileID: 6123838632200699544, guid: 453387da59619c241b2c13afeaa8e2ae, type: 3}
       propertyPath: m_Name
       value: CutsceneSlide 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377105079183994239, guid: 453387da59619c241b2c13afeaa8e2ae, type: 3}
+      propertyPath: m_Text
+      value: SLIDE 4
       objectReference: {fileID: 0}
     - target: {fileID: 7377105079183994239, guid: 453387da59619c241b2c13afeaa8e2ae, type: 3}
       propertyPath: m_Color.b

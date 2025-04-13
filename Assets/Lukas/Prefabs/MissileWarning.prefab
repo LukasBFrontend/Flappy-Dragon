@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1962928501748403751}
   - component: {fileID: 5206936066706266977}
+  - component: {fileID: 4166418045664013050}
+  - component: {fileID: 4435539293781012036}
   m_Layer: 0
   m_Name: MissileWarning
   m_TagString: Untagged
@@ -76,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: -79497861
   m_SortingLayer: 2
   m_SortingOrder: 10
-  m_Sprite: {fileID: -3735948464891479029, guid: 0bf08c70e2577774f9f9f1cdc43e69a7, type: 3}
+  m_Sprite: {fileID: -3735948464891479029, guid: 3282fcd8b8179a44f8b9d12c607ca69d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,3 +89,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &4166418045664013050
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849399177294858976}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 143cf6fe27a757c4a8f950a49c2740bd, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 143cf6fe27a757c4a8f950a49c2740bd, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!95 &4435539293781012036
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849399177294858976}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d09e6705448860409aa9624b3a98612, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

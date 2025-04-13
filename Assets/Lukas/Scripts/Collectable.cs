@@ -5,6 +5,7 @@ public class Collectable : MonoBehaviour
     public LogicScript logic;
     public int points = 20;
     [SerializeField] private AudioClip collectClip;
+    [SerializeField] private float audioVolume = 1f;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
@@ -14,7 +15,7 @@ public class Collectable : MonoBehaviour
     {
         if (IsPlayer(other))
         {
-            SoundFXManager.Instance.playSoundFXClip(collectClip, transform, .5f);
+            SoundFXManager.Instance.playSoundFXClip(collectClip, transform, audioVolume);
 
             logic.AddScore(points);
 

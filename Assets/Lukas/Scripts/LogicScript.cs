@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class LogicScript : Singleton<LogicScript>
 {
-    [SerializeField] private AudioClip musicClip;
     [HideInInspector]
     public int playerScore = 0;
     private GameObject scoreObject;
