@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class CutsceneManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] slides;
-    [SerializeField] private int[] slideDurations;
+    [SerializeField] private float[] slideDurations;
     private List<CanvasGroup> canvasGroups = new List<CanvasGroup>();
     private int currentSlideIndex = 0;
     private float timer;
