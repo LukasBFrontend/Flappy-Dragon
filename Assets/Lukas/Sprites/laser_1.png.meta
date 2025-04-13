@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: be4e09c509601a349a53fad501c7493d
+guid: caa876ebe6d446546be23f900bcc5871
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5695690571026589214
-    second: BG_v1_0
+      213: -4019954765290455757
+    second: laser2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,9 +40,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BG_v1_0
+      name: laser2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 704
-        height: 384
+        y: 6
+        width: 32
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e91b6b4a97d4f0b0800000000000000
-      internalID: -5695690571026589214
+      spriteID: 33d39b980704638c0800000000000000
+      internalID: -4019954765290455757
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BG_v1_0: -5695690571026589214
+      laser2_0: -4019954765290455757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
