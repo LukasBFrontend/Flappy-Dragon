@@ -27,7 +27,7 @@ public class CutsceneManager : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Return) || timer < 0)
+        if (Input.GetKeyDown(KeyCode.Space) || timer < 0)
         {
             showNextSlide();
         }
