@@ -178,7 +178,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 11c941941730dab448c5e07309626a86, type: 3}
-    m_FontSize: 150
+    m_FontSize: 120
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -232,7 +232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 156.7}
+  m_AnchoredPosition: {x: 0, y: 145}
   m_SizeDelta: {x: 2355, y: 381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156481351
@@ -257,11 +257,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 11c941941730dab448c5e07309626a86, type: 3}
-    m_FontSize: 150
+    m_FontSize: 120
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 250
+    m_MaxSize: 230
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -364,7 +364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc06eda643d77c74fa9ac16b38373b49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicClip: {fileID: 8300000, guid: 3e534113e11e6f149925e302a2946f5f, type: 3}
   playerScore: 0
   isGameOver: 0
   isPaused: 0
@@ -450,8 +449,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -108}
-  m_SizeDelta: {x: 1156.7, y: 281.4}
+  m_AnchoredPosition: {x: 0, y: -90}
+  m_SizeDelta: {x: 1200, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131727676
 MonoBehaviour:
@@ -608,9 +607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1366, y: 768}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
@@ -719,6 +718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startClickClip: {fileID: 8300000, guid: e16d70644e29cb548a3fd9c6b3215aa8, type: 3}
   optionsClickClip: {fileID: 8300000, guid: e16d70644e29cb548a3fd9c6b3215aa8, type: 3}
+  audioVolume: 0.2
 --- !u!1 &1143069064
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +778,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 11c941941730dab448c5e07309626a86, type: 3}
-    m_FontSize: 150
+    m_FontSize: 120
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1134,8 +1134,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -320.2}
-  m_SizeDelta: {x: 1156.7, y: 281.4}
+  m_AnchoredPosition: {x: 0, y: -240}
+  m_SizeDelta: {x: 1200, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2075946910
 MonoBehaviour:
@@ -1376,6 +1376,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 207911121575361887, guid: 6b319de39d779bf468637c274698b268, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1366
+      objectReference: {fileID: 0}
+    - target: {fileID: 207911121575361887, guid: 6b319de39d779bf468637c274698b268, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 768
+      objectReference: {fileID: 0}
+    - target: {fileID: 207911121575361887, guid: 6b319de39d779bf468637c274698b268, type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 594731498237650342, guid: 6b319de39d779bf468637c274698b268, type: 3}
       propertyPath: m_Name
       value: SoundMenuCanvas
@@ -1399,6 +1411,10 @@ PrefabInstance:
     - target: {fileID: 2791135870354273568, guid: 6b319de39d779bf468637c274698b268, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279852347542875321, guid: 6b319de39d779bf468637c274698b268, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4816555266955277280, guid: 6b319de39d779bf468637c274698b268, type: 3}
       propertyPath: m_Pivot.x
@@ -1492,6 +1508,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7001253302836143182, guid: 6b319de39d779bf468637c274698b268, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7044847604790053522, guid: 6b319de39d779bf468637c274698b268, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1526,7 +1546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9064689828562240588, guid: 6b319de39d779bf468637c274698b268, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.5882353
       objectReference: {fileID: 0}
     - target: {fileID: 9064689828562240588, guid: 6b319de39d779bf468637c274698b268, type: 3}
       propertyPath: m_Color.b

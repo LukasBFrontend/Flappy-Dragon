@@ -1,15 +1,16 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject firePrefab;
     [SerializeField] private AudioClip[] fireClips;
+    [SerializeField] private float audioVolume = 1f;
     [SerializeField] private GameObject laser;
     [SerializeField] private LayerMask layersToHit;
     [SerializeField] private Texture[] textures;
-
     [SerializeField] private float chargeDuration = 1f;
     [SerializeField] private float fps = 30f;
     [SerializeField] private float animationDuration = .5f;
@@ -19,6 +20,7 @@ public class Weapon : MonoBehaviour
     private float fpsCounter;
     private float animationTimer;
     private float chargeTimer;
+    private float groundMoveSpeed;
     private LineRenderer laserRenderer;
     private bool animationIsActive = false;
     private PlayerScript playerScript;
@@ -30,6 +32,7 @@ public class Weapon : MonoBehaviour
         playerIsAlive = playerScript.playerIsAlive;
         chargeTimer = chargeDuration;
         animationTimer = animationDuration;
+        groundMoveSpeed = GameObject.FindGameObjectWithTag("Moving").GetComponent<GroundMoveScript>().moveSpeed;
     }
 
     void Awake()
@@ -44,7 +47,7 @@ public class Weapon : MonoBehaviour
         {
             chargeTimer = chargeDuration;
         }
-        if (Input.GetKeyUp(KeyCode.Mouse0) && playerIsAlive && !LogicScript.Instance.isPaused)
+        if (Input.GetKeyUp(KeyCode.Mouse0) && playerIsAlive && !LogicScript.Instance.isPaused && !EventSystem.current.IsPointerOverGameObject())
         {
             if (chargeTimer > chargeDuration - .3f)
             {
@@ -89,12 +92,15 @@ public class Weapon : MonoBehaviour
             laserRenderer.enabled = false;
         }
 
+        if (!LogicScript.Instance.isGameOver)
+            laserRenderer.SetPosition(1, new Vector3(laserRenderer.GetPosition(1).x - Time.deltaTime * groundMoveSpeed, 0f, 0f));
+
     }
 
     void Shoot()
     {
         int random = Random.Range(0, 3);
-        SoundFXManager.Instance.playSoundFXClip(fireClips[random], transform, 0.6f);
+        SoundFXManager.Instance.playSoundFXClip(fireClips[random], transform, audioVolume);
         Instantiate(firePrefab, firePoint.position, firePoint.rotation);
     }
 
@@ -115,7 +121,6 @@ public class Weapon : MonoBehaviour
                 enemy.TakeDamage(100);
             }
             laserRenderer.SetPosition(1, new Vector3(hit.distance, 0f, 0f));
-            Debug.Log(hit.collider.gameObject.name);
             return;
         }
         laserRenderer.SetPosition(1, new Vector3(50f, 0f, 0f));

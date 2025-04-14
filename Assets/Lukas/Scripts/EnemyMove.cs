@@ -16,16 +16,16 @@ public class EnemyMove : MonoBehaviour
 
     void Start()
     {
-        if (selectedAxis == travelAxis.X)
-        {
-            min = transform.position.x;
-            max = transform.position.x + distance;
-        }
-
         if (selectedAxis == travelAxis.Y)
         {
-            min = transform.position.y;
-            max = transform.position.y + distance;
+            min = transform.localPosition.x;
+            max = transform.localPosition.x + distance;
+        }
+
+        if (selectedAxis == travelAxis.X)
+        {
+            min = transform.localPosition.y;
+            max = transform.localPosition.y + distance;
         }
     }
 
@@ -36,11 +36,11 @@ public class EnemyMove : MonoBehaviour
         {
             if (selectedCurve == pathCurve.PingPong)
             {
-                transform.localPosition = new Vector2(Mathf.PingPong(time * oscillationSpeed, max - min), transform.localPosition.y + Time.deltaTime * -travelSpeed);
+                transform.localPosition = new Vector2(Mathf.PingPong(time * oscillationSpeed, max - min) + min, transform.localPosition.y + Time.deltaTime * -travelSpeed);
             }
             else if (selectedCurve == pathCurve.Sinus)
             {
-                transform.localPosition = new Vector2(Mathf.Cos(time * oscillationSpeed) * (max - min), transform.localPosition.y + Time.deltaTime * -travelSpeed);
+                transform.localPosition = new Vector2(Mathf.Cos(time * oscillationSpeed) * (max - min) + min, transform.localPosition.y + Time.deltaTime * -travelSpeed);
             }
             else
             {
@@ -51,11 +51,11 @@ public class EnemyMove : MonoBehaviour
         {
             if (selectedCurve == pathCurve.PingPong)
             {
-                transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime * -travelSpeed, Mathf.PingPong(time * oscillationSpeed, max - min));
+                transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime * -travelSpeed, Mathf.PingPong(time * oscillationSpeed, max - min) + min);
             }
             else if (selectedCurve == pathCurve.Sinus)
             {
-                transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime * -travelSpeed, Mathf.Cos(time * oscillationSpeed) * (max - min));
+                transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime * -travelSpeed, Mathf.Cos(time * oscillationSpeed) * (max - min) + min);
             }
             else
             {

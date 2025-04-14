@@ -8,6 +8,8 @@ public class MissileTrigger : MonoBehaviour
     private GameObject activeWarningInstance;
 
     [SerializeField] private AudioClip missileClip;
+
+    [SerializeField] private float audioVolume = 1f;
     Missile missileScript;
     int xPosition = 10;
 
@@ -54,7 +56,7 @@ public class MissileTrigger : MonoBehaviour
                 timerEnabled = false;
                 activeWarningInstance.SetActive(false);
                 missileScript.isMoving = true;
-                SoundFXManager.Instance.playSoundFXClip(missileClip, transform, .8f);
+                SoundFXManager.Instance.playSoundFXClip(missileClip, transform, audioVolume);
             }
         }
 

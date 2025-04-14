@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public LogicScript logic;
     public SpriteRenderer sprite;
     [SerializeField] private AudioClip deathClip;
+    [SerializeField] private float audioVolume = 1f;
     public Color damageColor;
     private float currentTimer = 0f;
     private float targetTime = 2f;
@@ -25,7 +26,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        SoundFXManager.Instance.playSoundFXClip(deathClip, transform, .7f);
+        SoundFXManager.Instance.playSoundFXClip(deathClip, transform, audioVolume);
 
         Destroy(gameObject);
 
