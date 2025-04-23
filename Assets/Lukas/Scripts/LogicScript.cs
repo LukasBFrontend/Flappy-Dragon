@@ -14,9 +14,15 @@ public class LogicScript : Singleton<LogicScript>
 
     [HideInInspector]
     public bool isPaused = false;
+    [HideInInspector]
+    public bool isGameWon = false;
+
+    private GameObject player;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+
         if (scoreText) scoreText.text = playerScore.ToString();
 
         if (SceneManager.GetActiveScene().name == "Lvl 1")
@@ -32,7 +38,7 @@ public class LogicScript : Singleton<LogicScript>
 
     public void TickingScore()
     {
-        if (!isGameOver && !isPaused && SceneManager.GetActiveScene().name == "Lvl 1")
+        if (!isGameWon && !isGameOver && !isPaused && SceneManager.GetActiveScene().name == "Lvl 1")
         {
             AddScore(1);
         }
@@ -51,11 +57,25 @@ public class LogicScript : Singleton<LogicScript>
         ScreenManager.Instance.QuitToMain();
     }
 
+    public void GameWon()
+    {
+        if (!isGameOver && !isGameWon)
+        {
+            player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+            ScreenManager.Instance.ShowGameWon();
+            isGameWon = true;
+        }
+    }
+
     public void GameOver()
     {
-        playerScore = 0;
-        ScreenManager.Instance.ShowGameOver();
-        isGameOver = true;
+        if (!isGameOver && !isGameWon)
+        {
+            player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+            playerScore = 0;
+            ScreenManager.Instance.ShowGameOver();
+            isGameOver = true;
+        }
     }
 
     public void PauseGame()

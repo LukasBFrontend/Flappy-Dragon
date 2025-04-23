@@ -6,16 +6,19 @@ public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private AudioClip deathClip;
     [SerializeField] private float audioVolume = 1f;
-    public Rigidbody2D rigidBody;
+    private Rigidbody2D rigidBody;
     public float jumpForce;
 
     [HideInInspector]
     public bool playerIsAlive = true;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private LogicScript logic;
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
+        rigidBody = gameObject.GetComponent<Rigidbody2D>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
@@ -35,6 +38,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        spriteRenderer.enabled = false;
         logic.GameOver();
         playerIsAlive = false;
         SoundFXManager.Instance.playSoundFXClip(deathClip, transform, audioVolume);

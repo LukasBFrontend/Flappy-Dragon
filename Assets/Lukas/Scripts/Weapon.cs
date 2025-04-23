@@ -92,8 +92,8 @@ public class Weapon : MonoBehaviour
             laserRenderer.enabled = false;
         }
 
-        if (!LogicScript.Instance.isGameOver)
-            laserRenderer.SetPosition(1, new Vector3(laserRenderer.GetPosition(1).x - Time.deltaTime * groundMoveSpeed, 0f, 0f));
+        /*         if (!LogicScript.Instance.isGameOver)
+                    laserRenderer.SetPosition(1, new Vector3(laserRenderer.GetPosition(1).x - Time.deltaTime * groundMoveSpeed, 0f, 0f)); */
 
     }
 
@@ -115,12 +115,25 @@ public class Weapon : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(firePoint.position, new Vector2(1f, 0f), 50f, layersToHit);
         if (hit.collider != null)
         {
+            int damage = 100;
             Enemy enemy = hit.transform.gameObject.GetComponent<Enemy>();
+            BossWeapon bossWeapon = hit.transform.gameObject.GetComponent<BossWeapon>();
+            BossScript bossScript = hit.transform.gameObject.GetComponent<BossScript>();
+
             if (enemy != null)
             {
-                enemy.TakeDamage(100);
+                enemy.TakeDamage(damage);
+            }
+            else if (bossWeapon != null)
+            {
+                bossWeapon.TakeDamage(damage);
+            }
+            else if (bossScript != null)
+            {
+                bossScript.TakeDamage(damage);
             }
             laserRenderer.SetPosition(1, new Vector3(hit.distance, 0f, 0f));
+            //laserRenderer.SetPosition(1, new Vector3(11f, 0f, 0f));
             return;
         }
         laserRenderer.SetPosition(1, new Vector3(50f, 0f, 0f));
