@@ -14,6 +14,8 @@ public class LogicScript : Singleton<LogicScript>
 
     [HideInInspector]
     public bool isPaused = false;
+    [HideInInspector]
+    public bool isGameWon = false;
 
     void Start()
     {

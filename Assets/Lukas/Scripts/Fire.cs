@@ -16,11 +16,21 @@ public class Fire : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Enemy enemy = hitInfo.GetComponent<Enemy>();
+        BossWeapon bossWeapon = hitInfo.GetComponent<BossWeapon>();
+        BossScript bossScript = hitInfo.GetComponent<BossScript>();
         if (IsHostile(hitInfo))
         {
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);
+            }
+            else if (bossWeapon != null)
+            {
+                bossWeapon.TakeDamage(damage);
+            }
+            else if (bossScript != null)
+            {
+                bossScript.TakeDamage(damage);
             }
             Destroy(gameObject);
         }
