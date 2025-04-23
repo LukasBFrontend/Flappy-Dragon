@@ -7,6 +7,8 @@ public class ScreenManager : Singleton<ScreenManager>
     private GameObject soundMenu;
     private GameObject lvlMenu;
     private GameObject gameOverMenu;
+    private GameObject gameWonMenu;
+    private GameObject bossCanvas;
 
     public void Start()
     {
@@ -40,6 +42,8 @@ public class ScreenManager : Singleton<ScreenManager>
         soundMenu = GameObject.FindGameObjectWithTag("SoundMenu");
         lvlMenu = GameObject.FindGameObjectWithTag("LvlMenu");
         gameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
+        gameWonMenu = GameObject.FindGameObjectWithTag("GameWonMenu");
+        bossCanvas = GameObject.FindGameObjectWithTag("BossCanvas");
     }
 
     public void QuitToMain()
@@ -88,6 +92,21 @@ public class ScreenManager : Singleton<ScreenManager>
     public void ShowGameOver()
     {
         ShowMenu(gameOverMenu);
+    }
+
+    public void ShowGameWon()
+    {
+        ShowMenu(gameWonMenu);
+    }
+
+    public void ShowBossCanvas()
+    {
+        ShowMenu(bossCanvas);
+    }
+
+    public void HideBossCanvas()
+    {
+        HideMenu(bossCanvas);
     }
 
     private void ShowMenu(GameObject menu)

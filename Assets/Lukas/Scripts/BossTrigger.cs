@@ -21,6 +21,7 @@ public class BossTrigger : MonoBehaviour
         if (IsPlayer(other))
         {
             bossScript.isMoving = true;
+            ScreenManager.Instance.ShowBossCanvas();
         }
     }
 
