@@ -3,20 +3,23 @@ using UnityEngine.UI;
 
 public class BossScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public bool isMoving = false;
     public int bossHitpoints = 700;
     private int maxHitpoints;
-
     private float speed;
-    public GameObject healthTextObject;
-    public GameObject healthBar;
+    public float timer = 0;
+    private float missileInterval = 2f;
+    private float cannonInterval = 1f;
+    private bool missileOneFired, missileTwoFired, cannonOneFired, cannonTwoFired = false;
+    [SerializeField]
+    private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, healthTextObject, healthBar;
     private Text healthText;
     private RectTransform healthBarTransform;
     private float healthBarWidth;
     private float healthBarHeight;
     private GroundMoveScript groundMoveScript;
     private LogicScript logicScript;
+
     void Start()
     {
         healthText = healthTextObject.GetComponent<Text>();
@@ -27,15 +30,18 @@ public class BossScript : MonoBehaviour
         healthBarHeight = healthBarTransform.sizeDelta.y;
         maxHitpoints = bossHitpoints;
         speed = groundMoveScript.moveSpeed;
-
         healthText.text = bossHitpoints.ToString();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isMoving)
         {
+            timer += Time.deltaTime;
+
+            ShootMissiles();
+            ShootCannons();
+
             transform.position = new Vector2(transform.position.x + Time.deltaTime * speed, transform.position.y);
         }
         if (bossHitpoints <= 0)
@@ -43,6 +49,52 @@ public class BossScript : MonoBehaviour
             ScreenManager.Instance.HideBossCanvas();
             gameObject.SetActive(false);
             logicScript.GameWon();
+        }
+    }
+
+    public void ShootCannons()
+    {
+        if (timer % cannonInterval >= cannonInterval / 2 && !cannonOneFired)
+        {
+            Instantiate(cannonShotPrefab, cannonOne.transform);
+            cannonOneFired = true;
+        }
+        else if (timer % cannonInterval < cannonInterval / 2)
+        {
+            cannonOneFired = false;
+        }
+
+        if (timer % cannonInterval >= cannonInterval / 2 && !cannonTwoFired)
+        {
+            Instantiate(cannonShotPrefab, cannonTwo.transform);
+            cannonTwoFired = true;
+        }
+        else if (timer % cannonInterval < cannonInterval / 2)
+        {
+            cannonTwoFired = false;
+        }
+    }
+
+    public void ShootMissiles()
+    {
+        if (timer % missileInterval >= missileInterval / 2 && !missileOneFired)
+        {
+            Instantiate(missilePrefab, bazookaOne.transform);
+            missileOneFired = true;
+        }
+        else if (timer % missileInterval < missileInterval / 2)
+        {
+            missileOneFired = false;
+        }
+
+        if (timer % missileInterval <= missileInterval / 2 && !missileTwoFired)
+        {
+            Instantiate(missilePrefab, bazookaTwo.transform);
+            missileTwoFired = true;
+        }
+        else if (timer % missileInterval > missileInterval / 2)
+        {
+            missileTwoFired = false;
         }
     }
 
