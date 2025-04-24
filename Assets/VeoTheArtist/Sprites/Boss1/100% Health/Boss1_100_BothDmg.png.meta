@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: 9f279f9e9ed15cc47ba9816e2ee805cf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1546564031884516173
+    second: Boss1_100_BothDmg_0
+  - first:
+      213: -5559445206002962291
+    second: Boss1_100_BothDmg_1
+  - first:
+      213: -4045614788235036313
+    second: Boss1_100_BothDmg_2
+  - first:
+      213: -7511006448961482428
+    second: Boss1_100_BothDmg_3
+  - first:
+      213: -233437342239943707
+    second: Boss1_100_BothDmg_4
+  - first:
+      213: -3442505422298223481
+    second: Boss1_100_BothDmg_5
+  - first:
+      213: -3233334516382702944
+    second: Boss1_100_BothDmg_6
+  - first:
+      213: -7648245191894307739
+    second: Boss1_100_BothDmg_7
+  - first:
+      213: 2217089381052310053
+    second: Boss1_100_BothDmg_8
+  - first:
+      213: -1160422411444939967
+    second: Boss1_100_BothDmg_9
+  - first:
+      213: 3276676117093077658
+    second: Boss1_100_BothDmg_10
+  - first:
+      213: -8304802200061349842
+    second: Boss1_100_BothDmg_11
+  - first:
+      213: 6080565945321083556
+    second: Boss1_100_BothDmg_12
+  - first:
+      213: -7714547340359793217
+    second: Boss1_100_BothDmg_13
+  - first:
+      213: -7540418643799146359
+    second: Boss1_100_BothDmg_14
+  - first:
+      213: -3537929286402842119
+    second: Boss1_100_BothDmg_15
+  - first:
+      213: -5852718908763094999
+    second: Boss1_100_BothDmg_16
+  - first:
+      213: 4190144772080453375
+    second: Boss1_100_BothDmg_17
+  - first:
+      213: 6804425527424694214
+    second: Boss1_100_BothDmg_18
+  - first:
+      213: -4313592609216970794
+    second: Boss1_100_BothDmg_19
+  - first:
+      213: 5945644599068390503
+    second: Boss1_100_BothDmg_20
+  - first:
+      213: 1414331274752247380
+    second: Boss1_100_BothDmg_21
+  - first:
+      213: 6684548264309980183
+    second: Boss1_100_BothDmg_22
+  - first:
+      213: -3827083979698535649
+    second: Boss1_100_BothDmg_23
+  - first:
+      213: -4202427065745717102
+    second: Boss1_100_BothDmg_24
+  - first:
+      213: -1308769281656495131
+    second: Boss1_100_BothDmg_25
+  - first:
+      213: 3466310206668456736
+    second: Boss1_100_BothDmg_26
+  - first:
+      213: 6395533465479591896
+    second: Boss1_100_BothDmg_27
+  - first:
+      213: -4974444334931466349
+    second: Boss1_100_BothDmg_28
+  - first:
+      213: 3633783435227558175
+    second: Boss1_100_BothDmg_29
+  - first:
+      213: -8876428724068540893
+    second: Boss1_100_BothDmg_30
+  - first:
+      213: 343359542025898658
+    second: Boss1_100_BothDmg_31
+  - first:
+      213: 6227615309151187521
+    second: Boss1_100_BothDmg_32
+  - first:
+      213: -8095981759286546346
+    second: Boss1_100_BothDmg_33
+  - first:
+      213: 6087000467284085726
+    second: Boss1_100_BothDmg_34
+  - first:
+      213: -3073838150218045207
+    second: Boss1_100_BothDmg_35
+  - first:
+      213: 2514849700475691433
+    second: Boss1_100_BothDmg_36
+  - first:
+      213: 2259177875494506177
+    second: Boss1_100_BothDmg_37
+  - first:
+      213: -4651264874584027310
+    second: Boss1_100_BothDmg_38
+  - first:
+      213: -8745316336753384260
+    second: Boss1_100_BothDmg_39
+  - first:
+      213: 4335676102501910459
+    second: Boss1_100_BothDmg_40
+  - first:
+      213: 4900851180149585614
+    second: Boss1_100_BothDmg_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b5fdefacf767510800000000000000
+      internalID: 1546564031884516173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 960
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80f1f35a02e8d2b0800000000000000
+      internalID: -5559445206002962291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 960
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769fe21e8c61bd7c0800000000000000
+      internalID: -4045614788235036313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 960
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4419bfffd6b83c790800000000000000
+      internalID: -7511006448961482428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 960
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e31a7a59f9a2ccf0800000000000000
+      internalID: -233437342239943707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78cee8ebe83c930d0800000000000000
+      internalID: -3442505422298223481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a2eff66363e023d0800000000000000
+      internalID: -3233334516382702944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56cec062589fbd590800000000000000
+      internalID: -7648245191894307739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 640
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522e9e0ab0fa4ce10800000000000000
+      internalID: 2217089381052310053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 640
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1431c6807f955efe0800000000000000
+      internalID: -1160422411444939967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92d6536197197d20800000000000000
+      internalID: 3276676117093077658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20f577566a6fbc80800000000000000
+      internalID: -8304802200061349842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 320
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a25334d282826450800000000000000
+      internalID: 6080565945321083556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 320
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb58bee311c60f490800000000000000
+      internalID: -7714547340359793217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 320
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9808e9eb13d0b5790800000000000000
+      internalID: -7540418643799146359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f1e18b0f00c6eec0800000000000000
+      internalID: -3537929286402842119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920c6f85927f6cea0800000000000000
+      internalID: -5852718908763094999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6c0594872662a30800000000000000
+      internalID: 4190144772080453375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_18
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7bfbe37fc2e6e50800000000000000
+      internalID: 6804425527424694214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss1_100_BothDmg_19
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df3fd5506a0324c0800000000000000
+      internalID: -4313592609216970794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e15e1f7453f00cb4084c1081b5019bcf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Boss1_100_BothDmg_0: 1546564031884516173
+      Boss1_100_BothDmg_1: -5559445206002962291
+      Boss1_100_BothDmg_10: 3276676117093077658
+      Boss1_100_BothDmg_11: -8304802200061349842
+      Boss1_100_BothDmg_12: 6080565945321083556
+      Boss1_100_BothDmg_13: -7714547340359793217
+      Boss1_100_BothDmg_14: -7540418643799146359
+      Boss1_100_BothDmg_15: -3537929286402842119
+      Boss1_100_BothDmg_16: -5852718908763094999
+      Boss1_100_BothDmg_17: 4190144772080453375
+      Boss1_100_BothDmg_18: 6804425527424694214
+      Boss1_100_BothDmg_19: -4313592609216970794
+      Boss1_100_BothDmg_2: -4045614788235036313
+      Boss1_100_BothDmg_3: -7511006448961482428
+      Boss1_100_BothDmg_4: -233437342239943707
+      Boss1_100_BothDmg_5: -3442505422298223481
+      Boss1_100_BothDmg_6: -3233334516382702944
+      Boss1_100_BothDmg_7: -7648245191894307739
+      Boss1_100_BothDmg_8: 2217089381052310053
+      Boss1_100_BothDmg_9: -1160422411444939967
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
