@@ -946,6 +946,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &339160702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 339160703}
+  - component: {fileID: 339160704}
+  m_Layer: 0
+  m_Name: Bazooka 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &339160703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339160702}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.25, y: 0.57142854, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.14285713, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 702406629}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &339160704
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339160702}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -79497861
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -4034018572429779500, guid: 7124efa3181a15341ac172bde093b86d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &339538679
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,10 +2288,12 @@ Transform:
   m_GameObject: {fileID: 702406628}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalPosition: {x: 8, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1538742490}
+  - {fileID: 339160703}
   - {fileID: 1182316562}
   - {fileID: 1176283348}
   m_Father: {fileID: 2029857763}
@@ -2278,6 +2367,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoving: 0
   bossHitpoints: 500
+  timer: 0
+  missilePrefab: {fileID: 5305315244903078297, guid: 8b7f1ef686946a0409816ef7baf346fa, type: 3}
+  bazookaOne: {fileID: 1538742489}
+  bazookaTwo: {fileID: 339160702}
+  cannonShotPrefab: {fileID: 7639927384369690437, guid: bcca250d971bda34eb3e99908e5930d2, type: 3}
+  cannonOne: {fileID: 1182316561}
+  cannonTwo: {fileID: 1176283347}
   healthTextObject: {fileID: 451672239}
   healthBar: {fileID: 339538679}
 --- !u!61 &702406632
@@ -3496,7 +3592,7 @@ GameObject:
   - component: {fileID: 1176283350}
   - component: {fileID: 1176283349}
   m_Layer: 3
-  m_Name: Weapon 1
+  m_Name: Cannon 2
   m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3529,7 +3625,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1c2014da2dc6343885805fe4edf290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponHitpoints: 250
+  weaponHitpoints: 200
+  audioClip: {fileID: 8300000, guid: 173ed7b110e9c2042af46823b3b19653, type: 3}
+  volume: 0.2
+  boss: {fileID: 702406628}
 --- !u!212 &1176283350
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3644,7 +3743,7 @@ GameObject:
   - component: {fileID: 1182316564}
   - component: {fileID: 1182316563}
   m_Layer: 3
-  m_Name: Weapon 2
+  m_Name: Cannon 1
   m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3677,7 +3776,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1c2014da2dc6343885805fe4edf290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponHitpoints: 250
+  weaponHitpoints: 200
+  audioClip: {fileID: 8300000, guid: 173ed7b110e9c2042af46823b3b19653, type: 3}
+  volume: 0.2
+  boss: {fileID: 702406628}
 --- !u!212 &1182316564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4827,6 +4929,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1538742489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1538742490}
+  - component: {fileID: 1538742491}
+  m_Layer: 0
+  m_Name: Bazooka 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1538742490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538742489}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.25, y: -0.57142854, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.14285713, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 702406629}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1538742491
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538742489}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -79497861
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -4034018572429779500, guid: 7124efa3181a15341ac172bde093b86d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1569229761
 GameObject:
   m_ObjectHideFlags: 0
