@@ -9,6 +9,8 @@ public class BossWeapon : MonoBehaviour
     private float volume = 0.2f;
     [SerializeField]
     private GameObject boss;
+    [SerializeField]
+    private int weaponNumber = 1;
     private BossScript bossScript;
     void Start()
     {
@@ -22,6 +24,14 @@ public class BossWeapon : MonoBehaviour
         {
             SoundFXManager.Instance.playSoundFXClip(audioClip, transform, volume);
             bossScript.TakeDamage(100);
+            if (weaponNumber == 1)
+            {
+                bossScript.animator.SetBool("UpCannonDestroyed", true);
+            }
+            else if (weaponNumber == 2)
+            {
+                bossScript.animator.SetBool("DownCannonDestroyed", true);
+            }
             gameObject.SetActive(false);
         }
     }

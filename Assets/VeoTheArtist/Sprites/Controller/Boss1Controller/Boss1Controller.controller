@@ -110,9 +110,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsUnder50
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: BossHealth
+    m_EventTreshold: 51
   - m_ConditionMode: 1
     m_ConditionEvent: UpCannonDestroyed
     m_EventTreshold: 0
@@ -166,9 +166,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsUnder50
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: BossHealth
+    m_EventTreshold: 51
   - m_ConditionMode: 1
     m_ConditionEvent: DownCannonDestroyed
     m_EventTreshold: 0
@@ -194,9 +194,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsUnder50
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: BossHealth
+    m_EventTreshold: 51
   - m_ConditionMode: 1
     m_ConditionEvent: DownCannonDestroyed
     m_EventTreshold: 0
@@ -277,9 +277,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsUnder50
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: BossHealth
+    m_EventTreshold: 51
   - m_ConditionMode: 1
     m_ConditionEvent: UpCannonDestroyed
     m_EventTreshold: 0
@@ -412,9 +412,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsUnder50
-    m_EventTreshold: 50
+  - m_ConditionMode: 4
+    m_ConditionEvent: BossHealth
+    m_EventTreshold: 51
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1679208506474946022}
   m_Solo: 0
@@ -494,9 +494,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsUnder50
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: BossHealth
+    m_EventTreshold: 51
   - m_ConditionMode: 1
     m_ConditionEvent: UpCannonDestroyed
     m_EventTreshold: 0
@@ -554,9 +554,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsUnder50
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: BossHealth
+    m_EventTreshold: 51
   - m_ConditionMode: 1
     m_ConditionEvent: UpCannonDestroyed
     m_EventTreshold: 0
@@ -644,9 +644,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsUnder50
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: BossHealth
+    m_EventTreshold: 51
   - m_ConditionMode: 1
     m_ConditionEvent: UpCannonDestroyed
     m_EventTreshold: 0

@@ -8,11 +8,13 @@ public class BossScript : MonoBehaviour
     private int maxHitpoints;
     private float speed;
     public float timer = 0;
-    private float missileInterval = 2f;
-    private float cannonInterval = 1f;
+    public float missileInterval = 2f;
+    public float cannonInterval = 1f;
     private bool missileOneFired, missileTwoFired, cannonOneFired, cannonTwoFired = false;
     [SerializeField]
     private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, healthTextObject, healthBar;
+    [HideInInspector]
+    public Animator animator;
     private Text healthText;
     private RectTransform healthBarTransform;
     private float healthBarWidth;
@@ -26,6 +28,7 @@ public class BossScript : MonoBehaviour
         healthBarTransform = healthBar.GetComponent<RectTransform>();
         groundMoveScript = GameObject.FindGameObjectWithTag("Moving").GetComponent<GroundMoveScript>();
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        animator = gameObject.GetComponent<Animator>();
         healthBarWidth = healthBarTransform.sizeDelta.x;
         healthBarHeight = healthBarTransform.sizeDelta.y;
         maxHitpoints = bossHitpoints;
@@ -54,24 +57,30 @@ public class BossScript : MonoBehaviour
 
     public void ShootCannons()
     {
-        if (timer % cannonInterval >= cannonInterval / 2 && !cannonOneFired)
+        if (cannonOne)
         {
-            Instantiate(cannonShotPrefab, cannonOne.transform);
-            cannonOneFired = true;
-        }
-        else if (timer % cannonInterval < cannonInterval / 2)
-        {
-            cannonOneFired = false;
+            if (timer % cannonInterval >= cannonInterval / 2 && !cannonOneFired)
+            {
+                Instantiate(cannonShotPrefab, cannonOne.transform);
+                cannonOneFired = true;
+            }
+            else if (timer % cannonInterval < cannonInterval / 2)
+            {
+                cannonOneFired = false;
+            }
         }
 
-        if (timer % cannonInterval >= cannonInterval / 2 && !cannonTwoFired)
+        if (cannonTwo)
         {
-            Instantiate(cannonShotPrefab, cannonTwo.transform);
-            cannonTwoFired = true;
-        }
-        else if (timer % cannonInterval < cannonInterval / 2)
-        {
-            cannonTwoFired = false;
+            if (timer % cannonInterval >= cannonInterval / 2 && !cannonTwoFired)
+            {
+                Instantiate(cannonShotPrefab, cannonTwo.transform);
+                cannonTwoFired = true;
+            }
+            else if (timer % cannonInterval < cannonInterval / 2)
+            {
+                cannonTwoFired = false;
+            }
         }
     }
 
@@ -103,5 +112,6 @@ public class BossScript : MonoBehaviour
         bossHitpoints -= damage;
         healthBarTransform.sizeDelta = new Vector2(healthBarWidth * bossHitpoints / maxHitpoints, healthBarHeight);
         healthText.text = bossHitpoints.ToString();
+        animator.SetInteger("BossHealth", 100 * bossHitpoints / maxHitpoints);
     }
 }

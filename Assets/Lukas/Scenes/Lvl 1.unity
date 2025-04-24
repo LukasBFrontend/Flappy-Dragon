@@ -972,7 +972,7 @@ Transform:
   m_GameObject: {fileID: 339160702}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.175, y: 0.5267, z: 0}
+  m_LocalPosition: {x: -0.17499995, y: 0.4375, z: 0}
   m_LocalScale: {x: 0.075, y: 0.075, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2293,10 +2293,10 @@ Transform:
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1538742490}
-  - {fileID: 339160703}
   - {fileID: 1182316562}
   - {fileID: 1176283348}
+  - {fileID: 339160703}
+  - {fileID: 1538742490}
   m_Father: {fileID: 2029857763}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &702406630
@@ -2369,6 +2369,8 @@ MonoBehaviour:
   isMoving: 0
   bossHitpoints: 500
   timer: 0
+  missileInterval: 4
+  cannonInterval: 4
   missilePrefab: {fileID: 5305315244903078297, guid: 8b7f1ef686946a0409816ef7baf346fa, type: 3}
   bazookaOne: {fileID: 1538742489}
   bazookaTwo: {fileID: 339160702}
@@ -2377,6 +2379,7 @@ MonoBehaviour:
   cannonTwo: {fileID: 1176283347}
   healthTextObject: {fileID: 451672239}
   healthBar: {fileID: 339538679}
+  animator: {fileID: 0}
 --- !u!61 &702406632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2421,7 +2424,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.65, y: 1}
+  m_Size: {x: 0.6, y: 1}
   m_EdgeRadius: 0
 --- !u!95 &702406633
 Animator:
@@ -3615,7 +3618,7 @@ GameObject:
   - component: {fileID: 1176283350}
   - component: {fileID: 1176283349}
   m_Layer: 3
-  m_Name: Cannon 2
+  m_Name: Cannon 1
   m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3630,7 +3633,7 @@ Transform:
   m_GameObject: {fileID: 1176283347}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.382, y: 0.28, z: 0}
+  m_LocalPosition: {x: -0.25, y: 0.28, z: 0}
   m_LocalScale: {x: 0.1428571, y: 0.14285713, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3652,6 +3655,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 173ed7b110e9c2042af46823b3b19653, type: 3}
   volume: 0.2
   boss: {fileID: 702406628}
+  weaponNumber: 1
 --- !u!212 &1176283350
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3766,7 +3770,7 @@ GameObject:
   - component: {fileID: 1182316564}
   - component: {fileID: 1182316563}
   m_Layer: 3
-  m_Name: Cannon 1
+  m_Name: Cannon 2
   m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3781,7 +3785,7 @@ Transform:
   m_GameObject: {fileID: 1182316561}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.382, y: -0.28, z: 0}
+  m_LocalPosition: {x: -0.25, y: -0.28, z: 0}
   m_LocalScale: {x: 0.1428571, y: 0.14285713, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3803,6 +3807,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 173ed7b110e9c2042af46823b3b19653, type: 3}
   volume: 0.2
   boss: {fileID: 702406628}
+  weaponNumber: 2
 --- !u!212 &1182316564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4978,7 +4983,7 @@ Transform:
   m_GameObject: {fileID: 1538742489}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.175, y: -0.5259, z: 0}
+  m_LocalPosition: {x: -0.17499995, y: -0.4375, z: 0}
   m_LocalScale: {x: 0.075, y: 0.075, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

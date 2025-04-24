@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMoving: 1
-  targetsPlayer: 1
-  speed: 10
+  targetsPlayer: 0
+  speed: 5
 --- !u!61 &6935458931995886943
 BoxCollider2D:
   m_ObjectHideFlags: 0
