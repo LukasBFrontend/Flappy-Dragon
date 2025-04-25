@@ -3,7 +3,7 @@ using UnityEngine;
 public class SoundMenu : MonoBehaviour
 {
     [SerializeField] private AudioClip backClickClip;
-    [SerializeField] private float audioVolume = 1f;
+    [SerializeField][Range(0, 100)] private int audioVolume = 50;
     public void OnMasterVolumeChanged(float level)
     {
         SoundMixerManager.Instance.SetMasterVolume(level);

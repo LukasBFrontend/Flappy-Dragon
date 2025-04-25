@@ -18,6 +18,7 @@ public class Fire : MonoBehaviour
         Enemy enemy = hitInfo.GetComponent<Enemy>();
         BossWeapon bossWeapon = hitInfo.GetComponent<BossWeapon>();
         BossScript bossScript = hitInfo.GetComponent<BossScript>();
+
         if (IsHostile(hitInfo))
         {
             if (enemy != null)
@@ -32,6 +33,7 @@ public class Fire : MonoBehaviour
             {
                 bossScript.TakeDamage(damage);
             }
+
             Destroy(gameObject);
         }
 

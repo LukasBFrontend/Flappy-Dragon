@@ -94,7 +94,7 @@ MonoBehaviour:
   missile: {fileID: 4452154090513651382}
   missileWarning: {fileID: 1849399177294858976, guid: a16d803b4ae64d844909d703e4574ea0, type: 3}
   missileClip: {fileID: 8300000, guid: 559865f4a15456a419b252efc3250bea, type: 3}
-  audioVolume: 0.2
+  audioVolume: 30
   timer: 1
 --- !u!1 &4452154090513651382
 GameObject:
@@ -197,8 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e8579f8954854499ba9acfd2e90249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoving: 0
   speed: 12
+  isMoving: 0
+  targetsPlayer: 0
+  targetIsSet: 0
 --- !u!61 &2681629318874492586
 BoxCollider2D:
   m_ObjectHideFlags: 0

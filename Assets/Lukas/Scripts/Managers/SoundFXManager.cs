@@ -10,7 +10,7 @@ public class SoundFXManager : Singleton<SoundFXManager>
         AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
 
         audioSource.clip = audioClip;
-        audioSource.volume = volume;
+        audioSource.volume = Mathf.Log10(volume / 100 + 1);
         audioSource.Play();
 
         float clipLength = audioSource.clip.length;

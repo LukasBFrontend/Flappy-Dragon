@@ -3,19 +3,38 @@ using UnityEngine;
 
 public class MissileTrigger : MonoBehaviour
 {
-    public GameObject missile;
-    public GameObject missileWarning;
-    private GameObject activeWarningInstance;
-
+    [SerializeField] private GameObject missile, missileWarning;
     [SerializeField] private AudioClip missileClip;
+    [SerializeField] private int audioVolume = 50;
+    [SerializeField] private float timer = 2f;
 
-    [SerializeField] private float audioVolume = 1f;
-    Missile missileScript;
-    int xPosition = 10;
+    private GameObject activeWarningInstance;
+    private Missile missileScript;
+    private int xPosition = 10;
+    private bool timerEnabled = false;
 
-    public float timer = 2f;
+    private void Start()
+    {
+        missileScript = missile.GetComponent<Missile>();
+    }
 
-    bool timerEnabled = false;
+    private void Update()
+    {
+        if (timerEnabled)
+        {
+            timer -= Time.deltaTime;
+
+            if (timer <= 0)
+            {
+                timerEnabled = false;
+                activeWarningInstance.SetActive(false);
+                missileScript.isMoving = true;
+                SoundFXManager.Instance.playSoundFXClip(missileClip, transform, audioVolume);
+            }
+        }
+
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (IsPlayer(other))
@@ -39,26 +58,5 @@ public class MissileTrigger : MonoBehaviour
         }
 
         return false;
-    }
-
-    private void Start()
-    {
-        missileScript = missile.GetComponent<Missile>();
-    }
-    private void Update()
-    {
-        if (timerEnabled)
-        {
-            timer -= Time.deltaTime;
-
-            if (timer <= 0)
-            {
-                timerEnabled = false;
-                activeWarningInstance.SetActive(false);
-                missileScript.isMoving = true;
-                SoundFXManager.Instance.playSoundFXClip(missileClip, transform, audioVolume);
-            }
-        }
-
     }
 }

@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject firePrefab;
     [SerializeField] private AudioClip[] fireClips;
-    [SerializeField] private float audioVolume = 1f;
+    [SerializeField][Range(0, 100)] private float audioVolume = 1f;
     [SerializeField] private GameObject laser;
     [SerializeField] private LayerMask layersToHit;
     [SerializeField] private Texture[] textures;
@@ -17,14 +17,11 @@ public class Weapon : MonoBehaviour
 
 
     private int animationStep = 0;
-    private float fpsCounter;
-    private float animationTimer;
-    private float chargeTimer;
-    private float groundMoveSpeed;
-    private LineRenderer laserRenderer;
+    private float fpsCounter, animationTimer, chargeTimer, groundMoveSpeed;
     private bool animationIsActive = false;
-    private PlayerScript playerScript;
     private bool playerIsAlive;
+    private PlayerScript playerScript;
+    private LineRenderer laserRenderer;
 
     void Start()
     {
@@ -91,10 +88,6 @@ public class Weapon : MonoBehaviour
             animationIsActive = false;
             laserRenderer.enabled = false;
         }
-
-        /*         if (!LogicScript.Instance.isGameOver)
-                    laserRenderer.SetPosition(1, new Vector3(laserRenderer.GetPosition(1).x - Time.deltaTime * groundMoveSpeed, 0f, 0f)); */
-
     }
 
     void Shoot()

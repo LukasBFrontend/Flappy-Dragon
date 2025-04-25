@@ -5,7 +5,7 @@ public class LvlMenu : MonoBehaviour
     [SerializeField] private AudioClip resumeClickClip;
     [SerializeField] private AudioClip optionsClickClip;
     [SerializeField] private AudioClip quitClickClip;
-    [SerializeField] private float audioVolume = 1f;
+    [SerializeField][Range(0, 100)] private int audioVolume = 50;
     public void OnResumeClicked()
     {
         SoundFXManager.Instance.playSoundFXClip(resumeClickClip, transform, audioVolume);

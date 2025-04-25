@@ -2,16 +2,13 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    public enum travelAxis { X, Y, none }
-    public enum pathCurve { PingPong, Sinus, none };
-    public travelAxis selectedAxis;
-    public pathCurve selectedCurve;
-    public float distance = 2;
-    public float oscillationSpeed = 2;
-    public float travelSpeed = 2;
+    [SerializeField] private enum travelAxis { X, Y, none }
+    [SerializeField] private enum pathCurve { PingPong, Sinus, none };
+    [SerializeField] private travelAxis selectedAxis;
+    [SerializeField] private pathCurve selectedCurve;
+    public float distance, oscillationSpeed, travelSpeed = 2;
     private float min = 0f;
     private float max = 0f;
-
     private float time;
 
     void Start()
