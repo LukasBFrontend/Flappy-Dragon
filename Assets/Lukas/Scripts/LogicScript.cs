@@ -4,20 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class LogicScript : Singleton<LogicScript>
 {
-    [HideInInspector]
-    public int playerScore = 0;
-    private GameObject scoreObject;
+    [HideInInspector] public int playerScore = 0;
+    [HideInInspector] public bool isGameOver, isPaused, isGameWon = false;
+    private GameObject scoreObject, player;
     private Text scoreText;
-
-    [HideInInspector]
-    public bool isGameOver = false;
-
-    [HideInInspector]
-    public bool isPaused = false;
-    [HideInInspector]
-    public bool isGameWon = false;
-
-    private GameObject player;
 
     void Start()
     {

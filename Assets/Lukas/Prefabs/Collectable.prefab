@@ -147,7 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a022568b415a85c418e8c2963c209b6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logic: {fileID: 0}
   points: 20
   collectClip: {fileID: 8300000, guid: 5861dff1148da3548aacaa72f95768b7, type: 3}
-  audioVolume: 0.1
+  audioVolume: 30

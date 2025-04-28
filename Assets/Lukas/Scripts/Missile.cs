@@ -2,19 +2,17 @@ using UnityEngine;
 
 public class Missile : MonoBehaviour
 {
-    public bool isMoving = false;
-    public bool targetsPlayer = false;
-    public int speed = 3;
+    [SerializeField] private int speed = 3;
+    public bool isMoving, targetsPlayer, targetIsSet = false;
     private GameObject player;
-    private bool targetIsSet = false;
     private Vector2 targetPosition;
     private float targetAngle = 0f;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isMoving)
@@ -31,6 +29,7 @@ public class Missile : MonoBehaviour
                     targetAngle = deltaY / deltaX;
                 }
             }
+
             transform.position = new Vector2(transform.position.x - Time.deltaTime * speed, transform.position.y - Time.deltaTime * targetAngle * speed);
         }
     }

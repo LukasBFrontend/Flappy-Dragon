@@ -3,12 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ScreenManager : Singleton<ScreenManager>
 {
-    private GameObject startMenu;
-    private GameObject soundMenu;
-    private GameObject lvlMenu;
-    private GameObject gameOverMenu;
-    private GameObject gameWonMenu;
-    private GameObject bossCanvas;
+    private GameObject startMenu, soundMenu, lvlMenu, gameOverMenu, gameWonMenu, bossCanvas;
 
     public void Start()
     {

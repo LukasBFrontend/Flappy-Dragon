@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 3132916476305315673}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.1929293, y: 0.8967186, z: -0.026651662}
-  m_LocalScale: {x: 1, y: 9.8, z: 1}
+  m_LocalPosition: {x: -5.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6499358472826346135}
@@ -94,7 +94,7 @@ MonoBehaviour:
   missile: {fileID: 4452154090513651382}
   missileWarning: {fileID: 1849399177294858976, guid: a16d803b4ae64d844909d703e4574ea0, type: 3}
   missileClip: {fileID: 8300000, guid: 559865f4a15456a419b252efc3250bea, type: 3}
-  audioVolume: 0.2
+  audioVolume: 30
   timer: 1
 --- !u!1 &4452154090513651382
 GameObject:
@@ -197,8 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e8579f8954854499ba9acfd2e90249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoving: 0
   speed: 12
+  isMoving: 0
+  targetsPlayer: 0
+  targetIsSet: 0
 --- !u!61 &2681629318874492586
 BoxCollider2D:
   m_ObjectHideFlags: 0

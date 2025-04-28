@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int health = 100;
-    public int points = 10;
-    public LogicScript logic;
-    public SpriteRenderer sprite;
+    [SerializeField] private int health = 100;
+    [SerializeField] private int points = 10;
     [SerializeField] private AudioClip deathClip;
-    [SerializeField] private float audioVolume = 1f;
-    public Color damageColor;
+    [SerializeField][Range(0, 100)] private int audioVolume = 50;
+    [SerializeField] private Color damageColor;
+    private LogicScript logic;
+    private SpriteRenderer sprite;
     private float currentTimer = 0f;
     private float targetTime = 2f;
     private bool timerEnabled = false;

@@ -4,7 +4,7 @@ public class StartMenu : MonoBehaviour
 {
     [SerializeField] private AudioClip startClickClip;
     [SerializeField] private AudioClip optionsClickClip;
-    [SerializeField] private float audioVolume = 1f;
+    [SerializeField][Range(0, 100)] private int audioVolume = 50;
     public void OnStartClicked()
     {
         SoundFXManager.Instance.playSoundFXClip(startClickClip, transform, audioVolume);

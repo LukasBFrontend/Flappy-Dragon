@@ -3,32 +3,31 @@ using UnityEngine.UI;
 
 public class BossScript : MonoBehaviour
 {
-    public bool isMoving = false;
-    public int bossHitpoints = 700;
+    [HideInInspector] public bool isMoving = false;
+    [HideInInspector] public float timer = 0;
+    [HideInInspector] public Animator animator;
+    [SerializeField] private int bossHitpoints = 700;
+    [SerializeField]
+    private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, healthTextObject, healthBar;
+    private GroundMoveScript groundMoveScript;
+    private LogicScript logicScript;
+    private Text healthText;
+    private RectTransform healthBarTransform;
+    private float healthBarWidth, healthBarHeight;
     private int maxHitpoints;
     private float speed;
-    public float timer = 0;
     public float missileInterval = 2f;
     public float cannonInterval = 1f;
     private bool missileOneFired, missileTwoFired, cannonOneFired, cannonTwoFired = false;
-    [SerializeField]
-    private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, healthTextObject, healthBar;
-    [HideInInspector]
-    public Animator animator;
-    private Text healthText;
-    private RectTransform healthBarTransform;
-    private float healthBarWidth;
-    private float healthBarHeight;
-    private GroundMoveScript groundMoveScript;
-    private LogicScript logicScript;
 
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         healthText = healthTextObject.GetComponent<Text>();
         healthBarTransform = healthBar.GetComponent<RectTransform>();
         groundMoveScript = GameObject.FindGameObjectWithTag("Moving").GetComponent<GroundMoveScript>();
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-        animator = gameObject.GetComponent<Animator>();
+
         healthBarWidth = healthBarTransform.sizeDelta.x;
         healthBarHeight = healthBarTransform.sizeDelta.y;
         maxHitpoints = bossHitpoints;

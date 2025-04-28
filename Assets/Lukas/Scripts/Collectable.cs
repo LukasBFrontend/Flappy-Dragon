@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    public LogicScript logic;
-    public int points = 20;
+    [SerializeField] private int points = 20;
     [SerializeField] private AudioClip collectClip;
-    [SerializeField] private float audioVolume = 1f;
+    [SerializeField][Range(0, 100)] private int audioVolume = 50;
+    private LogicScript logic;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
