@@ -59,6 +59,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background TIles
+    uniqueID: 1027270779
+    locked: 0
+  - name: Background Lights
+    uniqueID: 533962511
+    locked: 0
   - name: Background
     uniqueID: 1554357795
     locked: 0
