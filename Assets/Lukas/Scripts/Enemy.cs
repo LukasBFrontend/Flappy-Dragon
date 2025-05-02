@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private AudioClip deathClip;
     [SerializeField][Range(0, 100)] private int audioVolume = 50;
     [SerializeField] private Color damageColor;
+
+    [HideInInspector] public bool isActive = false;
     private LogicScript logic;
     private SpriteRenderer sprite;
     private float currentTimer = 0f;
@@ -15,8 +17,11 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        timerEnabled = true;
+        if (isActive)
+        {
+            health -= damage;
+            timerEnabled = true;
+        }
 
         if (health <= 0)
         {
