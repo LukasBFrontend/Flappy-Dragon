@@ -16,6 +16,7 @@ public class BossTrigger : MonoBehaviour
         {
             bossScript.isMoving = true;
             ScreenManager.Instance.ShowBossCanvas();
+            LogicScript.Instance.isBossFight = true;
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class LogicScript : Singleton<LogicScript>
 {
     [HideInInspector] public int playerScore = 0;
-    [HideInInspector] public bool isGameOver, isPaused, isGameWon = false;
+    [HideInInspector] public bool isGameOver, isPaused, isGameWon, isBossFight = false;
     private GameObject scoreObject, player;
     private Text scoreText;
 
@@ -28,7 +28,7 @@ public class LogicScript : Singleton<LogicScript>
 
     public void TickingScore()
     {
-        if (!isGameWon && !isGameOver && !isPaused && SceneManager.GetActiveScene().name == "Lvl 1")
+        if (!isGameWon && !isGameOver && !isPaused && !isBossFight && SceneManager.GetActiveScene().name == "Lvl 1")
         {
             AddScore(1);
         }
