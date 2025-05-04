@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 1743150437623915584}
   - component: {fileID: 1959631514002531005}
   - component: {fileID: 2681629318874492586}
+  - component: {fileID: 8156924008866348956}
   m_Layer: 0
   m_Name: MissilePayload
   m_TagString: Missile
@@ -174,7 +175,7 @@ SpriteRenderer:
   m_SortingLayerID: -79497861
   m_SortingLayer: 4
   m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: 79bdc8bdc7697b3458cdf1b1a9774c68, type: 3}
+  m_Sprite: {fileID: 3415909720577417287, guid: 1d188715147960f4cae1eee34de6dd99, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -247,6 +248,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &8156924008866348956
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452154090513651382}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 51a25f3315b7a1d4d9eaf54c4f98df56, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6362572531398585812
 GameObject:
   m_ObjectHideFlags: 0

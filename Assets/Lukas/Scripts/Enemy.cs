@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public bool isActive = false;
     private LogicScript logic;
     private SpriteRenderer sprite;
+    private Animator animator;
+    private BoxCollider2D boxCollider;
     private float currentTimer = 0f;
     private float targetTime = 2f;
     private bool timerEnabled = false;
@@ -33,7 +35,8 @@ public class Enemy : MonoBehaviour
     {
         SoundFXManager.Instance.playSoundFXClip(deathClip, transform, audioVolume);
 
-        Destroy(gameObject);
+        animator.SetBool("IsDead", true);
+        boxCollider.enabled = false;
 
         logic.AddScore(points);
     }
@@ -64,6 +67,8 @@ public class Enemy : MonoBehaviour
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
+        animator = gameObject.GetComponent<Animator>();
+        boxCollider = gameObject.GetComponent<BoxCollider2D>();
     }
 
     void Update()
