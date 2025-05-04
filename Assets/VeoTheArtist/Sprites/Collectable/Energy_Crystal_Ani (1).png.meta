@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: cb00398bc3ad29844aba9639599ca7ae
+guid: 43e453c81eef747429a054816c652f9b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7733305029108402947
-    second: Homin_Missile_ani (3)_0
+      213: -8833014647542732912
+    second: Energy_Crystal_Ani (1)_0
   - first:
-      213: -574792462663176425
-    second: Homin_Missile_ani (3)_1
+      213: 7955253534151460912
+    second: Energy_Crystal_Ani (1)_1
   - first:
-      213: -6426126123039181818
-    second: Homin_Missile_ani (3)_2
+      213: -1127834221709367112
+    second: Energy_Crystal_Ani (1)_2
   - first:
-      213: -3535953787791418763
-    second: Homin_Missile_ani (3)_3
+      213: -1015409585542187584
+    second: Energy_Crystal_Ani (1)_3
+  - first:
+      213: 7526933671894143316
+    second: Energy_Crystal_Ani (1)_4
+  - first:
+      213: 7521978837545937308
+    second: Energy_Crystal_Ani (1)_5
+  - first:
+      213: -6700843281795597011
+    second: Energy_Crystal_Ani (1)_6
+  - first:
+      213: -7824503703113604116
+    second: Energy_Crystal_Ani (1)_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,12 +134,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_0
+      name: Energy_Crystal_Ani (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 31
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df470408c08cda490800000000000000
-      internalID: -7733305029108402947
+      spriteID: 097a4653af3da6580800000000000000
+      internalID: -8833014647542732912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_1
+      name: Energy_Crystal_Ani (1)_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 2
-        width: 31
-        height: 28
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,19 +171,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71fa363fc4de508f0800000000000000
-      internalID: -574792462663176425
+      spriteID: 038c449c0fcb66e60800000000000000
+      internalID: 7955253534151460912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_2
+      name: Energy_Crystal_Ani (1)_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 31
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -181,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60434629650d1d6a0800000000000000
-      internalID: -6426126123039181818
+      spriteID: 8b8eb7930c02950f0800000000000000
+      internalID: -1127834221709367112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_3
+      name: Energy_Crystal_Ani (1)_3
       rect:
         serializedVersion: 2
-        x: 97
-        y: 2
-        width: 31
-        height: 28
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +215,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57ade78a3c4cdeec0800000000000000
-      internalID: -3535953787791418763
+      spriteID: 0c53b30ac5a88e1f0800000000000000
+      internalID: -1015409585542187584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Energy_Crystal_Ani (1)_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4515d219b4a057860800000000000000
+      internalID: 7526933671894143316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Energy_Crystal_Ani (1)_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c996eeb46ef636860800000000000000
+      internalID: 7521978837545937308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Energy_Crystal_Ani (1)_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2db20da982d103a0800000000000000
+      internalID: -6700843281795597011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Energy_Crystal_Ani (1)_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce36f288657c96390800000000000000
+      internalID: -7824503703113604116
       vertices: []
       indices: 
       edges: []
@@ -213,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e3737af71b18f1248b246de71f53c679
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Homin_Missile_ani (3)_0: -7733305029108402947
-      Homin_Missile_ani (3)_1: -574792462663176425
-      Homin_Missile_ani (3)_2: -6426126123039181818
-      Homin_Missile_ani (3)_3: -3535953787791418763
+      Energy_Crystal_Ani (1)_0: -8833014647542732912
+      Energy_Crystal_Ani (1)_1: 7955253534151460912
+      Energy_Crystal_Ani (1)_2: -1127834221709367112
+      Energy_Crystal_Ani (1)_3: -1015409585542187584
+      Energy_Crystal_Ani (1)_4: 7526933671894143316
+      Energy_Crystal_Ani (1)_5: 7521978837545937308
+      Energy_Crystal_Ani (1)_6: -6700843281795597011
+      Energy_Crystal_Ani (1)_7: -7824503703113604116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
