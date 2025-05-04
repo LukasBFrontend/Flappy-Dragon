@@ -1,16 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour
 {
-    private GameObject player;
+    private GameObject player, lvlMenu;
     private PlayerScript playerScript;
+    private LvlMenu lvlMenuScript;
 
     private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "Lvl 1")
         {
             player = GameObject.FindGameObjectWithTag("Player");
+            lvlMenu = GameObject.FindGameObjectWithTag("LvlMenu");
+
 
             if (player != null)
             {
@@ -20,16 +24,39 @@ public class InputManager : MonoBehaviour
             {
                 playerScript = null;
             }
+
+            if (lvlMenu != null)
+            {
+                lvlMenuScript = lvlMenu.GetComponent<LvlMenu>();
+            }
+            else
+            {
+                lvlMenuScript = null;
+            }
         }
         else
         {
             player = null;
             playerScript = null;
+            lvlMenu = null;
+            lvlMenuScript = null;
         }
     }
 
     void Update()
     {
+        float verticalInput = Input.GetAxisRaw("Vertical");
+
+        if (verticalInput != 0 && EventSystem.current.currentSelectedGameObject == null)
+        {
+            lvlMenuScript.SelectFirstButton();
+        }
+
+        if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+
         if (playerScript == null) return;
 
         if (Input.GetKeyDown(KeyCode.O) && playerScript.playerIsAlive)
@@ -41,10 +68,10 @@ public class InputManager : MonoBehaviour
             ScreenManager.Instance.OpenLvlMenu();
             LogicScript.Instance.PauseGame();
         }
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            LogicScript.Instance.PauseGame();
-        }
+        /*         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+                {
+                    EventSystem.current.SetSelectedGameObject(null);
+                } */
     }
 
     void OnEnable()
