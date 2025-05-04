@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class ScreenManager : Singleton<ScreenManager>
 {
@@ -50,11 +51,17 @@ public class ScreenManager : Singleton<ScreenManager>
 
     public void OpenLvlMenu()
     {
-        if (SceneManager.GetActiveScene().name == "Lvl 1") ShowMenu(lvlMenu);
+        if (SceneManager.GetActiveScene().name == "Lvl 1")
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+
+            ShowMenu(lvlMenu);
+        }
     }
 
     public void CloseLvlMenu()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         HideMenu(lvlMenu);
     }
 

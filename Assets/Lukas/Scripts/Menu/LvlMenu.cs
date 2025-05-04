@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LvlMenu : MonoBehaviour
+public class LvlMenu : MenuCanvasBase
 {
     [SerializeField] private AudioClip resumeClickClip;
     [SerializeField] private AudioClip optionsClickClip;
