@@ -70,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 96
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -149,10 +149,10 @@ TextureImporter:
       name: Enemy4_wall_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 99
-        width: 58
-        height: 90
+        x: 0
+        y: 96
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: Enemy4_wall_1
       rect:
         serializedVersion: 2
-        x: 67
-        y: 98
-        width: 58
-        height: 92
+        x: 64
+        y: 96
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: Enemy4_wall_2
       rect:
         serializedVersion: 2
-        x: 131
-        y: 99
-        width: 58
-        height: 90
+        x: 128
+        y: 96
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: Enemy4_wall_3
       rect:
         serializedVersion: 2
-        x: 195
-        y: 98
-        width: 58
-        height: 90
+        x: 192
+        y: 96
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,10 +237,10 @@ TextureImporter:
       name: Enemy4_wall_4
       rect:
         serializedVersion: 2
-        x: 258
-        y: 98
-        width: 60
-        height: 90
+        x: 256
+        y: 96
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: Enemy4_wall_5
       rect:
         serializedVersion: 2
-        x: 323
-        y: 98
-        width: 58
-        height: 90
+        x: 320
+        y: 96
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: Enemy4_wall_6
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 58
-        height: 90
+        x: 0
+        y: 0
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,10 +303,10 @@ TextureImporter:
       name: Enemy4_wall_7
       rect:
         serializedVersion: 2
-        x: 67
-        y: 2
-        width: 58
-        height: 92
+        x: 64
+        y: 0
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,10 +325,10 @@ TextureImporter:
       name: Enemy4_wall_8
       rect:
         serializedVersion: 2
-        x: 131
-        y: 3
-        width: 58
-        height: 90
+        x: 128
+        y: 0
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,10 +347,10 @@ TextureImporter:
       name: Enemy4_wall_9
       rect:
         serializedVersion: 2
-        x: 195
-        y: 4
-        width: 58
-        height: 90
+        x: 192
+        y: 0
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -369,10 +369,10 @@ TextureImporter:
       name: Enemy4_wall_10
       rect:
         serializedVersion: 2
-        x: 258
-        y: 4
-        width: 60
-        height: 90
+        x: 256
+        y: 0
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +391,10 @@ TextureImporter:
       name: Enemy4_wall_11
       rect:
         serializedVersion: 2
-        x: 323
-        y: 4
-        width: 58
-        height: 90
+        x: 320
+        y: 0
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 73c41210eebf65446a3aae2fd2c6170d
     internalID: 0
     vertices: []
     indices: 

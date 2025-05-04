@@ -1,43 +1,31 @@
 fileFormatVersion: 2
-guid: 898df633b6be3dc4e8dd8c32efadb5b9
+guid: 43e453c81eef747429a054816c652f9b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6897387627269625799
-    second: Enemy4_wallVeryDmg_0
+      213: -8833014647542732912
+    second: Energy_Crystal_Ani (1)_0
   - first:
-      213: 1175241548482147119
-    second: Enemy4_wallVeryDmg_1
+      213: 7955253534151460912
+    second: Energy_Crystal_Ani (1)_1
   - first:
-      213: 2030565285238858181
-    second: Enemy4_wallVeryDmg_2
+      213: -1127834221709367112
+    second: Energy_Crystal_Ani (1)_2
   - first:
-      213: -4134801205307406411
-    second: Enemy4_wallVeryDmg_3
+      213: -1015409585542187584
+    second: Energy_Crystal_Ani (1)_3
   - first:
-      213: -2243962807261272549
-    second: Enemy4_wallVeryDmg_4
+      213: 7526933671894143316
+    second: Energy_Crystal_Ani (1)_4
   - first:
-      213: 750016180823098003
-    second: Enemy4_wallVeryDmg_5
+      213: 7521978837545937308
+    second: Energy_Crystal_Ani (1)_5
   - first:
-      213: -5335127822272923648
-    second: Enemy4_wallVeryDmg_6
+      213: -6700843281795597011
+    second: Energy_Crystal_Ani (1)_6
   - first:
-      213: 8888190109264864598
-    second: Enemy4_wallVeryDmg_7
-  - first:
-      213: 5875074389441186443
-    second: Enemy4_wallVeryDmg_8
-  - first:
-      213: -937318591361654263
-    second: Enemy4_wallVeryDmg_9
-  - first:
-      213: 7896894336814999712
-    second: Enemy4_wallVeryDmg_10
-  - first:
-      213: 3094901329330016649
-    second: Enemy4_wallVeryDmg_11
+      213: -7824503703113604116
+    second: Energy_Crystal_Ani (1)_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 96
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -146,145 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 64
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c79499c08178bf50800000000000000
-      internalID: 6897387627269625799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 64
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f23fe8e26fb4f4010800000000000000
-      internalID: 1175241548482147119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 64
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5c1e6e75e540e2c10800000000000000
-      internalID: 2030565285238858181
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 64
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5b78bccf53c3e96c0800000000000000
-      internalID: -4134801205307406411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 96
-        width: 64
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b16e00047b7dbd0e0800000000000000
-      internalID: -2243962807261272549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 96
-        width: 64
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 39281c12eb7986a00800000000000000
-      internalID: 750016180823098003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_6
+      name: Energy_Crystal_Ani (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,20 +149,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0087e1a2381d5f5b0800000000000000
-      internalID: -5335127822272923648
+      spriteID: 097a4653af3da6580800000000000000
+      internalID: -8833014647542732912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_7
+      name: Energy_Crystal_Ani (1)_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 038c449c0fcb66e60800000000000000
+      internalID: 7955253534151460912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Energy_Crystal_Ani (1)_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 64
-        height: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +193,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6556fde00d1395b70800000000000000
-      internalID: 8888190109264864598
+      spriteID: 8b8eb7930c02950f0800000000000000
+      internalID: -1127834221709367112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_8
+      name: Energy_Crystal_Ani (1)_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c53b30ac5a88e1f0800000000000000
+      internalID: -1015409585542187584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Energy_Crystal_Ani (1)_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 64
-        height: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,20 +237,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b8a03ab9705788150800000000000000
-      internalID: 5875074389441186443
+      spriteID: 4515d219b4a057860800000000000000
+      internalID: 7526933671894143316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_9
+      name: Energy_Crystal_Ani (1)_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c996eeb46ef636860800000000000000
+      internalID: 7521978837545937308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Energy_Crystal_Ani (1)_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 64
-        height: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 902e48015b9fdf2f0800000000000000
-      internalID: -937318591361654263
+      spriteID: d2db20da982d103a0800000000000000
+      internalID: -6700843281795597011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_10
+      name: Energy_Crystal_Ani (1)_7
       rect:
         serializedVersion: 2
-        x: 256
+        x: 224
         y: 0
-        width: 64
-        height: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,30 +303,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a8e6ae4f87679d60800000000000000
-      internalID: 7896894336814999712
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy4_wallVeryDmg_11
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 981999d8c5c43fa20800000000000000
-      internalID: 3094901329330016649
+      spriteID: ce36f288657c96390800000000000000
+      internalID: -7824503703113604116
       vertices: []
       indices: 
       edges: []
@@ -413,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8c581553afe7ae24bac9d92dfb2ccb07
+    spriteID: e3737af71b18f1248b246de71f53c679
     internalID: 0
     vertices: []
     indices: 
@@ -423,18 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Enemy4_wallVeryDmg_0: 6897387627269625799
-      Enemy4_wallVeryDmg_1: 1175241548482147119
-      Enemy4_wallVeryDmg_10: 7896894336814999712
-      Enemy4_wallVeryDmg_11: 3094901329330016649
-      Enemy4_wallVeryDmg_2: 2030565285238858181
-      Enemy4_wallVeryDmg_3: -4134801205307406411
-      Enemy4_wallVeryDmg_4: -2243962807261272549
-      Enemy4_wallVeryDmg_5: 750016180823098003
-      Enemy4_wallVeryDmg_6: -5335127822272923648
-      Enemy4_wallVeryDmg_7: 8888190109264864598
-      Enemy4_wallVeryDmg_8: 5875074389441186443
-      Enemy4_wallVeryDmg_9: -937318591361654263
+      Energy_Crystal_Ani (1)_0: -8833014647542732912
+      Energy_Crystal_Ani (1)_1: 7955253534151460912
+      Energy_Crystal_Ani (1)_2: -1127834221709367112
+      Energy_Crystal_Ani (1)_3: -1015409585542187584
+      Energy_Crystal_Ani (1)_4: 7526933671894143316
+      Energy_Crystal_Ani (1)_5: 7521978837545937308
+      Energy_Crystal_Ani (1)_6: -6700843281795597011
+      Energy_Crystal_Ani (1)_7: -7824503703113604116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
