@@ -58,7 +58,8 @@ public class PlayerScript : MonoBehaviour
 
     private void Die()
     {
-        spriteRenderer.enabled = false;
+        animator.SetBool("IsDead", true);
+        //spriteRenderer.enabled = false;
         logic.GameOver();
         playerIsAlive = false;
         SoundFXManager.Instance.playSoundFXClip(deathClip, transform, audioVolume);

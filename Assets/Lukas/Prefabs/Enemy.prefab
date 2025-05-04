@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 5921645379625092429}
   - component: {fileID: 7830317270350381046}
   - component: {fileID: 3174890353587406933}
+  - component: {fileID: 1750422460694784058}
   m_Layer: 3
   m_Name: EnemyObject
   m_TagString: Robot
@@ -171,7 +172,7 @@ SpriteRenderer:
   m_SortingLayerID: -79497861
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2196170452285218203, guid: dceaa8ed7223f994da588d44ff365c04, type: 3}
+  m_Sprite: {fileID: -6575154076847309493, guid: a11b0258680fdf64e86fb5af55ec9ed2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -265,6 +266,28 @@ MonoBehaviour:
   distance: 2
   oscillationSpeed: 2
   travelSpeed: 2
+--- !u!95 &1750422460694784058
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5929367842862280142}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f176592d4536d7843ac2df093b7f4d29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7243781370973174510
 GameObject:
   m_ObjectHideFlags: 0

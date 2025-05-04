@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: a1804be2c92c6634ebfbf497632fda5a
+guid: d40f8a1b916e8d740b2a1e69260fc67c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7215553989744792968
-    second: Enemy4_wallDmg_0
+      213: 6897387627269625799
+    second: Enemy4_wallVeryDmg_0
   - first:
-      213: 1119026908205233785
-    second: Enemy4_wallDmg_1
+      213: 1175241548482147119
+    second: Enemy4_wallVeryDmg_1
   - first:
-      213: 3617285968648494797
-    second: Enemy4_wallDmg_2
+      213: 2030565285238858181
+    second: Enemy4_wallVeryDmg_2
   - first:
-      213: 462584556296187113
-    second: Enemy4_wallDmg_3
+      213: -4134801205307406411
+    second: Enemy4_wallVeryDmg_3
   - first:
-      213: 4906436745331214095
-    second: Enemy4_wallDmg_4
+      213: -2243962807261272549
+    second: Enemy4_wallVeryDmg_4
   - first:
-      213: -3828896716825478490
-    second: Enemy4_wallDmg_5
+      213: 750016180823098003
+    second: Enemy4_wallVeryDmg_5
   - first:
-      213: -3225726516799129439
-    second: Enemy4_wallDmg_6
+      213: -5335127822272923648
+    second: Enemy4_wallVeryDmg_6
   - first:
-      213: -829964121988372833
-    second: Enemy4_wallDmg_7
+      213: 8888190109264864598
+    second: Enemy4_wallVeryDmg_7
   - first:
-      213: -9170840106642722409
-    second: Enemy4_wallDmg_8
+      213: 5875074389441186443
+    second: Enemy4_wallVeryDmg_8
   - first:
-      213: 7752447265405392577
-    second: Enemy4_wallDmg_9
+      213: -937318591361654263
+    second: Enemy4_wallVeryDmg_9
   - first:
-      213: 1109943066733399757
-    second: Enemy4_wallDmg_10
+      213: 7896894336814999712
+    second: Enemy4_wallVeryDmg_10
   - first:
-      213: -4683898867639872626
-    second: Enemy4_wallDmg_11
+      213: 3094901329330016649
+    second: Enemy4_wallVeryDmg_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -146,7 +146,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy4_wallDmg_0
+      name: Enemy4_wallVeryDmg_0
       rect:
         serializedVersion: 2
         x: 3
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87aeb9f30e33ddb90800000000000000
-      internalID: -7215553989744792968
+      spriteID: 7c79499c08178bf50800000000000000
+      internalID: 6897387627269625799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallDmg_1
+      name: Enemy4_wallVeryDmg_1
       rect:
         serializedVersion: 2
         x: 67
@@ -183,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9763dad4b05978f00800000000000000
-      internalID: 1119026908205233785
+      spriteID: f23fe8e26fb4f4010800000000000000
+      internalID: 1175241548482147119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallDmg_2
+      name: Enemy4_wallVeryDmg_2
       rect:
         serializedVersion: 2
         x: 131
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dce5c4c5c6e233230800000000000000
-      internalID: 3617285968648494797
+      spriteID: 5c1e6e75e540e2c10800000000000000
+      internalID: 2030565285238858181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallDmg_3
+      name: Enemy4_wallVeryDmg_3
       rect:
         serializedVersion: 2
         x: 195
@@ -227,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ecad9cf33e6b6600800000000000000
-      internalID: 462584556296187113
+      spriteID: 5b78bccf53c3e96c0800000000000000
+      internalID: -4134801205307406411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallDmg_4
+      name: Enemy4_wallVeryDmg_4
       rect:
         serializedVersion: 2
         x: 258
@@ -249,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f070466793a271440800000000000000
-      internalID: 4906436745331214095
+      spriteID: b16e00047b7dbd0e0800000000000000
+      internalID: -2243962807261272549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallDmg_5
+      name: Enemy4_wallVeryDmg_5
       rect:
         serializedVersion: 2
         x: 323
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6aa35ffe8b60ddac0800000000000000
-      internalID: -3828896716825478490
+      spriteID: 39281c12eb7986a00800000000000000
+      internalID: 750016180823098003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallDmg_6
+      name: Enemy4_wallVeryDmg_6
       rect:
         serializedVersion: 2
         x: 3
@@ -293,14 +293,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a831a7d2daeb33d0800000000000000
-      internalID: -3225726516799129439
+      spriteID: 0087e1a2381d5f5b0800000000000000
+      internalID: -5335127822272923648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallDmg_7
+      name: Enemy4_wallVeryDmg_7
       rect:
         serializedVersion: 2
         x: 67
@@ -315,14 +315,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f96609447006b74f0800000000000000
-      internalID: -829964121988372833
+      spriteID: 6556fde00d1395b70800000000000000
+      internalID: 8888190109264864598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallDmg_8
+      name: Enemy4_wallVeryDmg_8
       rect:
         serializedVersion: 2
         x: 131
@@ -337,14 +337,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 791b7af1381aab080800000000000000
-      internalID: -9170840106642722409
+      spriteID: b8a03ab9705788150800000000000000
+      internalID: 5875074389441186443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallDmg_9
+      name: Enemy4_wallVeryDmg_9
       rect:
         serializedVersion: 2
         x: 195
@@ -359,14 +359,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c6df62b6b9369b60800000000000000
-      internalID: 7752447265405392577
+      spriteID: 902e48015b9fdf2f0800000000000000
+      internalID: -937318591361654263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallDmg_10
+      name: Enemy4_wallVeryDmg_10
       rect:
         serializedVersion: 2
         x: 258
@@ -381,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dce4d85a65f476f00800000000000000
-      internalID: 1109943066733399757
+      spriteID: 0a8e6ae4f87679d60800000000000000
+      internalID: 7896894336814999712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy4_wallDmg_11
+      name: Enemy4_wallVeryDmg_11
       rect:
         serializedVersion: 2
         x: 323
@@ -403,8 +403,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e839876dbc27ffeb0800000000000000
-      internalID: -4683898867639872626
+      spriteID: 981999d8c5c43fa20800000000000000
+      internalID: 3094901329330016649
       vertices: []
       indices: 
       edges: []
@@ -423,18 +423,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Enemy4_wallDmg_0: -7215553989744792968
-      Enemy4_wallDmg_1: 1119026908205233785
-      Enemy4_wallDmg_10: 1109943066733399757
-      Enemy4_wallDmg_11: -4683898867639872626
-      Enemy4_wallDmg_2: 3617285968648494797
-      Enemy4_wallDmg_3: 462584556296187113
-      Enemy4_wallDmg_4: 4906436745331214095
-      Enemy4_wallDmg_5: -3828896716825478490
-      Enemy4_wallDmg_6: -3225726516799129439
-      Enemy4_wallDmg_7: -829964121988372833
-      Enemy4_wallDmg_8: -9170840106642722409
-      Enemy4_wallDmg_9: 7752447265405392577
+      Enemy4_wallVeryDmg_0: 6897387627269625799
+      Enemy4_wallVeryDmg_1: 1175241548482147119
+      Enemy4_wallVeryDmg_10: 7896894336814999712
+      Enemy4_wallVeryDmg_11: 3094901329330016649
+      Enemy4_wallVeryDmg_2: 2030565285238858181
+      Enemy4_wallVeryDmg_3: -4134801205307406411
+      Enemy4_wallVeryDmg_4: -2243962807261272549
+      Enemy4_wallVeryDmg_5: 750016180823098003
+      Enemy4_wallVeryDmg_6: -5335127822272923648
+      Enemy4_wallVeryDmg_7: 8888190109264864598
+      Enemy4_wallVeryDmg_8: 5875074389441186443
+      Enemy4_wallVeryDmg_9: -937318591361654263
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
