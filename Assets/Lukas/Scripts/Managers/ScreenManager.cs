@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ScreenManager : Singleton<ScreenManager>
 {
-    private GameObject startMenu, soundMenu, lvlMenu, gameOverMenu, gameWonMenu, bossCanvas;
+    private GameObject startMenu, soundMenu, lvlMenu, gameOverMenu, gameWonMenu, bossCanvas, playerCanvas;
 
     public void Start()
     {
@@ -39,6 +39,7 @@ public class ScreenManager : Singleton<ScreenManager>
         gameOverMenu = GameObject.FindGameObjectWithTag("GameOverMenu");
         gameWonMenu = GameObject.FindGameObjectWithTag("GameWonMenu");
         bossCanvas = GameObject.FindGameObjectWithTag("BossCanvas");
+        playerCanvas = GameObject.FindGameObjectWithTag("PlayerCanvas");
     }
 
     public void QuitToMain()
@@ -102,6 +103,16 @@ public class ScreenManager : Singleton<ScreenManager>
     public void HideBossCanvas()
     {
         HideMenu(bossCanvas);
+    }
+
+    public void ShowPlayerCanvas()
+    {
+        ShowMenu(playerCanvas);
+    }
+
+    public void HidePlayerCanvas()
+    {
+        HideMenu(playerCanvas);
     }
 
     private void ShowMenu(GameObject menu)

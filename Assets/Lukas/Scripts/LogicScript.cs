@@ -20,6 +20,11 @@ public class LogicScript : Singleton<LogicScript>
             InvokeRepeating("TickingScore", 0f, 0.1f);
         }
     }
+
+    public bool LvlIsActive()
+    {
+        return !isGameWon && !isGameOver && !isPaused && !isBossFight;
+    }
     public void AddScore(int points)
     {
         playerScore += points;

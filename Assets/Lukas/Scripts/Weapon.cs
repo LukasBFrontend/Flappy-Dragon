@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] private GameObject ammoMeter;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject firePrefab;
     [SerializeField] private AudioClip[] fireClips;
@@ -14,9 +15,17 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float chargeDuration = 1f;
     [SerializeField] private float fps = 30f;
     [SerializeField] private float animationDuration = .5f;
+    private RectTransform ammoMeterTransform;
+    private float ammoMeterHeight;
+    private float ammoMeterWidth;
+    private float maxAmmo = 4f;
+    private float currentAmmo;
 
-
+    private float rechargeDelay = 0.3f;
+    private float rechargeTimer = 0f;
+    private float rechargeRate = 3f;
     private int animationStep = 0;
+    private float laserRecoveryTimer = 1f;
     private float fpsCounter, animationTimer, chargeTimer, groundMoveSpeed;
     private bool animationIsActive = false;
     private bool playerIsAlive;
@@ -26,10 +35,16 @@ public class Weapon : MonoBehaviour
     void Start()
     {
         playerScript = gameObject.GetComponent<PlayerScript>();
+        groundMoveSpeed = GameObject.FindGameObjectWithTag("Moving").GetComponent<GroundMoveScript>().moveSpeed;
+
         playerIsAlive = playerScript.playerIsAlive;
         chargeTimer = chargeDuration;
         animationTimer = animationDuration;
-        groundMoveSpeed = GameObject.FindGameObjectWithTag("Moving").GetComponent<GroundMoveScript>().moveSpeed;
+
+        ammoMeterTransform = ammoMeter.GetComponent<RectTransform>();
+        currentAmmo = maxAmmo;
+        ammoMeterWidth = ammoMeterTransform.sizeDelta.x;
+        ammoMeterHeight = ammoMeterTransform.sizeDelta.y;
     }
 
     void Awake()
@@ -38,6 +53,18 @@ public class Weapon : MonoBehaviour
     }
     void Update()
     {
+        if (laserRecoveryTimer < 1f)
+        {
+            laserRecoveryTimer += Time.deltaTime / 4;
+        }
+        rechargeTimer -= Time.deltaTime;
+        if (currentAmmo < maxAmmo && rechargeTimer < 0 && LogicScript.Instance.LvlIsActive())
+        {
+            currentAmmo += Time.deltaTime * rechargeRate * laserRecoveryTimer;
+            SetAmmoBar();
+        }
+
+
         playerIsAlive = playerScript.playerIsAlive;
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -90,45 +117,67 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    private void SetAmmoBar()
+    {
+        ammoMeterTransform.sizeDelta = new Vector2(ammoMeterWidth * currentAmmo / maxAmmo, ammoMeterHeight);
+    }
+
     void Shoot()
     {
-        int random = Random.Range(0, 3);
-        SoundFXManager.Instance.playSoundFXClip(fireClips[random], transform, audioVolume);
-        Instantiate(firePrefab, firePoint.position, firePoint.rotation);
+        if (currentAmmo >= 1)
+        {
+            rechargeTimer = rechargeDelay;
+            currentAmmo--;
+            SetAmmoBar();
+
+            int random = Random.Range(0, 3);
+            SoundFXManager.Instance.playSoundFXClip(fireClips[random], transform, audioVolume);
+            Instantiate(firePrefab, firePoint.position, firePoint.rotation);
+        }
+
     }
 
     void ShootLaser()
     {
-        laserRenderer.enabled = true;
-        animationIsActive = true;
-        animationTimer = animationDuration;
-        animationStep = 0;
-        fpsCounter = 0;
-
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, new Vector2(1f, 0f), 50f, layersToHit);
-        if (hit.collider != null)
+        if (currentAmmo >= 2)
         {
-            int damage = 100;
-            Enemy enemy = hit.transform.gameObject.GetComponent<Enemy>();
-            BossWeapon bossWeapon = hit.transform.gameObject.GetComponent<BossWeapon>();
-            BossScript bossScript = hit.transform.gameObject.GetComponent<BossScript>();
+            laserRecoveryTimer = 0f;
+            currentAmmo -= 2f;
+            rechargeTimer = 0.6f;
+            SetAmmoBar();
 
-            if (enemy != null)
+            laserRenderer.enabled = true;
+            animationIsActive = true;
+            animationTimer = animationDuration;
+            animationStep = 0;
+            fpsCounter = 0;
+
+            RaycastHit2D hit = Physics2D.Raycast(firePoint.position, new Vector2(1f, 0f), 50f, layersToHit);
+            if (hit.collider != null)
             {
-                enemy.TakeDamage(damage);
+                int damage = 100;
+                Enemy enemy = hit.transform.gameObject.GetComponent<Enemy>();
+                BossWeapon bossWeapon = hit.transform.gameObject.GetComponent<BossWeapon>();
+                BossScript bossScript = hit.transform.gameObject.GetComponent<BossScript>();
+
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(damage);
+                }
+                else if (bossWeapon != null)
+                {
+                    bossWeapon.TakeDamage(damage);
+                }
+                else if (bossScript != null)
+                {
+                    bossScript.TakeDamage(damage);
+                }
+                laserRenderer.SetPosition(1, new Vector3(hit.distance, 0f, 0f));
+                //laserRenderer.SetPosition(1, new Vector3(11f, 0f, 0f));
+                return;
             }
-            else if (bossWeapon != null)
-            {
-                bossWeapon.TakeDamage(damage);
-            }
-            else if (bossScript != null)
-            {
-                bossScript.TakeDamage(damage);
-            }
-            laserRenderer.SetPosition(1, new Vector3(hit.distance, 0f, 0f));
-            //laserRenderer.SetPosition(1, new Vector3(11f, 0f, 0f));
-            return;
+            laserRenderer.SetPosition(1, new Vector3(50f, 0f, 0f));
         }
-        laserRenderer.SetPosition(1, new Vector3(50f, 0f, 0f));
+
     }
 }
