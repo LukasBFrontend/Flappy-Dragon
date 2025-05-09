@@ -25,12 +25,14 @@ public class Enemy : MonoBehaviour
             health -= damage;
             timerEnabled = true;
 
-            animator.SetFloat("Health", 100 * health / maxHealth);
-        }
-
-        if (health <= 0)
-        {
-            Die();
+            if (health <= 0)
+            {
+                Die();
+            }
+            else
+            {
+                animator.SetFloat("Health", 100 * health / maxHealth);
+            }
         }
     }
 
