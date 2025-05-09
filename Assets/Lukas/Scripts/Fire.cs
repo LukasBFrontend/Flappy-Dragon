@@ -41,7 +41,7 @@ public class Fire : MonoBehaviour
 
     private bool IsHostile(Collider2D collision)
     {
-        string[] tagToFind = new string[] { "Ground", "Robot", "Missile" };
+        string[] tagToFind = new string[] { "Ground", "Robot", "Missile", "Enemy" };
 
         for (int i = 0; i < tagToFind.Length; i++)
         {

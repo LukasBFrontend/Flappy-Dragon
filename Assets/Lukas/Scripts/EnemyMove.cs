@@ -12,7 +12,7 @@ public class EnemyMove : MonoBehaviour
     private float min = 0f;
     private float max = 0f;
     private float time;
-
+    private bool activated = false;
     private float lengthOffset;
 
     void Start()
@@ -34,40 +34,46 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
-        time = Time.timeSinceLevelLoad;
-
-        if (isMoving)
+        if (transform.position.x <= 12 && !activated)
         {
-            if (selectedAxis == travelAxis.Y)
-            {
-                if (selectedCurve == pathCurve.PingPong)
-                {
-                    transform.localPosition = new Vector2(Mathf.PingPong(time * oscillationSpeed + lengthOffset, max - min) + min, transform.localPosition.y + Time.deltaTime * -travelSpeed);
-                }
-                else if (selectedCurve == pathCurve.Sinus)
-                {
-                    transform.localPosition = new Vector2(Mathf.Cos(time * oscillationSpeed + phaseOffset) * (max - min) + transform.localPosition.x, transform.localPosition.y + Time.deltaTime * -travelSpeed);
-                }
-                else
-                {
-                    transform.localPosition = new Vector2(transform.localPosition.x, transform.localPosition.y + Time.deltaTime * -travelSpeed);
-                }
-            }
-            else if (selectedAxis == travelAxis.X)
-            {
-                if (selectedCurve == pathCurve.PingPong)
-                {
-                    transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime * -travelSpeed, Mathf.PingPong(time * oscillationSpeed + lengthOffset, max - min) + min);
-                }
-                else if (selectedCurve == pathCurve.Sinus)
-                {
-                    transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime * -travelSpeed, Mathf.Cos(time * oscillationSpeed + phaseOffset * Mathf.PI) * (max - min) / 2 + min + distance / 2);
-                }
-                else
-                {
-                    transform.localPosition = new Vector2(transform.localPosition.x + Time.deltaTime * -travelSpeed, transform.localPosition.y);
-                }
-            }
+            isMoving = true;
+            activated = true;
         }
+
+        if (!isMoving) return;
+
+        time = Time.timeSinceLevelLoad;
+        Vector2 pos = transform.localPosition;
+
+        switch (selectedAxis)
+        {
+            case travelAxis.Y:
+                pos.y += Time.deltaTime * -travelSpeed;
+                switch (selectedCurve)
+                {
+                    case pathCurve.PingPong:
+                        pos.x = Mathf.PingPong(time * oscillationSpeed + lengthOffset, max - min) + min;
+                        break;
+                    case pathCurve.Sinus:
+                        pos.x = Mathf.Cos(time * oscillationSpeed + phaseOffset) * (max - min) + pos.x;
+                        break;
+                }
+                break;
+
+            case travelAxis.X:
+                pos.x += Time.deltaTime * -travelSpeed;
+                switch (selectedCurve)
+                {
+                    case pathCurve.PingPong:
+                        pos.y = Mathf.PingPong(time * oscillationSpeed + lengthOffset, max - min) + min;
+                        break;
+                    case pathCurve.Sinus:
+                        pos.y = Mathf.Cos(time * oscillationSpeed + phaseOffset * Mathf.PI) * (max - min) / 2 + min + distance / 2;
+                        break;
+                }
+                break;
+        }
+
+        transform.localPosition = pos;
     }
 }
