@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int health = 100;
+    [SerializeField] private int maxHealth = 100;
     [SerializeField] private int points = 10;
     [SerializeField] private AudioClip deathClip;
     [SerializeField][Range(0, 100)] private int audioVolume = 50;
     [SerializeField] private Color damageColor;
 
-    [HideInInspector] public bool isActive = false;
+    [HideInInspector] public bool isActive, isDead = false;
+    private int health;
     private LogicScript logic;
     private SpriteRenderer sprite;
     private Animator animator;
@@ -23,11 +24,15 @@ public class Enemy : MonoBehaviour
         {
             health -= damage;
             timerEnabled = true;
-        }
 
-        if (health <= 0)
-        {
-            Die();
+            if (health <= 0)
+            {
+                Die();
+            }
+            else
+            {
+                animator.SetFloat("Health", 100 * health / maxHealth);
+            }
         }
     }
 
@@ -37,6 +42,7 @@ public class Enemy : MonoBehaviour
 
         animator.SetBool("IsDead", true);
         boxCollider.enabled = false;
+        isDead = true;
 
         logic.AddScore(points);
     }
@@ -69,6 +75,8 @@ public class Enemy : MonoBehaviour
         sprite = gameObject.GetComponent<SpriteRenderer>();
         animator = gameObject.GetComponent<Animator>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
+
+        health = maxHealth;
     }
 
     void Update()
@@ -77,6 +85,10 @@ public class Enemy : MonoBehaviour
         {
             currentTimer += Time.deltaTime;
             Flicker(currentTimer, targetTime);
+        }
+        if (transform.position.x <= 12)
+        {
+            isActive = true;
         }
     }
 }

@@ -23,6 +23,7 @@ TagManager:
   - GameWonMenu
   - BossCanvas
   - PlayerCanvas
+  - Background
   layers:
   - Default
   - TransparentFX

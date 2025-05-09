@@ -10,7 +10,7 @@ public class MissileTrigger : MonoBehaviour
 
     private GameObject activeWarningInstance;
     private Missile missileScript;
-    private int xPosition = 10;
+    private int xPosition = 9;
     private bool timerEnabled = false;
 
     private void Start()

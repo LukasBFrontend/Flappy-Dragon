@@ -9,18 +9,20 @@ public class Weapon : MonoBehaviour
     [SerializeField] private GameObject firePrefab;
     [SerializeField] private AudioClip[] fireClips;
     [SerializeField][Range(0, 100)] private float audioVolume = 1f;
-    [SerializeField] private GameObject laser;
+    [SerializeField] private GameObject laser, laserVortex, laserImpact;
     [SerializeField] private LayerMask layersToHit;
     [SerializeField] private Texture[] textures;
     [SerializeField] private float chargeDuration = 1f;
     [SerializeField] private float fps = 30f;
     [SerializeField] private float animationDuration = .5f;
     private RectTransform ammoMeterTransform;
+    private Animator laserVortexAnimator;
     private float ammoMeterHeight;
     private float ammoMeterWidth;
     private float maxAmmo = 4f;
     private float currentAmmo;
-
+    private int laserTicks = 10;
+    private int laserTickCount = 0;
     private float rechargeDelay = 0.3f;
     private float rechargeTimer = 0f;
     private float rechargeRate = 3f;
@@ -32,10 +34,13 @@ public class Weapon : MonoBehaviour
     private PlayerScript playerScript;
     private LineRenderer laserRenderer;
 
+    private Collider2D lastHit;
+
     void Start()
     {
         playerScript = gameObject.GetComponent<PlayerScript>();
         groundMoveSpeed = GameObject.FindGameObjectWithTag("Moving").GetComponent<GroundMoveScript>().moveSpeed;
+        laserVortexAnimator = laserVortex.GetComponent<Animator>();
 
         playerIsAlive = playerScript.playerIsAlive;
         chargeTimer = chargeDuration;
@@ -73,6 +78,9 @@ public class Weapon : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.Mouse0) && playerIsAlive && !LogicScript.Instance.isPaused && !EventSystem.current.IsPointerOverGameObject())
         {
+            laserVortex.GetComponent<SpriteRenderer>().enabled = false;
+            laserVortexAnimator.enabled = false;
+
             if (chargeTimer > chargeDuration - .3f)
             {
                 Shoot();
@@ -86,6 +94,13 @@ public class Weapon : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0))
         {
             chargeTimer -= Time.deltaTime;
+
+            if (chargeTimer <= chargeDuration - .3f)
+            {
+                laserVortex.GetComponent<SpriteRenderer>().enabled = true;
+                laserVortexAnimator.enabled = true;
+                laserVortexAnimator.SetBool("IsCharging", true);
+            }
         }
 
 
@@ -114,6 +129,12 @@ public class Weapon : MonoBehaviour
         {
             animationIsActive = false;
             laserRenderer.enabled = false;
+            laserImpact.SetActive(false);
+            laserTickCount = 0;
+        }
+        else
+        {
+            UpdateLaser();
         }
     }
 
@@ -134,7 +155,6 @@ public class Weapon : MonoBehaviour
             SoundFXManager.Instance.playSoundFXClip(fireClips[random], transform, audioVolume);
             Instantiate(firePrefab, firePoint.position, firePoint.rotation);
         }
-
     }
 
     void ShootLaser()
@@ -152,9 +172,14 @@ public class Weapon : MonoBehaviour
             animationStep = 0;
             fpsCounter = 0;
 
+            laserImpact.SetActive(true);
+
             RaycastHit2D hit = Physics2D.Raycast(firePoint.position, new Vector2(1f, 0f), 50f, layersToHit);
             if (hit.collider != null)
             {
+                lastHit = hit.collider;
+
+                laserImpact.transform.localPosition = new Vector3(hit.distance + 0.5f, 0f, 0f);
                 int damage = 100;
                 Enemy enemy = hit.transform.gameObject.GetComponent<Enemy>();
                 BossWeapon bossWeapon = hit.transform.gameObject.GetComponent<BossWeapon>();
@@ -172,11 +197,57 @@ public class Weapon : MonoBehaviour
                 {
                     bossScript.TakeDamage(damage);
                 }
-                laserRenderer.SetPosition(1, new Vector3(hit.distance, 0f, 0f));
+                laserRenderer.SetPosition(1, new Vector3(hit.distance + 0.5f, 0f, 0f));
                 //laserRenderer.SetPosition(1, new Vector3(11f, 0f, 0f));
                 return;
             }
-            laserRenderer.SetPosition(1, new Vector3(50f, 0f, 0f));
+            laserImpact.transform.localPosition = new Vector3(hit.distance, 0f, 50f);
+            laserRenderer.SetPosition(1, new Vector3(50f - laser.transform.localPosition.x, 0f, 0f));
+        }
+
+    }
+
+    void UpdateLaser()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, new Vector2(1f, 0f), 50f, layersToHit);
+
+        if (animationTimer <= animationDuration * (laserTicks - laserTickCount) / laserTicks)
+        {
+            laserTickCount++;
+
+            if (hit.collider != null)
+            {
+                int damage = 50;
+                Enemy enemy = hit.transform.gameObject.GetComponent<Enemy>();
+                BossWeapon bossWeapon = hit.transform.gameObject.GetComponent<BossWeapon>();
+                BossScript bossScript = hit.transform.gameObject.GetComponent<BossScript>();
+
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(damage);
+                }
+                else if (bossWeapon != null)
+                {
+                    bossWeapon.TakeDamage(damage);
+                }
+                else if (bossScript != null)
+                {
+                    bossScript.TakeDamage(damage);
+                }
+            }
+
+        }
+
+        if (hit.collider != null)
+        {
+            lastHit = hit.collider;
+            laserImpact.transform.localPosition = new Vector3(hit.distance + 0.5f, 0f, 0f);
+            laserRenderer.SetPosition(1, new Vector3(hit.distance + 0.5f - laser.transform.localPosition.x, 0f, 0f));
+        }
+        else
+        {
+            laserImpact.transform.localPosition = new Vector3(50f, 0f, 0f);
+            laserRenderer.SetPosition(1, new Vector3(50f - laser.transform.localPosition.x, 0f, 0f));
         }
 
     }
