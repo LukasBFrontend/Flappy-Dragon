@@ -23,7 +23,7 @@ public class LogicScript : Singleton<LogicScript>
 
     public bool LvlIsActive()
     {
-        return !isGameWon && !isGameOver && !isPaused && !isBossFight;
+        return !isGameWon && !isGameOver && !isPaused;
     }
     public void AddScore(int points)
     {
