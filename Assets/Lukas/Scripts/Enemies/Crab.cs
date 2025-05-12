@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Crab : MonoBehaviour
 {
-    [SerializeField] private GameObject parentObject, homingMissilePrefab, firePoint;
+    [SerializeField] private GameObject homingMissilePrefab, firePoint;
     [SerializeField] private float walkDistance = 2;
     [SerializeField] private float speed = 1f;
     [Range(.1f, 2f)][SerializeField] private float countDownTimer, launchTimer = 0.8f;

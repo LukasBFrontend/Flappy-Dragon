@@ -15,7 +15,7 @@ public class BossScript : MonoBehaviour
     private RectTransform healthBarTransform;
     private float healthBarWidth, healthBarHeight;
     private int maxHitpoints;
-    private float speed;
+    float speed;
     public float missileInterval = 2f;
     public float cannonInterval = 1f;
     private bool missileOneFired, missileTwoFired, cannonOneFired, cannonTwoFired = false;
@@ -43,8 +43,6 @@ public class BossScript : MonoBehaviour
 
             ShootMissiles();
             ShootCannons();
-
-            transform.position = new Vector2(transform.position.x + Time.deltaTime * speed, transform.position.y);
         }
         if (bossHitpoints <= 0)
         {

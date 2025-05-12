@@ -156,12 +156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3a5d49b3d397b4f9be2ea286c86dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentObject: {fileID: 0}
   homingMissilePrefab: {fileID: 4069436539317369221, guid: 887164e0ab6f7a348946f6dc7177e9cc, type: 3}
   firePoint: {fileID: 723623311631153609}
   walkDistance: 3
   speed: 3.25
-  countDownTimer: 0.2
+  countDownTimer: 0.6
   launchTimer: 1.2
 --- !u!61 &3726319335402532583
 BoxCollider2D:

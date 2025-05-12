@@ -8,6 +8,7 @@ public class HomingMissile : MonoBehaviour
     private GameObject player;
     private Vector3 relativePosition;
     private Rigidbody2D rigidbody;
+    private Animator animator;
     private float turnTimer;
     private bool targetHeightReached = false;
 
@@ -15,6 +16,7 @@ public class HomingMissile : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
         relativePosition = transform.position;
         turnTimer = turnTime;
     }
@@ -30,8 +32,9 @@ public class HomingMissile : MonoBehaviour
         {
             targetHeightReached = true;
             rigidbody.linearVelocityY = 0;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            //transform.rotation = Quaternion.Euler(0, 0, 0);
             turnTimer -= Time.deltaTime;
+            animator.SetBool("IsTurning", true);
         }
         else if (turnTimer >= 0f)
         {
