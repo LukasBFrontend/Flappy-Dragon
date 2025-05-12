@@ -131,6 +131,10 @@ public class ScreenManager : Singleton<ScreenManager>
             canvasGroup.interactable = true;
             canvasGroup.blocksRaycasts = true;
         }
+        else
+        {
+            Debug.Log("No canvas group found on " + menu.name);
+        }
     }
 
     private void HideMenu(GameObject menu)

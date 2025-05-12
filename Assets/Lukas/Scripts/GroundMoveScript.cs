@@ -12,6 +12,7 @@ public class GroundMoveScript : MonoBehaviour
 
     void Start()
     {
+        positionX = transform.position.x;
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
