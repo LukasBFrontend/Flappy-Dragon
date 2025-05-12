@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: cb00398bc3ad29844aba9639599ca7ae
+guid: 039a2f7739895464cb43a4eb8c56c96c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7733305029108402947
-    second: Homin_Missile_ani (3)_0
+      213: -7321578842383922418
+    second: Red Drone Idle_0
   - first:
-      213: -574792462663176425
-    second: Homin_Missile_ani (3)_1
+      213: 2292524691531513842
+    second: Red Drone Idle_1
   - first:
-      213: -6426126123039181818
-    second: Homin_Missile_ani (3)_2
+      213: 9194283066053381499
+    second: Red Drone Idle_2
   - first:
-      213: -3535953787791418763
-    second: Homin_Missile_ani (3)_3
+      213: 6090492247181666746
+    second: Red Drone Idle_3
+  - first:
+      213: -2395461755373118790
+    second: Red Drone Idle_4
+  - first:
+      213: -4950703228279874689
+    second: Red Drone Idle_5
+  - first:
+      213: -6312468261268056451
+    second: Red Drone Idle_6
+  - first:
+      213: -1276197125144014978
+    second: Red Drone Idle_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_0
+      name: Red Drone Idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df470408c08cda490800000000000000
-      internalID: -7733305029108402947
+      spriteID: e0bc0b095d6846a90800000000000000
+      internalID: -7321578842383922418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_1
+      name: Red Drone Idle_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,42 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71fa363fc4de508f0800000000000000
-      internalID: -574792462663176425
+      spriteID: 2ff3c858f0fa0df10800000000000000
+      internalID: 2292524691531513842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 60434629650d1d6a0800000000000000
-      internalID: -6426126123039181818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Homin_Missile_ani (3)_3
+      name: Red Drone Idle_2
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +193,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57ade78a3c4cdeec0800000000000000
-      internalID: -3535953787791418763
+      spriteID: b7d40843cb7a89f70800000000000000
+      internalID: 9194283066053381499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Idle_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9a8841e66c58450800000000000000
+      internalID: 6090492247181666746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Idle_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba93f5a93c91ced0800000000000000
+      internalID: -2395461755373118790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Idle_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b9ff1d4a19b4bb0800000000000000
+      internalID: -4950703228279874689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Idle_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76903faf8b9568a0800000000000000
+      internalID: -6312468261268056451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Idle_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f8a6ce9790a4ee0800000000000000
+      internalID: -1276197125144014978
       vertices: []
       indices: 
       edges: []
@@ -213,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f4e008228ca7b944abe16744dfe0ce51
+    spriteID: dda3657f448b5024d9627ed0bf722811
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Homin_Missile_ani (3)_0: -7733305029108402947
-      Homin_Missile_ani (3)_1: -574792462663176425
-      Homin_Missile_ani (3)_2: -6426126123039181818
-      Homin_Missile_ani (3)_3: -3535953787791418763
+      Red Drone Idle_0: -7321578842383922418
+      Red Drone Idle_1: 2292524691531513842
+      Red Drone Idle_2: 9194283066053381499
+      Red Drone Idle_3: 6090492247181666746
+      Red Drone Idle_4: -2395461755373118790
+      Red Drone Idle_5: -4950703228279874689
+      Red Drone Idle_6: -6312468261268056451
+      Red Drone Idle_7: -1276197125144014978
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

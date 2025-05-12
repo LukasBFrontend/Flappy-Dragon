@@ -1,0 +1,722 @@
+fileFormatVersion: 2
+guid: d3629770e286337439502fb4858e829e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5701495526064696786
+    second: Enemy4_Death (wip) (1)_0
+  - first:
+      213: 8634905145628798411
+    second: Enemy4_Death (wip) (1)_1
+  - first:
+      213: -4476967043872513932
+    second: Enemy4_Death (wip) (1)_2
+  - first:
+      213: 854459663516931878
+    second: Enemy4_Death (wip) (1)_3
+  - first:
+      213: -4999293439697601753
+    second: Enemy4_Death (wip) (1)_4
+  - first:
+      213: 3729765385814288177
+    second: Enemy4_Death (wip) (1)_5
+  - first:
+      213: -4955566754971383393
+    second: Enemy4_Death (wip) (1)_6
+  - first:
+      213: -6057839896825397418
+    second: Enemy4_Death (wip) (1)_7
+  - first:
+      213: -736483362117188949
+    second: Enemy4_Death (wip) (1)_8
+  - first:
+      213: 6612441805383796063
+    second: Enemy4_Death (wip) (1)_9
+  - first:
+      213: 6775193564853124757
+    second: Enemy4_Death (wip) (1)_10
+  - first:
+      213: -7619515213594827591
+    second: Enemy4_Death (wip) (1)_11
+  - first:
+      213: 991722796092417366
+    second: Enemy4_Death (wip) (1)_12
+  - first:
+      213: 6872063587592623438
+    second: Enemy4_Death (wip) (1)_13
+  - first:
+      213: -832861843040590032
+    second: Enemy4_Death (wip) (1)_14
+  - first:
+      213: -2454204679812534250
+    second: Enemy4_Death (wip) (1)_15
+  - first:
+      213: -6593009769572131431
+    second: Enemy4_Death (wip) (1)_16
+  - first:
+      213: -6501308918791611561
+    second: Enemy4_Death (wip) (1)_17
+  - first:
+      213: -84036896507260062
+    second: Enemy4_Death (wip) (1)_18
+  - first:
+      213: -3164677662023510076
+    second: Enemy4_Death (wip) (1)_19
+  - first:
+      213: -3073247097184228044
+    second: Enemy4_Death (wip) (1)_20
+  - first:
+      213: 7223608329331283089
+    second: Enemy4_Death (wip) (1)_21
+  - first:
+      213: -7874092119542549427
+    second: Enemy4_Death (wip) (1)_22
+  - first:
+      213: -3258783018789394147
+    second: Enemy4_Death (wip) (1)_23
+  - first:
+      213: 8089137972737069263
+    second: Enemy4_Death (wip) (1)_24
+  - first:
+      213: 2320036386295357090
+    second: Enemy4_Death (wip) (1)_25
+  - first:
+      213: 4814684326837237105
+    second: Enemy4_Death (wip) (1)_26
+  - first:
+      213: 8163154360136750747
+    second: Enemy4_Death (wip) (1)_27
+  - first:
+      213: -5706014614931532513
+    second: Enemy4_Death (wip) (1)_28
+  - first:
+      213: 9169668279888199675
+    second: Enemy4_Death (wip) (1)_29
+  - first:
+      213: 7725509903963733769
+    second: Enemy4_Death (wip) (1)_30
+  - first:
+      213: 3294529707836706498
+    second: Enemy4_Death (wip) (1)_31
+  - first:
+      213: 8767842402737861918
+    second: Enemy4_Death (wip) (1)_32
+  - first:
+      213: -3335107849036424108
+    second: Enemy4_Death (wip) (1)_33
+  - first:
+      213: 5922931235067761304
+    second: Enemy4_Death (wip) (1)_34
+  - first:
+      213: 7140516481443348334
+    second: Enemy4_Death (wip) (1)_35
+  - first:
+      213: -1671072428531857175
+    second: Enemy4_Death (wip) (1)_36
+  - first:
+      213: 2103492318205081828
+    second: Enemy4_Death (wip) (1)_37
+  - first:
+      213: 6079990917435177734
+    second: Enemy4_Death (wip) (1)_38
+  - first:
+      213: 2349557615291216478
+    second: Enemy4_Death (wip) (1)_39
+  - first:
+      213: -6044804612087722688
+    second: Enemy4_Death (wip) (1)_40
+  - first:
+      213: -6804707717177651418
+    second: Enemy4_Death (wip) (1)_41
+  - first:
+      213: 1544305788995910912
+    second: Enemy4_Death (wip) (1)_42
+  - first:
+      213: -6050258740250977525
+    second: Enemy4_Death (wip) (1)_43
+  - first:
+      213: -1475275309916332839
+    second: Enemy4_Death (wip) (1)_44
+  - first:
+      213: 8426568393842290190
+    second: Enemy4_Death (wip) (1)_45
+  - first:
+      213: 5879071625712990529
+    second: Enemy4_Death (wip) (1)_46
+  - first:
+      213: -1611456398779373337
+    second: Enemy4_Death (wip) (1)_47
+  - first:
+      213: -5258026553364361622
+    second: Enemy4_Death (wip) (1)_48
+  - first:
+      213: 6119343498070538773
+    second: Enemy4_Death (wip) (1)_49
+  - first:
+      213: 7636251338738335552
+    second: Enemy4_Death (wip) (1)_50
+  - first:
+      213: -3583384675413941480
+    second: Enemy4_Death (wip) (1)_51
+  - first:
+      213: -729140250465046160
+    second: Enemy4_Death (wip) (1)_52
+  - first:
+      213: -2481386642824203686
+    second: Enemy4_Death (wip) (1)_53
+  - first:
+      213: -5229640242425093391
+    second: Enemy4_Death (wip) (1)_54
+  - first:
+      213: 6355962449893935659
+    second: Enemy4_Death (wip) (1)_55
+  - first:
+      213: -1640229606906716064
+    second: Enemy4_Death (wip) (1)_56
+  - first:
+      213: -3586289091048638841
+    second: Enemy4_Death (wip) (1)_57
+  - first:
+      213: 1952803313974223682
+    second: Enemy4_Death (wip) (1)_58
+  - first:
+      213: -4005254050229429456
+    second: Enemy4_Death (wip) (1)_59
+  - first:
+      213: -7728696709710980644
+    second: Enemy4_Death (wip) (1)_60
+  - first:
+      213: -5354835110176436270
+    second: Enemy4_Death (wip) (1)_61
+  - first:
+      213: -1799885924881651219
+    second: Enemy4_Death (wip) (1)_62
+  - first:
+      213: -6039122676706360041
+    second: Enemy4_Death (wip) (1)_63
+  - first:
+      213: 6058802984260179458
+    second: Enemy4_Death (wip) (1)_64
+  - first:
+      213: 1329774920245022202
+    second: Enemy4_Death (wip) (1)_65
+  - first:
+      213: 4629840308217858800
+    second: Enemy4_Death (wip) (1)_66
+  - first:
+      213: -4662888288577934035
+    second: Enemy4_Death (wip) (1)_67
+  - first:
+      213: 7507061532147184492
+    second: Enemy4_Death (wip) (1)_68
+  - first:
+      213: -8144789583762219061
+    second: Enemy4_Death (wip) (1)_69
+  - first:
+      213: 6072190238438352978
+    second: Enemy4_Death (wip) (1)_70
+  - first:
+      213: 2374986451665936784
+    second: Enemy4_Death (wip) (1)_71
+  - first:
+      213: -3228001101624521116
+    second: Enemy4_Death (wip) (1)_72
+  - first:
+      213: -4379668252907437586
+    second: Enemy4_Death (wip) (1)_73
+  - first:
+      213: 6521844419071057138
+    second: Enemy4_Death (wip) (1)_74
+  - first:
+      213: -4802793121353928995
+    second: Enemy4_Death (wip) (1)_75
+  - first:
+      213: 7390891445528152457
+    second: Enemy4_Death (wip) (1)_76
+  - first:
+      213: -3262029817253918420
+    second: Enemy4_Death (wip) (1)_77
+  - first:
+      213: 4863396065163332779
+    second: Enemy4_Death (wip) (1)_78
+  - first:
+      213: 180355389630982349
+    second: Enemy4_Death (wip) (1)_79
+  - first:
+      213: -4104171756137409839
+    second: Enemy4_Death (wip) (1)_80
+  - first:
+      213: 5161186116189386939
+    second: Enemy4_Death (wip) (1)_81
+  - first:
+      213: 7204834277766388311
+    second: Enemy4_Death (wip) (1)_82
+  - first:
+      213: -2638983107759738715
+    second: Enemy4_Death (wip) (1)_83
+  - first:
+      213: 8297167149960526208
+    second: Enemy4_Death (wip) (1)_84
+  - first:
+      213: 3853233008361965474
+    second: Enemy4_Death (wip) (1)_85
+  - first:
+      213: -4703976719367834970
+    second: Enemy4_Death (wip) (1)_86
+  - first:
+      213: -4644694187820838799
+    second: Enemy4_Death (wip) (1)_87
+  - first:
+      213: 8433315841719790114
+    second: Enemy4_Death (wip) (1)_88
+  - first:
+      213: -5138613183560277724
+    second: Enemy4_Death (wip) (1)_89
+  - first:
+      213: 398230896411867785
+    second: Enemy4_Death (wip) (1)_90
+  - first:
+      213: -1522379161650007108
+    second: Enemy4_Death (wip) (1)_91
+  - first:
+      213: -1237442900432050299
+    second: Enemy4_Death (wip) (1)_92
+  - first:
+      213: -9119148554027151133
+    second: Enemy4_Death (wip) (1)_93
+  - first:
+      213: 4368893359513517956
+    second: Enemy4_Death (wip) (1)_94
+  - first:
+      213: 8456903999419910699
+    second: Enemy4_Death (wip) (1)_95
+  - first:
+      213: -1073154129969748000
+    second: Enemy4_Death (wip) (1)_96
+  - first:
+      213: 5296825939051241953
+    second: Enemy4_Death (wip) (1)_97
+  - first:
+      213: -9166169455500085840
+    second: Enemy4_Death (wip) (1)_98
+  - first:
+      213: -4789868235093748166
+    second: Enemy4_Death (wip) (1)_99
+  - first:
+      213: -4049405555708704897
+    second: Enemy4_Death (wip) (1)_100
+  - first:
+      213: -9141393301623959837
+    second: Enemy4_Death (wip) (1)_101
+  - first:
+      213: -8491582423050972258
+    second: Enemy4_Death (wip) (1)_102
+  - first:
+      213: 3514548752809411789
+    second: Enemy4_Death (wip) (1)_103
+  - first:
+      213: 3920007114278703223
+    second: Enemy4_Death (wip) (1)_104
+  - first:
+      213: 526622897651606095
+    second: Enemy4_Death (wip) (1)_105
+  - first:
+      213: 7891134159503148764
+    second: Enemy4_Death (wip) (1)_106
+  - first:
+      213: 842499412057221009
+    second: Enemy4_Death (wip) (1)_107
+  - first:
+      213: -256785944841023686
+    second: Enemy4_Death (wip) (1)_108
+  - first:
+      213: -2919623674451580833
+    second: Enemy4_Death (wip) (1)_109
+  - first:
+      213: 6280992439297123490
+    second: Enemy4_Death (wip) (1)_110
+  - first:
+      213: -1986829229180046666
+    second: Enemy4_Death (wip) (1)_111
+  - first:
+      213: -7041092952432269655
+    second: Enemy4_Death (wip) (1)_112
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 96
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy4_Death (wip) (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dda09f19f7cf1f40800000000000000
+      internalID: 5701495526064696786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy4_Death (wip) (1)_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcda562fa7855d770800000000000000
+      internalID: 8634905145628798411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy4_Death (wip) (1)_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47029de813e9ed1c0800000000000000
+      internalID: -4476967043872513932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy4_Death (wip) (1)_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62793de6986abdb00800000000000000
+      internalID: 854459663516931878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy4_Death (wip) (1)_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b32ee9a11fe9ab0800000000000000
+      internalID: -4999293439697601753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy4_Death (wip) (1)_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13722057bd9c2c330800000000000000
+      internalID: 3729765385814288177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy4_Death (wip) (1)_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f990235ca4a4a3bb0800000000000000
+      internalID: -4955566754971383393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy4_Death (wip) (1)_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f788ba5ba3eeba0800000000000000
+      internalID: -6057839896825397418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy4_Death (wip) (1)_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba20502c84c77c5f0800000000000000
+      internalID: -736483362117188949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy4_Death (wip) (1)_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5508dba9cc14cb50800000000000000
+      internalID: 6612441805383796063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy4_Death (wip) (1)_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e359596a2560e50800000000000000
+      internalID: 6775193564853124757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 06b7ea87fb3b5e640b0b250e950d27a4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemy4_Death (wip) (1)_0: 5701495526064696786
+      Enemy4_Death (wip) (1)_1: 8634905145628798411
+      Enemy4_Death (wip) (1)_10: 6775193564853124757
+      Enemy4_Death (wip) (1)_2: -4476967043872513932
+      Enemy4_Death (wip) (1)_3: 854459663516931878
+      Enemy4_Death (wip) (1)_4: -4999293439697601753
+      Enemy4_Death (wip) (1)_5: 3729765385814288177
+      Enemy4_Death (wip) (1)_6: -4955566754971383393
+      Enemy4_Death (wip) (1)_7: -6057839896825397418
+      Enemy4_Death (wip) (1)_8: -736483362117188949
+      Enemy4_Death (wip) (1)_9: 6612441805383796063
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
