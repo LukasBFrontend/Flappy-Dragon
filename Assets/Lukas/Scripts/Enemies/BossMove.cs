@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BossMove : MonoBehaviour
@@ -5,9 +6,10 @@ public class BossMove : MonoBehaviour
     [SerializeField] private Vector2[] positions;
     [SerializeField] private int[] moveSequence;
     [Range(1f, 10f)][SerializeField] private float moveSpeed;
+    [Range(0f, 5f)][SerializeField] private float waitTime = 1f;
     private BossScript bossScript;
     private Rigidbody2D rigidbody;
-    private float waitTimer = 1f;
+    private float waitTimer;
     private int sequenceIndex = 0;
     private int positionIndex;
     private Vector2 targetPosition;
@@ -18,42 +20,42 @@ public class BossMove : MonoBehaviour
     {
         bossScript = gameObject.GetComponent<BossScript>();
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
-        Debug.Log(offset);
+        waitTimer = waitTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (positions != null && moveSequence != null)
+        if (!bossScript.isMoving) return;
+        if (!hasStarted)
         {
-            if (bossScript.isMoving)
+            offset = transform.position;
+
+            for (int i = 0; i < positions.Length; i++)
             {
-                if (!hasStarted)
-                {
-                    offset = transform.position;
-
-                    for (int i = 0; i < positions.Length; i++)
-                    {
-                        positions[i].x += offset.x;
-                        positions[i].y += offset.y;
-                    }
-
-                    hasStarted = true;
-
-                    SetVelocity();
-                }
-                else if (Vector3.Magnitude(rigidbody.position - targetPosition) <= .01f)
-                {
-                    sequenceIndex = (sequenceIndex + 1) % moveSequence.Length;
-                    Debug.Log("Sequence index: " + sequenceIndex);
-                    positionIndex = moveSequence[sequenceIndex];
-                    SetVelocity();
-                }
+                positions[i].x += offset.x;
+                positions[i].y += offset.y;
             }
+
+            hasStarted = true;
+
+            SetVelocity();
         }
-        else
+        else if (Vector3.Distance(rigidbody.position, targetPosition) <= .08f)
         {
-            Debug.Log("Positions array or Move Sequence array is empty");
+            if (waitTimer == waitTime)
+            {
+                sequenceIndex = (sequenceIndex + 1) % moveSequence.Length;
+                positionIndex = moveSequence[sequenceIndex];
+                rigidbody.linearVelocity = Vector2.zero;
+            }
+
+            waitTimer -= Time.deltaTime;
+
+            if (waitTimer <= 0)
+            {
+                SetVelocity();
+                waitTimer = waitTime;
+            }
         }
     }
     private void SetVelocity()
@@ -61,8 +63,6 @@ public class BossMove : MonoBehaviour
         positionIndex = moveSequence[sequenceIndex];
         targetPosition = positions[positionIndex];
         direction = Vector3.Normalize(targetPosition - rigidbody.position);
-        rigidbody.linearVelocityY = direction.y * moveSpeed;
-        rigidbody.linearVelocityX = direction.x * moveSpeed;
-        Debug.Log("Setting velocity to " + (direction * moveSpeed));
+        rigidbody.linearVelocity = direction * moveSpeed;
     }
 }
