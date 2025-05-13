@@ -17,6 +17,7 @@ public class BossTrigger : MonoBehaviour
             this.transform.parent.transform.DetachChildren();
             bossScript.isMoving = true;
             ScreenManager.Instance.ShowBossCanvas();
+            ScreenManager.Instance.HideScoreCanvas();
             LogicScript.Instance.isBossFight = true;
         }
     }

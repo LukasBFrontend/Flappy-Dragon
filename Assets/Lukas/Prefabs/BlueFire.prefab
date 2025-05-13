@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2504263955859395808}
   - component: {fileID: 8836832906809777893}
   - component: {fileID: 2914452500419379617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

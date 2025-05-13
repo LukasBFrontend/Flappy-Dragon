@@ -51,7 +51,6 @@ public class Crab : MonoBehaviour
 
     void FireMissile()
     {
-        Debug.Log("Fire");
         Instantiate(homingMissilePrefab, firePoint.transform);
         missileFired = true;
     }
