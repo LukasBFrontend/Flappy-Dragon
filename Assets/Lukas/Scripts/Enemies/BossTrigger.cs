@@ -14,6 +14,7 @@ public class BossTrigger : MonoBehaviour
     {
         if (IsPlayer(other))
         {
+            this.transform.parent.transform.DetachChildren();
             bossScript.isMoving = true;
             ScreenManager.Instance.ShowBossCanvas();
             LogicScript.Instance.isBossFight = true;

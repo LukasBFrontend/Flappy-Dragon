@@ -33,9 +33,6 @@ public class Weapon : MonoBehaviour
     private bool playerIsAlive;
     private PlayerScript playerScript;
     private LineRenderer laserRenderer;
-
-    private Collider2D lastHit;
-
     void Start()
     {
         playerScript = gameObject.GetComponent<PlayerScript>();
@@ -132,7 +129,7 @@ public class Weapon : MonoBehaviour
             laserImpact.SetActive(false);
             laserTickCount = 0;
         }
-        else
+        else if (animationIsActive)
         {
             UpdateLaser();
         }
@@ -177,8 +174,6 @@ public class Weapon : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(firePoint.position, new Vector2(1f, 0f), 50f, layersToHit);
             if (hit.collider != null)
             {
-                lastHit = hit.collider;
-
                 laserImpact.transform.localPosition = new Vector3(hit.distance + 0.5f, 0f, 0f);
                 int damage = 100;
                 Enemy enemy = hit.transform.gameObject.GetComponent<Enemy>();
@@ -198,7 +193,7 @@ public class Weapon : MonoBehaviour
                     bossScript.TakeDamage(damage);
                 }
                 laserRenderer.SetPosition(1, new Vector3(hit.distance + 0.5f, 0f, 0f));
-                //laserRenderer.SetPosition(1, new Vector3(11f, 0f, 0f));
+
                 return;
             }
             laserImpact.transform.localPosition = new Vector3(hit.distance, 0f, 50f);
@@ -235,12 +230,10 @@ public class Weapon : MonoBehaviour
                     bossScript.TakeDamage(damage);
                 }
             }
-
         }
 
         if (hit.collider != null)
         {
-            lastHit = hit.collider;
             laserImpact.transform.localPosition = new Vector3(hit.distance + 0.5f, 0f, 0f);
             laserRenderer.SetPosition(1, new Vector3(hit.distance + 0.5f - laser.transform.localPosition.x, 0f, 0f));
         }
@@ -249,6 +242,5 @@ public class Weapon : MonoBehaviour
             laserImpact.transform.localPosition = new Vector3(50f, 0f, 0f);
             laserRenderer.SetPosition(1, new Vector3(50f - laser.transform.localPosition.x, 0f, 0f));
         }
-
     }
 }

@@ -15,7 +15,7 @@ public class BossScript : MonoBehaviour
     private RectTransform healthBarTransform;
     private float healthBarWidth, healthBarHeight;
     private int maxHitpoints;
-    private float speed;
+    float speed;
     public float missileInterval = 2f;
     public float cannonInterval = 1f;
     private bool missileOneFired, missileTwoFired, cannonOneFired, cannonTwoFired = false;
@@ -43,8 +43,6 @@ public class BossScript : MonoBehaviour
 
             ShootMissiles();
             ShootCannons();
-
-            transform.position = new Vector2(transform.position.x + Time.deltaTime * speed, transform.position.y);
         }
         if (bossHitpoints <= 0)
         {
@@ -108,6 +106,7 @@ public class BossScript : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        Debug.Log("BossScript.TakeDamage called");
         bossHitpoints -= damage;
         healthBarTransform.sizeDelta = new Vector2(healthBarWidth * bossHitpoints / maxHitpoints, healthBarHeight);
         healthText.text = bossHitpoints.ToString();

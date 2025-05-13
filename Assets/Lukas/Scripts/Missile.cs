@@ -3,7 +3,7 @@ using UnityEngine;
 public class Missile : MonoBehaviour
 {
     [SerializeField] private int speed = 3;
-    public bool isMoving, targetsPlayer, targetIsSet = false;
+    [HideInInspector] public bool isMoving, targetsPlayer, targetIsSet = false;
     private GameObject player;
     private Vector2 targetPosition;
     private float targetAngle = 0f;
