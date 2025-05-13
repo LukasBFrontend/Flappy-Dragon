@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: cb00398bc3ad29844aba9639599ca7ae
+guid: 3e89ae80b0ce11b409a7b9cb56ad0e8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7733305029108402947
-    second: Homin_Missile_ani (3)_0
-  - first:
-      213: -574792462663176425
-    second: Homin_Missile_ani (3)_1
-  - first:
-      213: -6426126123039181818
-    second: Homin_Missile_ani (3)_2
-  - first:
-      213: -3535953787791418763
-    second: Homin_Missile_ani (3)_3
+      213: 6875680932996411315
+    second: Mechagon_Idle_BlueP_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_0
+      name: Mechagon_Idle_BlueP_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +128,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df470408c08cda490800000000000000
-      internalID: -7733305029108402947
+      spriteID: 3bf6d2031635b6f50800000000000000
+      internalID: 6875680932996411315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_1
+      name: Mechagon_Idle_BlueP_1
       rect:
         serializedVersion: 2
         x: 32
@@ -157,16 +148,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 71fa363fc4de508f0800000000000000
-      internalID: -574792462663176425
+      spriteID: f45a7a720a5b8c64ba34daf4412033ab
+      internalID: 1313518312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_2
+      name: Mechagon_Idle_BlueP_2
       rect:
         serializedVersion: 2
         x: 64
@@ -179,16 +170,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 60434629650d1d6a0800000000000000
-      internalID: -6426126123039181818
+      spriteID: 1ed1e5c844551e64abe39d99dbef580b
+      internalID: 572725726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_3
+      name: Mechagon_Idle_BlueP_3
       rect:
         serializedVersion: 2
         x: 96
@@ -201,10 +192,54 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 57ade78a3c4cdeec0800000000000000
-      internalID: -3535953787791418763
+      spriteID: 7adc51b99ad590245a80c19acf72c801
+      internalID: 1546758463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mechagon_Idle_BlueP_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05c13808b1e9164195d7deee7023d74
+      internalID: 1742905593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mechagon_Idle_BlueP_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599be488f5b924e4b8cafed0f2d6d5df
+      internalID: -1746425354
       vertices: []
       indices: 
       edges: []
@@ -213,7 +248,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f4e008228ca7b944abe16744dfe0ce51
+    spriteID: 1c387c16f74245e46ba42d1694f7284c
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +258,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Homin_Missile_ani (3)_0: -7733305029108402947
-      Homin_Missile_ani (3)_1: -574792462663176425
-      Homin_Missile_ani (3)_2: -6426126123039181818
-      Homin_Missile_ani (3)_3: -3535953787791418763
+      Mechagon_Idle_BlueP_0: 6875680932996411315
+      Mechagon_Idle_BlueP_1: 1313518312
+      Mechagon_Idle_BlueP_2: 572725726
+      Mechagon_Idle_BlueP_3: 1546758463
+      Mechagon_Idle_BlueP_4: 1742905593
+      Mechagon_Idle_BlueP_5: -1746425354
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

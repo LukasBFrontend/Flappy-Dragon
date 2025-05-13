@@ -1,0 +1,425 @@
+fileFormatVersion: 2
+guid: 2823cf211f675394690f8ea8ac0a1b0c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8478163142944891002
+    second: Blue Drone Dead_0
+  - first:
+      213: -9009413012535847870
+    second: Blue Drone Dead_1
+  - first:
+      213: 265212281590677905
+    second: Blue Drone Dead_2
+  - first:
+      213: 6133706359111103038
+    second: Blue Drone Dead_3
+  - first:
+      213: -4723754581436040397
+    second: Blue Drone Dead_4
+  - first:
+      213: -4764767957682650320
+    second: Blue Drone Dead_5
+  - first:
+      213: 3414307397481897344
+    second: Blue Drone Dead_6
+  - first:
+      213: 3361516644247819973
+    second: Blue Drone Dead_7
+  - first:
+      213: -4217885601819058121
+    second: Blue Drone Dead_8
+  - first:
+      213: -1089505140417674392
+    second: Blue Drone Dead_9
+  - first:
+      213: -4498574979476150860
+    second: Blue Drone Dead_10
+  - first:
+      213: -8360668153752794985
+    second: Blue Drone Dead_11
+  - first:
+      213: 1248388929965395676
+    second: Blue Drone Dead_12
+  - first:
+      213: 6815428754443900864
+    second: Blue Drone Dead_13
+  - first:
+      213: -1386864758065214180
+    second: Blue Drone Dead_14
+  - first:
+      213: -1744522201093170181
+    second: Blue Drone Dead_15
+  - first:
+      213: -7227204491307612677
+    second: Blue Drone Dead_16
+  - first:
+      213: 6968168474054964275
+    second: Blue Drone Dead_17
+  - first:
+      213: 1037469355191177462
+    second: Blue Drone Dead_18
+  - first:
+      213: -1215178524787920603
+    second: Blue Drone Dead_19
+  - first:
+      213: 4540666398880117247
+    second: Blue Drone Dead_20
+  - first:
+      213: 3417003479587869368
+    second: Blue Drone Dead_21
+  - first:
+      213: 422517793741303675
+    second: Blue Drone Dead_22
+  - first:
+      213: 6075952914198524133
+    second: Blue Drone Dead_23
+  - first:
+      213: -3810048323027591685
+    second: Blue Drone Dead_24
+  - first:
+      213: -7129359464835816110
+    second: Blue Drone Dead_25
+  - first:
+      213: -6807302200658937154
+    second: Blue Drone Dead_26
+  - first:
+      213: 5393967764145435456
+    second: Blue Drone Dead_27
+  - first:
+      213: 7949221016677074650
+    second: Blue Drone Dead_28
+  - first:
+      213: 2584414960363618631
+    second: Blue Drone Dead_29
+  - first:
+      213: -7985299380714225386
+    second: Blue Drone Dead_30
+  - first:
+      213: -8223732443688480059
+    second: Blue Drone Dead_31
+  - first:
+      213: 5490476293806055298
+    second: Blue Drone Dead_32
+  - first:
+      213: 1601923836094010284
+    second: Blue Drone Dead_33
+  - first:
+      213: -3027695296032575586
+    second: Blue Drone Dead_34
+  - first:
+      213: 7393310303879589224
+    second: Blue Drone Dead_35
+  - first:
+      213: -2429173881676725568
+    second: Blue Drone Dead_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue Drone Dead_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a702a03957c78a570800000000000000
+      internalID: 8478163142944891002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Drone Dead_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244d409599228f280800000000000000
+      internalID: -9009413012535847870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Drone Dead_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 191884a3a293ea300800000000000000
+      internalID: 265212281590677905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Drone Dead_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e323f539f6d4f1550800000000000000
+      internalID: 6133706359111103038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Drone Dead_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b71675c3ad17eb0800000000000000
+      internalID: -4723754581436040397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Drone Dead_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033892d89c420edb0800000000000000
+      internalID: -4764767957682650320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Drone Dead_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08d95ecfc7e026f20800000000000000
+      internalID: 3414307397481897344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Drone Dead_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c654fee39186ae20800000000000000
+      internalID: 3361516644247819973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3edc2d61af6fd344786ebca5a2a4ef53
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Blue Drone Dead_0: 8478163142944891002
+      Blue Drone Dead_1: -9009413012535847870
+      Blue Drone Dead_2: 265212281590677905
+      Blue Drone Dead_3: 6133706359111103038
+      Blue Drone Dead_4: -4723754581436040397
+      Blue Drone Dead_5: -4764767957682650320
+      Blue Drone Dead_6: 3414307397481897344
+      Blue Drone Dead_7: 3361516644247819973
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

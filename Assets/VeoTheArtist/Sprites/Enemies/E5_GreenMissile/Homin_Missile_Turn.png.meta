@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: cb00398bc3ad29844aba9639599ca7ae
+guid: 4a04fa855fffb2c4d9b4b2f828df9df7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7733305029108402947
-    second: Homin_Missile_ani (3)_0
+      213: 1512612597079358894
+    second: Homin_Missile_Turn_0
   - first:
-      213: -574792462663176425
-    second: Homin_Missile_ani (3)_1
+      213: 782413581022220824
+    second: Homin_Missile_Turn_1
   - first:
-      213: -6426126123039181818
-    second: Homin_Missile_ani (3)_2
-  - first:
-      213: -3535953787791418763
-    second: Homin_Missile_ani (3)_3
+      213: 4465860517806044673
+    second: Homin_Missile_Turn_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_0
+      name: Homin_Missile_Turn_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df470408c08cda490800000000000000
-      internalID: -7733305029108402947
+      spriteID: ead32b39421edf410800000000000000
+      internalID: 1512612597079358894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_1
+      name: Homin_Missile_Turn_1
       rect:
         serializedVersion: 2
         x: 32
@@ -159,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71fa363fc4de508f0800000000000000
-      internalID: -574792462663176425
+      spriteID: 812554ca101bbda00800000000000000
+      internalID: 782413581022220824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_2
+      name: Homin_Missile_Turn_2
       rect:
         serializedVersion: 2
         x: 64
@@ -181,30 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60434629650d1d6a0800000000000000
-      internalID: -6426126123039181818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Homin_Missile_ani (3)_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 57ade78a3c4cdeec0800000000000000
-      internalID: -3535953787791418763
+      spriteID: 1067544da7ce9fd30800000000000000
+      internalID: 4465860517806044673
       vertices: []
       indices: 
       edges: []
@@ -213,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f4e008228ca7b944abe16744dfe0ce51
+    spriteID: c52f1a94c68a7ac44bfef871bb46d133
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Homin_Missile_ani (3)_0: -7733305029108402947
-      Homin_Missile_ani (3)_1: -574792462663176425
-      Homin_Missile_ani (3)_2: -6426126123039181818
-      Homin_Missile_ani (3)_3: -3535953787791418763
+      Homin_Missile_Turn_0: 1512612597079358894
+      Homin_Missile_Turn_1: 782413581022220824
+      Homin_Missile_Turn_2: 4465860517806044673
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

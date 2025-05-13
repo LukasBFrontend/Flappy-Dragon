@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: cb00398bc3ad29844aba9639599ca7ae
+guid: 0463296422f617a44bdf675588c3ec9a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7733305029108402947
-    second: Homin_Missile_ani (3)_0
-  - first:
-      213: -574792462663176425
-    second: Homin_Missile_ani (3)_1
-  - first:
-      213: -6426126123039181818
-    second: Homin_Missile_ani (3)_2
-  - first:
-      213: -3535953787791418763
-    second: Homin_Missile_ani (3)_3
+      213: -3419211434067078658
+    second: Mechagon_Fly_BlueP_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_0
+      name: Mechagon_Fly_BlueP_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +128,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df470408c08cda490800000000000000
-      internalID: -7733305029108402947
+      spriteID: ef15a7401558c80d0800000000000000
+      internalID: -3419211434067078658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_1
+      name: Mechagon_Fly_BlueP_1
       rect:
         serializedVersion: 2
         x: 32
@@ -157,16 +148,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 71fa363fc4de508f0800000000000000
-      internalID: -574792462663176425
+      spriteID: ccfe783f07d47b84cbac52481fd51aed
+      internalID: 443844465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_2
+      name: Mechagon_Fly_BlueP_2
       rect:
         serializedVersion: 2
         x: 64
@@ -179,16 +170,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 60434629650d1d6a0800000000000000
-      internalID: -6426126123039181818
+      spriteID: d4ee11bb6cb5e0d4f91ce854af58edc7
+      internalID: -67025098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Homin_Missile_ani (3)_3
+      name: Mechagon_Fly_BlueP_3
       rect:
         serializedVersion: 2
         x: 96
@@ -201,10 +192,32 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 57ade78a3c4cdeec0800000000000000
-      internalID: -3535953787791418763
+      spriteID: e45121dbfb368814d85eff2e8ae1f33b
+      internalID: 180864496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mechagon_Fly_BlueP_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0636ac279e2a2f449902fb1601b0f076
+      internalID: 823810668
       vertices: []
       indices: 
       edges: []
@@ -213,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f4e008228ca7b944abe16744dfe0ce51
+    spriteID: 669d0b5ad4816dd4798c3e5161504ee0
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +236,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Homin_Missile_ani (3)_0: -7733305029108402947
-      Homin_Missile_ani (3)_1: -574792462663176425
-      Homin_Missile_ani (3)_2: -6426126123039181818
-      Homin_Missile_ani (3)_3: -3535953787791418763
+      Mechagon_Fly_BlueP_0: -3419211434067078658
+      Mechagon_Fly_BlueP_1: 443844465
+      Mechagon_Fly_BlueP_2: -67025098
+      Mechagon_Fly_BlueP_3: 180864496
+      Mechagon_Fly_BlueP_4: 823810668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
