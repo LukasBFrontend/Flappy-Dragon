@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public class ScreenManager : Singleton<ScreenManager>
 {
-    private GameObject startMenu, soundMenu, lvlMenu, gameOverMenu, gameWonMenu, bossCanvas, playerCanvas;
+    private GameObject startMenu, soundMenu, lvlMenu, gameOverMenu, gameWonMenu, bossCanvas, playerCanvas, scoreCanvas;
 
     public void Start()
     {
@@ -41,6 +41,7 @@ public class ScreenManager : Singleton<ScreenManager>
         gameWonMenu = GameObject.FindGameObjectWithTag("GameWonMenu");
         bossCanvas = GameObject.FindGameObjectWithTag("BossCanvas");
         playerCanvas = GameObject.FindGameObjectWithTag("PlayerCanvas");
+        scoreCanvas = GameObject.FindGameObjectWithTag("ScoreCanvas");
     }
 
     public void QuitToMain()
@@ -120,6 +121,11 @@ public class ScreenManager : Singleton<ScreenManager>
     public void HidePlayerCanvas()
     {
         HideMenu(playerCanvas);
+    }
+
+    public void HideScoreCanvas()
+    {
+        HideMenu(scoreCanvas);
     }
 
     private void ShowMenu(GameObject menu)

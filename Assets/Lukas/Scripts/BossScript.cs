@@ -17,7 +17,7 @@ public class BossScript : MonoBehaviour
     private int maxHitpoints;
     float speed;
     public float missileInterval = 2f;
-    public float cannonInterval = 1f;
+    public float cannonInterval = .7f;
     private bool missileOneFired, missileTwoFired, cannonOneFired, cannonTwoFired = false;
 
     void Start()
@@ -54,11 +54,12 @@ public class BossScript : MonoBehaviour
 
     public void ShootCannons()
     {
-        if (cannonOne)
+        if (cannonOne && cannonOne.GetComponent<BossWeapon>().weaponHitpoints > 0)
         {
             if (timer % cannonInterval >= cannonInterval / 2 && !cannonOneFired)
             {
                 Instantiate(cannonShotPrefab, cannonOne.transform);
+                cannonOne.transform.DetachChildren();
                 cannonOneFired = true;
             }
             else if (timer % cannonInterval < cannonInterval / 2)
@@ -67,11 +68,12 @@ public class BossScript : MonoBehaviour
             }
         }
 
-        if (cannonTwo)
+        if (cannonTwo && cannonTwo.GetComponent<BossWeapon>().weaponHitpoints > 0)
         {
             if (timer % cannonInterval >= cannonInterval / 2 && !cannonTwoFired)
             {
                 Instantiate(cannonShotPrefab, cannonTwo.transform);
+                cannonTwo.transform.DetachChildren();
                 cannonTwoFired = true;
             }
             else if (timer % cannonInterval < cannonInterval / 2)
@@ -86,22 +88,29 @@ public class BossScript : MonoBehaviour
         if (timer % missileInterval >= missileInterval / 2 && !missileOneFired)
         {
             Instantiate(missilePrefab, bazookaOne.transform);
+            bazookaOne.transform.DetachChildren();
             missileOneFired = true;
+
+            Instantiate(missilePrefab, bazookaTwo.transform);
+            bazookaTwo.transform.DetachChildren();
+            missileTwoFired = true;
         }
         else if (timer % missileInterval < missileInterval / 2)
         {
             missileOneFired = false;
-        }
-
-        if (timer % missileInterval <= missileInterval / 2 && !missileTwoFired)
-        {
-            Instantiate(missilePrefab, bazookaTwo.transform);
-            missileTwoFired = true;
-        }
-        else if (timer % missileInterval > missileInterval / 2)
-        {
             missileTwoFired = false;
         }
+
+        /*         if (timer % missileInterval <= missileInterval / 2 && !missileTwoFired)
+                {
+                    Instantiate(missilePrefab, bazookaTwo.transform);
+                    bazookaTwo.transform.DetachChildren();
+                    missileTwoFired = true;
+                }
+                else if (timer % missileInterval > missileInterval / 2)
+                {
+                    missileTwoFired = false;
+                } */
     }
 
     public void TakeDamage(int damage)
