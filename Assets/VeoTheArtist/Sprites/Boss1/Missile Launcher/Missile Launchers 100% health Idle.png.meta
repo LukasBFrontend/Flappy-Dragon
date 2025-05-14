@@ -1,0 +1,710 @@
+fileFormatVersion: 2
+guid: 8a99496105249344c9e824d3fb2f237e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8909214224131824115
+    second: Missile Launchers 100% health Idle_0
+  - first:
+      213: -4568411495142263666
+    second: Missile Launchers 100% health Idle_1
+  - first:
+      213: 1803570523017118027
+    second: Missile Launchers 100% health Idle_2
+  - first:
+      213: 16533819854688331
+    second: Missile Launchers 100% health Idle_3
+  - first:
+      213: 4375791987651915871
+    second: Missile Launchers 100% health Idle_4
+  - first:
+      213: 4116572555444003077
+    second: Missile Launchers 100% health Idle_5
+  - first:
+      213: -3057375388094540361
+    second: Missile Launchers 100% health Idle_6
+  - first:
+      213: 9219701387215972698
+    second: Missile Launchers 100% health Idle_7
+  - first:
+      213: 418836804356568488
+    second: Missile Launchers 100% health Idle_8
+  - first:
+      213: 1501108165504189813
+    second: Missile Launchers 100% health Idle_9
+  - first:
+      213: -6345963876477277869
+    second: Missile Launchers 100% health Idle_10
+  - first:
+      213: 4492237664259750926
+    second: Missile Launchers 100% health Idle_11
+  - first:
+      213: -1250685377462220702
+    second: Missile Launchers 100% health Idle_12
+  - first:
+      213: 4819535912527250726
+    second: Missile Launchers 100% health Idle_13
+  - first:
+      213: 8815733709535851951
+    second: Missile Launchers 100% health Idle_14
+  - first:
+      213: -8203663757227422586
+    second: Missile Launchers 100% health Idle_15
+  - first:
+      213: 6307731531957044931
+    second: Missile Launchers 100% health Idle_16
+  - first:
+      213: 6161855228631608234
+    second: Missile Launchers 100% health Idle_17
+  - first:
+      213: -8185167142993067247
+    second: Missile Launchers 100% health Idle_18
+  - first:
+      213: -7822392711531198580
+    second: Missile Launchers 100% health Idle_19
+  - first:
+      213: 3775689052419691331
+    second: Missile Launchers 100% health Idle_20
+  - first:
+      213: -7395387419995392176
+    second: Missile Launchers 100% health Idle_21
+  - first:
+      213: 7715731985879762453
+    second: Missile Launchers 100% health Idle_22
+  - first:
+      213: 6213000793309713608
+    second: Missile Launchers 100% health Idle_23
+  - first:
+      213: 8213891821004050402
+    second: Missile Launchers 100% health Idle_24
+  - first:
+      213: -5671000171548085118
+    second: Missile Launchers 100% health Idle_25
+  - first:
+      213: 1426919856078158479
+    second: Missile Launchers 100% health Idle_26
+  - first:
+      213: -5190652116515155397
+    second: Missile Launchers 100% health Idle_27
+  - first:
+      213: -8112435643935844408
+    second: Missile Launchers 100% health Idle_28
+  - first:
+      213: -871455537275855779
+    second: Missile Launchers 100% health Idle_29
+  - first:
+      213: -7933506873901662299
+    second: Missile Launchers 100% health Idle_30
+  - first:
+      213: -5515287974610924823
+    second: Missile Launchers 100% health Idle_31
+  - first:
+      213: 5360194961113334591
+    second: Missile Launchers 100% health Idle_32
+  - first:
+      213: 6430359329264779008
+    second: Missile Launchers 100% health Idle_33
+  - first:
+      213: -6741029818754393580
+    second: Missile Launchers 100% health Idle_34
+  - first:
+      213: 5522702351683737461
+    second: Missile Launchers 100% health Idle_35
+  - first:
+      213: 9204991466466449873
+    second: Missile Launchers 100% health Idle_36
+  - first:
+      213: 1556146775994358757
+    second: Missile Launchers 100% health Idle_37
+  - first:
+      213: -9222284558268513750
+    second: Missile Launchers 100% health Idle_38
+  - first:
+      213: 5323425095652665256
+    second: Missile Launchers 100% health Idle_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 320
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f91c314223e3ab70800000000000000
+      internalID: 8909214224131824115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 960
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84fb3c13fdb990c0800000000000000
+      internalID: -4568411495142263666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 960
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b410dcfb5d1970910800000000000000
+      internalID: 1803570523017118027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 960
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40183beb6dba3000800000000000000
+      internalID: 16533819854688331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 960
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f503efaf0afe9bc30800000000000000
+      internalID: 4375791987651915871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501ac5bbde0012930800000000000000
+      internalID: 4116572555444003077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b55a9f78450295d0800000000000000
+      internalID: -3057375388094540361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a592f284095f2ff70800000000000000
+      internalID: 9219701387215972698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 640
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5788ebad100d500800000000000000
+      internalID: 418836804356568488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 640
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 575c05e5ce105d410800000000000000
+      internalID: 1501108165504189813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3596c190a7b9ee7a0800000000000000
+      internalID: -6345963876477277869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c35d0da52a75e30800000000000000
+      internalID: 4492237664259750926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 320
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268c69e864ca4aee0800000000000000
+      internalID: -1250685377462220702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 320
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625cc60a06e62e240800000000000000
+      internalID: 4819535912527250726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 320
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa5325fd917c75a70800000000000000
+      internalID: 8815733709535851951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c86b5174bb62e80800000000000000
+      internalID: -8203663757227422586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c684d49860998750800000000000000
+      internalID: 6307731531957044931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab68fbfeae438550800000000000000
+      internalID: 6161855228631608234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_18
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11303bea9d1786e80800000000000000
+      internalID: -8185167142993067247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile Launchers 100% health Idle_19
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87049f0647417390800000000000000
+      internalID: -7822392711531198580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: de5c9c7a75cac15469797c0b90226140
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Missile Launchers 100% health Idle_0: 8909214224131824115
+      Missile Launchers 100% health Idle_1: -4568411495142263666
+      Missile Launchers 100% health Idle_10: -6345963876477277869
+      Missile Launchers 100% health Idle_11: 4492237664259750926
+      Missile Launchers 100% health Idle_12: -1250685377462220702
+      Missile Launchers 100% health Idle_13: 4819535912527250726
+      Missile Launchers 100% health Idle_14: 8815733709535851951
+      Missile Launchers 100% health Idle_15: -8203663757227422586
+      Missile Launchers 100% health Idle_16: 6307731531957044931
+      Missile Launchers 100% health Idle_17: 6161855228631608234
+      Missile Launchers 100% health Idle_18: -8185167142993067247
+      Missile Launchers 100% health Idle_19: -7822392711531198580
+      Missile Launchers 100% health Idle_2: 1803570523017118027
+      Missile Launchers 100% health Idle_3: 16533819854688331
+      Missile Launchers 100% health Idle_4: 4375791987651915871
+      Missile Launchers 100% health Idle_5: 4116572555444003077
+      Missile Launchers 100% health Idle_6: -3057375388094540361
+      Missile Launchers 100% health Idle_7: 9219701387215972698
+      Missile Launchers 100% health Idle_8: 418836804356568488
+      Missile Launchers 100% health Idle_9: 1501108165504189813
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
