@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class HomingMissile : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     [Range(1f, 20f)][SerializeField] private float launchSpeed, flightSpeed = 5f;
     [Range(0f, 1f)][SerializeField] private float turnTime = .5f;
     private GameObject player;

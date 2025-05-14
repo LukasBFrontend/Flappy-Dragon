@@ -8,7 +8,8 @@ public class BossScript : MonoBehaviour
     [HideInInspector] public Animator animator;
     [SerializeField] private int bossHitpoints = 700;
     [SerializeField]
-    private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, healthTextObject, healthBar;
+    private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, laserGun, healthTextObject, healthBar;
+    private BossLaser laserScript;
     private GroundMoveScript groundMoveScript;
     private LogicScript logicScript;
     private Text healthText;
@@ -25,6 +26,7 @@ public class BossScript : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         healthText = healthTextObject.GetComponent<Text>();
         healthBarTransform = healthBar.GetComponent<RectTransform>();
+        laserScript = laserGun.GetComponent<BossLaser>();
         groundMoveScript = GameObject.FindGameObjectWithTag("Moving").GetComponent<GroundMoveScript>();
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
 
@@ -87,13 +89,15 @@ public class BossScript : MonoBehaviour
     {
         if (timer % missileInterval >= missileInterval / 2 && !missileOneFired)
         {
-            Instantiate(missilePrefab, bazookaOne.transform);
-            bazookaOne.transform.DetachChildren();
+            //Instantiate(missilePrefab, bazookaOne.transform);
+            //bazookaOne.transform.DetachChildren();
             missileOneFired = true;
 
-            Instantiate(missilePrefab, bazookaTwo.transform);
-            bazookaTwo.transform.DetachChildren();
+            //Instantiate(missilePrefab, bazookaTwo.transform);
+            //bazookaTwo.transform.DetachChildren();
             missileTwoFired = true;
+
+            laserScript.StartLaserSequence();
         }
         else if (timer % missileInterval < missileInterval / 2)
         {
@@ -115,7 +119,6 @@ public class BossScript : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        Debug.Log("BossScript.TakeDamage called");
         bossHitpoints -= damage;
         healthBarTransform.sizeDelta = new Vector2(healthBarWidth * bossHitpoints / maxHitpoints, healthBarHeight);
         healthText.text = bossHitpoints.ToString();
