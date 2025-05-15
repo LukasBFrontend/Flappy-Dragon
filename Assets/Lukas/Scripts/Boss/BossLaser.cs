@@ -13,6 +13,7 @@ public class BossLaser : MonoBehaviour
     private float fpsCounter, animationTimer, chargeTimer;
     private bool animationIsActive, sequenceIsActive = false;
     private LineRenderer laserRenderer;
+    private BoxCollider2D collider;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class BossLaser : MonoBehaviour
     void Awake()
     {
         laserRenderer = laser.GetComponent<LineRenderer>();
+        collider = laser.GetComponent<BoxCollider2D>();
     }
     void Update()
     {
@@ -29,12 +31,13 @@ public class BossLaser : MonoBehaviour
         {
             chargeTimer -= Time.deltaTime;
         }
-        if (chargeTimer <= 0)
+        if (chargeTimer < 0)
         {
             laserVortex.GetComponent<SpriteRenderer>().enabled = false;
             laserVortexAnimator.enabled = false;
 
             laserRenderer.enabled = true;
+            collider.enabled = true;
             animationIsActive = true;
             animationTimer = animationDuration;
             animationStep = 0;
@@ -65,10 +68,11 @@ public class BossLaser : MonoBehaviour
                 fpsCounter = 0f;
             }
         }
-        if (animationTimer < 0)
+        if (animationTimer <= 0)
         {
             animationIsActive = false;
             laserRenderer.enabled = false;
+            collider.enabled = false;
             laserImpact.SetActive(false);
             sequenceIsActive = false;
         }
