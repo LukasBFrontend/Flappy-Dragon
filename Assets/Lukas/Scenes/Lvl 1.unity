@@ -5852,15 +5852,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702406628}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f1addd8efb7f9a45933bb4793ca6b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   positions:
-  - {x: 0, y: 1}
-  - {x: 0, y: -1}
-  moveSequence: 0000000001000000
+  - {x: 0.5, y: 1}
+  - {x: 0, y: 0}
+  - {x: 0.5, y: -1}
+  moveSequence: 000000000100000002000000
   moveSpeed: 2
   waitTime: 0.5
 --- !u!60 &702406637
@@ -6944,7 +6945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -800, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &832781466
@@ -7238,7 +7239,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.99951196
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -13145,7 +13146,7 @@ Transform:
   m_GameObject: {fileID: 1573916202}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13175,7 +13176,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8ea117715ed09e347ae3414d079968b8, type: 2}
+  - {fileID: 2100000, guid: 3f412060a413455419b6a8ae8ad1f509, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13201,7 +13202,7 @@ LineRenderer:
   - {x: 3, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.44765297
+    widthMultiplier: 2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -13302,7 +13303,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 20, y: 0.5}
+  m_Size: {x: 20, y: 1}
   m_EdgeRadius: 0
 --- !u!1001 &1579871236
 PrefabInstance:
@@ -40371,11 +40372,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   textures:
-  - {fileID: 2800000, guid: caa876ebe6d446546be23f900bcc5871, type: 3}
-  - {fileID: 2800000, guid: 3fb8e3c51d5e5d047b622232b05a0f59, type: 3}
-  - {fileID: 2800000, guid: 53c10d1fc95edde4dbcbce67fc9c9c4b, type: 3}
-  - {fileID: 2800000, guid: f11d8d8284265a04f8c138dcb6943ec3, type: 3}
-  - {fileID: 2800000, guid: 84d2960b58f49254e8903f1b5c7269e5, type: 3}
+  - {fileID: 2800000, guid: c9166af12582b6f4abe9e1643547ce8b, type: 3}
+  - {fileID: 2800000, guid: c8ae0ddbcd3046a4a87e245023c3abfd, type: 3}
+  - {fileID: 2800000, guid: de3a868e60bae1f4c88f47c9bd1175fc, type: 3}
+  - {fileID: 2800000, guid: 4d64ada5e2d23a042a605e1d22fbb8b2, type: 3}
   chargeDuration: 1.5
   fps: 30
   animationDuration: 1
@@ -40516,7 +40516,7 @@ MonoBehaviour:
   playerIsAlive: 1
   deathClip: {fileID: 8300000, guid: 017722ed8d6c68d4a860036c1326d680, type: 3}
   audioVolume: 30
-  jumpForce: 7.5
+  jumpForce: 8
 --- !u!50 &2011919042
 Rigidbody2D:
   serializedVersion: 5
