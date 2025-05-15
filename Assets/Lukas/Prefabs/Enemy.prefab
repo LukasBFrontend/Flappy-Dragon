@@ -241,12 +241,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612dcd4de43fcdc419cf4f8e74125c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  maxHealth: 40
   points: 50
   deathClip: {fileID: 8300000, guid: d61368a8af60e914aae1d6327ae6ad33, type: 3}
   audioVolume: 30
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   isActive: 0
+  isDead: 0
 --- !u!114 &3174890353587406933
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class HomingMissile : MonoBehaviour
 
     void Update()
     {
-
+        if (player == null) return;
         if (transform.position.y <= player.transform.position.y && !targetHeightReached)
         {
             rigidbody.linearVelocityY = launchSpeed;
