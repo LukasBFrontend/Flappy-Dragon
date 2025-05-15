@@ -5767,6 +5767,35 @@ MonoBehaviour:
   healthBar: {fileID: 339538679}
   missileInterval: 7
   cannonInterval: 1.25
+  attacks:
+  - Attack: 0
+    Delay: 0.5
+  - Attack: 0
+    Delay: 0.5
+  - Attack: 0
+    Delay: 2
+  - Attack: 1
+    Delay: 1
+  - Attack: 2
+    Delay: 1
+  - Attack: 1
+    Delay: 1
+  - Attack: 2
+    Delay: 2
+  - Attack: 0
+    Delay: 0.5
+  - Attack: 0
+    Delay: 0.5
+  - Attack: 0
+    Delay: 0.5
+  - Attack: 0
+    Delay: 0.2
+  - Attack: 0
+    Delay: 0.2
+  - Attack: 0
+    Delay: 2
+  - Attack: 3
+    Delay: 4
 --- !u!95 &702406633
 Animator:
   serializedVersion: 7
@@ -5823,14 +5852,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702406628}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f1addd8efb7f9a45933bb4793ca6b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   positions:
-  - {x: 3, y: 0}
-  - {x: 0, y: 0}
+  - {x: 0, y: 1}
+  - {x: 0, y: -1}
   moveSequence: 0000000001000000
   moveSpeed: 2
   waitTime: 0.5
@@ -13098,10 +13127,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1573916203}
+  - component: {fileID: 1573916205}
   - component: {fileID: 1573916204}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: Missile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13116,7 +13146,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1990473447}
@@ -13228,6 +13258,52 @@ LineRenderer:
   m_UseWorldSpace: 0
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!61 &1573916205
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573916202}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -10, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 20, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1579871236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40418,7 +40494,7 @@ GameObject:
   - component: {fileID: 2011919047}
   - component: {fileID: 2011919041}
   - component: {fileID: 2011919046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ~Player
   m_TagString: Player
   m_Icon: {fileID: 0}

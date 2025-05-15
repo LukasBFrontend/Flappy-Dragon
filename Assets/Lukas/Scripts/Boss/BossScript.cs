@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,7 +20,11 @@ public class BossScript : MonoBehaviour
     float speed;
     public float missileInterval = 2f;
     public float cannonInterval = .7f;
-    private bool missileOneFired, missileTwoFired, cannonOneFired, cannonTwoFired = false;
+
+    [SerializeField] private NextAttack[] attacks;
+    private float attackTimer = 0;
+    private int attackIndex = 0;
+
 
     void Start()
     {
@@ -41,10 +46,30 @@ public class BossScript : MonoBehaviour
     {
         if (isMoving)
         {
+            if (attackTimer <= 0)
+            {
+                switch (attacks[attackIndex].Attack)
+                {
+                    case AttackType.Cannons:
+                        ShootCannons();
+                        break;
+                    case AttackType.MissileOne:
+                        ShootMissileOne();
+                        break;
+                    case AttackType.MissileTwo:
+                        ShootMissileTwo();
+                        break;
+                    case AttackType.Laser:
+                        laserScript.StartLaserSequence();
+                        break;
+                    default:
+                        break;
+                }
+                attackTimer = attacks[attackIndex].Delay;
+                attackIndex = (attackIndex + 1) % attacks.Length;
+            }
             timer += Time.deltaTime;
-
-            ShootMissiles();
-            ShootCannons();
+            attackTimer -= Time.deltaTime;
         }
         if (bossHitpoints <= 0)
         {
@@ -58,63 +83,27 @@ public class BossScript : MonoBehaviour
     {
         if (cannonOne && cannonOne.GetComponent<BossWeapon>().weaponHitpoints > 0)
         {
-            if (timer % cannonInterval >= cannonInterval / 2 && !cannonOneFired)
-            {
-                Instantiate(cannonShotPrefab, cannonOne.transform);
-                cannonOne.transform.DetachChildren();
-                cannonOneFired = true;
-            }
-            else if (timer % cannonInterval < cannonInterval / 2)
-            {
-                cannonOneFired = false;
-            }
+            Instantiate(cannonShotPrefab, cannonOne.transform);
+            cannonOne.transform.DetachChildren();
         }
 
         if (cannonTwo && cannonTwo.GetComponent<BossWeapon>().weaponHitpoints > 0)
         {
-            if (timer % cannonInterval >= cannonInterval / 2 && !cannonTwoFired)
-            {
-                Instantiate(cannonShotPrefab, cannonTwo.transform);
-                cannonTwo.transform.DetachChildren();
-                cannonTwoFired = true;
-            }
-            else if (timer % cannonInterval < cannonInterval / 2)
-            {
-                cannonTwoFired = false;
-            }
+            Instantiate(cannonShotPrefab, cannonTwo.transform);
+            cannonTwo.transform.DetachChildren();
         }
     }
 
-    public void ShootMissiles()
+    public void ShootMissileOne()
     {
-        if (timer % missileInterval >= missileInterval / 2 && !missileOneFired)
-        {
-            //Instantiate(missilePrefab, bazookaOne.transform);
-            //bazookaOne.transform.DetachChildren();
-            missileOneFired = true;
+        Instantiate(missilePrefab, bazookaOne.transform);
+        bazookaOne.transform.DetachChildren();
+    }
 
-            //Instantiate(missilePrefab, bazookaTwo.transform);
-            //bazookaTwo.transform.DetachChildren();
-            missileTwoFired = true;
-
-            laserScript.StartLaserSequence();
-        }
-        else if (timer % missileInterval < missileInterval / 2)
-        {
-            missileOneFired = false;
-            missileTwoFired = false;
-        }
-
-        /*         if (timer % missileInterval <= missileInterval / 2 && !missileTwoFired)
-                {
-                    Instantiate(missilePrefab, bazookaTwo.transform);
-                    bazookaTwo.transform.DetachChildren();
-                    missileTwoFired = true;
-                }
-                else if (timer % missileInterval > missileInterval / 2)
-                {
-                    missileTwoFired = false;
-                } */
+    public void ShootMissileTwo()
+    {
+        Instantiate(missilePrefab, bazookaTwo.transform);
+        bazookaTwo.transform.DetachChildren();
     }
 
     public void TakeDamage(int damage)
@@ -125,3 +114,17 @@ public class BossScript : MonoBehaviour
         animator.SetInteger("BossHealth", 100 * bossHitpoints / maxHitpoints);
     }
 }
+[System.Serializable]
+public class NextAttack
+{
+    public AttackType Attack;
+    [Range(0f, 5f)] public float Delay;
+}
+
+public enum AttackType
+{
+    Cannons,
+    MissileOne,
+    MissileTwo,
+    Laser
+};
