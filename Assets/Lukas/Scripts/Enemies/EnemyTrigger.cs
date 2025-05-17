@@ -12,12 +12,14 @@ public class EnemyTrigger : MonoBehaviour
         enemyLogicScript = enemy.GetComponent<Enemy>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Update()
     {
-        if (other.tag == "Player")
+        if (transform.position.x <= 14)
         {
-            enemyMoveScript.isMoving = true;
-            enemyLogicScript.isActive = true;
+            {
+                enemyMoveScript.isMoving = true;
+                enemyLogicScript.isActive = true;
+            }
         }
     }
 }
