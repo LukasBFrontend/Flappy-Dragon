@@ -33,8 +33,7 @@ public class BossLaser : MonoBehaviour
         }
         if (chargeTimer < 0)
         {
-            laserVortex.GetComponent<SpriteRenderer>().enabled = false;
-            laserVortexAnimator.enabled = false;
+            laserVortexAnimator.SetBool("IsCharging", false);
 
             laserRenderer.enabled = true;
             collider.enabled = true;
@@ -85,8 +84,7 @@ public class BossLaser : MonoBehaviour
         chargeTimer = chargeDuration;
         animationTimer = animationDuration;
 
-        laserVortex.GetComponent<SpriteRenderer>().enabled = true;
-        laserVortexAnimator.enabled = true;
         laserVortexAnimator.SetBool("IsCharging", true);
+        Debug.Log(laserVortexAnimator.GetBool("IsCharging"));
     }
 }

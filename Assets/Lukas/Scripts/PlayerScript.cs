@@ -2,9 +2,15 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum PowerUp
+{
+    None,
+    Blue
+}
 public class PlayerScript : MonoBehaviour
 {
     [HideInInspector] public bool playerIsAlive = true;
+    [HideInInspector] public PowerUp activePowerUp = PowerUp.None;
     [SerializeField] private AudioClip deathClip;
     [SerializeField][Range(0, 100)] private float audioVolume = 1f;
     [SerializeField] private float jumpForce;
@@ -13,6 +19,7 @@ public class PlayerScript : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private LogicScript logic;
+
 
     void Start()
     {
@@ -41,6 +48,8 @@ public class PlayerScript : MonoBehaviour
             {
                 Die();
             }
+
+            animator.SetBool("HasBlue", activePowerUp == PowerUp.Blue);
         }
     }
 

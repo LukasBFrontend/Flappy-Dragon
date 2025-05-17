@@ -1,10 +1,61 @@
 fileFormatVersion: 2
-guid: 1bcea85cee753d347ad4921bf85465bd
+guid: 163edd28d9731fb4dad4089d054743fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4091884654436317117
-    second: Laser Beam_0
+      213: -9117471382288314138
+    second: Boss Laser Charge_0
+  - first:
+      213: -6470884836638621944
+    second: Boss Laser Charge_1
+  - first:
+      213: 3233466340191042075
+    second: Boss Laser Charge_2
+  - first:
+      213: -7064964587200252030
+    second: Boss Laser Charge_3
+  - first:
+      213: 8970908910513134069
+    second: Boss Laser Charge_4
+  - first:
+      213: 924613387134787964
+    second: Boss Laser Charge_5
+  - first:
+      213: 6577216828419409459
+    second: Boss Laser Charge_6
+  - first:
+      213: 3773842052466302842
+    second: Boss Laser Charge_7
+  - first:
+      213: 7468636068242564023
+    second: Boss Laser Charge_8
+  - first:
+      213: -1694193966390781178
+    second: Boss Laser Charge_9
+  - first:
+      213: -6670575718701127805
+    second: Boss Laser Charge_10
+  - first:
+      213: -8417860572199296527
+    second: Boss Laser Charge_11
+  - first:
+      213: 7662009212209834532
+    second: Boss Laser Charge_12
+  - first:
+      213: 6033282382708655379
+    second: Boss Laser Charge_13
+  - first:
+      213: 7880584544721240216
+    second: Boss Laser Charge_14
+  - first:
+      213: 3232175165338589373
+    second: Boss Laser Charge_15
+  - first:
+      213: 1227781842853558459
+    second: Boss Laser Charge_16
+  - first:
+      213: 5358305108179702608
+    second: Boss Laser Charge_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +102,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,89 +164,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss Laser Beam_0
+      name: Boss Laser Charge_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
-        height: 64
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b9f211615293ca14a82d105e92381142
-      internalID: 1516569969
+      spriteID: 6e05ae0951c387180800000000000000
+      internalID: -9117471382288314138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss Laser Beam_1
+      name: Boss Laser Charge_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
-        height: 64
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1b08341ae66eb8a4881cfd70605d5697
-      internalID: 1158192757
+      spriteID: 80f71b9768cc236a0800000000000000
+      internalID: -6470884836638621944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss Laser Beam_2
+      name: Boss Laser Charge_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
-        height: 64
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f4c7f0b74d2823f4683f56f378757887
-      internalID: -80557682
+      spriteID: b1af44831849fdc20800000000000000
+      internalID: 3233466340191042075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss Laser Beam_3
+      name: Boss Laser Charge_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
-        height: 64
+        height: 320
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 727a45f4a2f235b498c8cf0f2c4d93cb
-      internalID: -560967482
+      spriteID: 287f635c32434fd90800000000000000
+      internalID: -7064964587200252030
       vertices: []
       indices: 
       edges: []
@@ -204,7 +255,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: aba77fdc474af4440b146245b917c51d
+    spriteID: 76358ba9ec35925409d516831216b26a
     internalID: 0
     vertices: []
     indices: 
@@ -214,10 +265,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Boss Laser Beam_0: 1516569969
-      Boss Laser Beam_1: 1158192757
-      Boss Laser Beam_2: -80557682
-      Boss Laser Beam_3: -560967482
+      Boss Laser Charge_0: -9117471382288314138
+      Boss Laser Charge_1: -6470884836638621944
+      Boss Laser Charge_2: 3233466340191042075
+      Boss Laser Charge_3: -7064964587200252030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

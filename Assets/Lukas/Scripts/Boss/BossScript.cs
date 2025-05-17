@@ -9,7 +9,9 @@ public class BossScript : MonoBehaviour
     [HideInInspector] public Animator animator;
     [SerializeField] private int bossHitpoints = 700;
     [SerializeField]
-    private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, laserGun, healthTextObject, healthBar;
+    private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, laserGun, missileLaunchers, healthTextObject, healthBar;
+    private Animator launcherAnimator;
+    private SpriteRenderer launcherRenderer;
     private BossLaser laserScript;
     private GroundMoveScript groundMoveScript;
     private LogicScript logicScript;
@@ -29,6 +31,8 @@ public class BossScript : MonoBehaviour
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
+        launcherAnimator = missileLaunchers.GetComponent<Animator>();
+        launcherRenderer = missileLaunchers.GetComponent<SpriteRenderer>();
         healthText = healthTextObject.GetComponent<Text>();
         healthBarTransform = healthBar.GetComponent<RectTransform>();
         laserScript = laserGun.GetComponent<BossLaser>();
@@ -46,6 +50,19 @@ public class BossScript : MonoBehaviour
     {
         if (isMoving)
         {
+            if (attackTimer <= .5f)
+            {
+                AttackType comingAttack = attacks[attackIndex].Attack;
+                if (comingAttack == AttackType.MissileOne || comingAttack == AttackType.MissileTwo && !launcherRenderer.enabled)
+                {
+                    launcherRenderer.enabled = true;
+                }
+
+                if (comingAttack != AttackType.MissileOne && comingAttack != AttackType.MissileTwo && launcherRenderer.enabled)
+                {
+                    launcherRenderer.enabled = false;
+                }
+            }
             if (attackTimer <= 0)
             {
                 switch (attacks[attackIndex].Attack)
@@ -112,6 +129,7 @@ public class BossScript : MonoBehaviour
         healthBarTransform.sizeDelta = new Vector2(healthBarWidth * bossHitpoints / maxHitpoints, healthBarHeight);
         healthText.text = bossHitpoints.ToString();
         animator.SetInteger("BossHealth", 100 * bossHitpoints / maxHitpoints);
+        launcherAnimator.SetInteger("BossHealth", 100 * bossHitpoints / maxHitpoints);
     }
 }
 [System.Serializable]

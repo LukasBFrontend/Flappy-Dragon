@@ -82,7 +82,7 @@ public class Weapon : MonoBehaviour
             {
                 Shoot();
             }
-            else
+            else if (playerScript.activePowerUp == PowerUp.Blue)
             {
                 ShootLaser();
             }
