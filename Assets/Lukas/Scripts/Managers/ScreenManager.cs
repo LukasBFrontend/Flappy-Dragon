@@ -4,8 +4,9 @@ using UnityEngine.EventSystems;
 
 public class ScreenManager : Singleton<ScreenManager>
 {
-    private GameObject startMenu, soundMenu, lvlMenu, gameOverMenu, gameWonMenu, bossCanvas, playerCanvas, scoreCanvas;
-
+    private GameObject startMenu, soundMenu, lvlMenu, gameOverMenu, gameWonMenu, bossCanvas, playerCanvas, scoreCanvas, startSelectMenu;
+    private GameObject moving;
+    public bool startAtBoss = false;
     public void Start()
     {
         CacheMenus();
@@ -16,9 +17,19 @@ public class ScreenManager : Singleton<ScreenManager>
         SceneManager.LoadScene("Lvl 1");
     }
 
+    public void StartAtBoss()
+    {
+        startAtBoss = true;
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+        SceneManager.LoadScene("Lvl 1");
+    }
+
     private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         CacheMenus();
+
+        moving = GameObject.FindGameObjectWithTag("Moving");
+        if (moving != null && startAtBoss) moving.transform.position = new Vector2(-800, 0);
 
         if (scene.name == "Lvl 1")
         {
@@ -42,6 +53,7 @@ public class ScreenManager : Singleton<ScreenManager>
         bossCanvas = GameObject.FindGameObjectWithTag("BossCanvas");
         playerCanvas = GameObject.FindGameObjectWithTag("PlayerCanvas");
         scoreCanvas = GameObject.FindGameObjectWithTag("ScoreCanvas");
+        startSelectMenu = GameObject.FindGameObjectWithTag("StartSelectMenu");
     }
 
     public void QuitToMain()
@@ -128,6 +140,16 @@ public class ScreenManager : Singleton<ScreenManager>
         HideMenu(scoreCanvas);
     }
 
+    public void OpenStartSelectMenu()
+    {
+        HideMenu(startMenu);
+        ShowMenu(startSelectMenu);
+    }
+    public void CloseStartSelectMenu()
+    {
+        HideMenu(startSelectMenu);
+        ShowMenu(startMenu);
+    }
     private void ShowMenu(GameObject menu)
     {
         var canvasGroup = menu.GetComponent<CanvasGroup>();

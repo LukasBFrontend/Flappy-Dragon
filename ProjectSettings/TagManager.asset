@@ -24,6 +24,7 @@ TagManager:
   - BossCanvas
   - PlayerCanvas
   - Background
+  - StartSelectMenu
   layers:
   - Default
   - TransparentFX
