@@ -320,7 +320,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &207911121575361887
 MonoBehaviour:
@@ -1513,6 +1513,7 @@ GameObject:
   - component: {fileID: 1132915545648631145}
   - component: {fileID: 7657549852793101576}
   - component: {fileID: 4685596297326285965}
+  - component: {fileID: 2741891879213182547}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -1634,6 +1635,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 2741891879213182547}
+        m_TargetAssemblyTypeName: ButtonClick, Assembly-CSharp
+        m_MethodName: OnButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2741891879213182547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5906324326834178595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c7aa43155720047bb4e86ecf2d4ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickClip: {fileID: 8300000, guid: e16d70644e29cb548a3fd9c6b3215aa8, type: 3}
+  audioVolume: 30
 --- !u!1 &6470198338322202798
 GameObject:
   m_ObjectHideFlags: 0
