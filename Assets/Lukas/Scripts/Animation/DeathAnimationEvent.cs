@@ -7,11 +7,22 @@ public class DeathAnimationEvent : StateMachineBehaviour
     //{
     //
     //}
+    private bool hasDropped = false;
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (stateInfo.normalizedTime > 1) animator.gameObject.SetActive(false);
+        if (stateInfo.normalizedTime > .5 && !hasDropped)
+        {
+            EnemyDrop enemyDrop = animator.gameObject.GetComponent<EnemyDrop>();
+            enemyDrop?.SpawnDrop();
+            hasDropped = true;
+        }
+
+        if (stateInfo.normalizedTime > 1)
+        {
+            animator.gameObject.SetActive(false);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

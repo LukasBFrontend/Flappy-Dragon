@@ -44,6 +44,7 @@ public class Enemy : MonoBehaviour
         boxCollider.enabled = false;
         isDead = true;
 
+
         logic.AddScore(points);
     }
 
