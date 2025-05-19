@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612dcd4de43fcdc419cf4f8e74125c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 80
-  points: 100
+  maxHealth: 100
+  points: 25
   deathClip: {fileID: 8300000, guid: 017722ed8d6c68d4a860036c1326d680, type: 3}
   audioVolume: 35
   damageColor: {r: 1, g: 0, b: 0, a: 1}
