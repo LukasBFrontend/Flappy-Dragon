@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612dcd4de43fcdc419cf4f8e74125c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
+  maxHealth: 20
   points: 10
   deathClip: {fileID: 8300000, guid: 173ed7b110e9c2042af46823b3b19653, type: 3}
   audioVolume: 30

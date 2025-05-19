@@ -156,7 +156,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2, y: 1.2}
   m_EdgeRadius: 0
 --- !u!114 &5339368241588242171
 MonoBehaviour:
@@ -170,5 +170,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2601fa44a99352742b457150f5e7dfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpDuration: 10
+  powerUpDuration: 16
   spriteRenderer: {fileID: 7061081833248318032}
