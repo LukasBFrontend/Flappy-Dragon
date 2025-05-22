@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6868920672460619406}
   - component: {fileID: 1822571985982347641}
   - component: {fileID: 6876864876135871238}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BlueSnake
   m_TagString: Enemy
   m_Icon: {fileID: 0}

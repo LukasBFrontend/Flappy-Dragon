@@ -29,7 +29,7 @@ public class ScreenManager : Singleton<ScreenManager>
         CacheMenus();
 
         moving = GameObject.FindGameObjectWithTag("Moving");
-        if (moving != null && startAtBoss) moving.transform.position = new Vector2(-800, 0);
+        if (moving != null && startAtBoss) moving.transform.position = new Vector2(-775, 0);
 
         if (scene.name == "Lvl 1")
         {

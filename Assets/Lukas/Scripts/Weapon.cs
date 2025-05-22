@@ -19,13 +19,13 @@ public class Weapon : MonoBehaviour
     private Animator laserVortexAnimator;
     private float ammoMeterHeight;
     private float ammoMeterWidth;
-    private float maxAmmo = 4f;
+    private float maxAmmo = 5f;
     private float currentAmmo;
     private int laserTicks = 10;
     private int laserTickCount = 0;
     private float rechargeDelay = 0.3f;
     private float rechargeTimer = 0f;
-    private float rechargeRate = 3f;
+    private float rechargeRate = 4f;
     private int animationStep = 0;
     private float laserRecoveryTimer = 1f;
     private float fpsCounter, animationTimer, chargeTimer, groundMoveSpeed;
@@ -156,10 +156,10 @@ public class Weapon : MonoBehaviour
 
     void ShootLaser()
     {
-        if (currentAmmo >= 2)
+        if (currentAmmo >= 4f)
         {
             laserRecoveryTimer = 0f;
-            currentAmmo -= 2f;
+            currentAmmo -= 4f;
             rechargeTimer = 0.6f;
             SetAmmoBar();
 

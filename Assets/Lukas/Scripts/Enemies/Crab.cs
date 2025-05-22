@@ -7,7 +7,9 @@ public class Crab : MonoBehaviour
     [SerializeField] private float speed = 1f;
     [Range(.1f, 2f)][SerializeField] private float countDownTimer, launchTimer = 0.8f;
     private Animator animator;
-    private bool isActive, missileFired = false;
+    private AnimatorClipInfo[] animatorinfo;
+    private string current_animation;
+    private bool isActive, missileFired, walkingBack = false;
     private Vector3 relativePosition;
     private Vector3 startPosition;
     void Start()
@@ -19,11 +21,14 @@ public class Crab : MonoBehaviour
 
     void Update()
     {
-        if (!isActive) isActive = transform.position.x < 9.75;
+        animatorinfo = this.animator.GetCurrentAnimatorClipInfo(0);
+        current_animation = animatorinfo[0].clip.name;
+
+        if (!isActive) isActive = transform.position.x < 10;
 
         if (isActive)
         {
-            if (relativePosition.x <= startPosition.x + walkDistance)
+            if (relativePosition.x <= startPosition.x + walkDistance && !walkingBack)
             {
                 relativePosition.x += speed * Time.deltaTime;
                 transform.localPosition = relativePosition;
@@ -45,6 +50,14 @@ public class Crab : MonoBehaviour
             else
             {
                 animator.SetBool("IsOpen", false);
+                if (current_animation == "RC_Walk")
+                {
+                    gameObject.transform.DetachChildren();
+                    walkingBack = true;
+                    transform.localScale = new Vector3(-1, 1, 1);
+                    relativePosition.x -= speed * Time.deltaTime;
+                    transform.localPosition = relativePosition;
+                }
             }
         }
     }

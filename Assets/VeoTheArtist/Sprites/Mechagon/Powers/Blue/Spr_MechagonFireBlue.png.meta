@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spr_MechagonFireBlue_0: 4751125155077912546
+      Spr_MechagonFireBlue_1: 270147896556344353
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
