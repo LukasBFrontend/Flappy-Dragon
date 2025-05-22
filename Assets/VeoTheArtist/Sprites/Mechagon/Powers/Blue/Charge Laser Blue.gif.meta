@@ -76,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -114,7 +114,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -155,10 +155,10 @@ TextureImporter:
       name: Charge Laser Blue_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 20
-        width: 9
-        height: 8
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,10 +177,10 @@ TextureImporter:
       name: Charge Laser Blue_1
       rect:
         serializedVersion: 2
-        x: 9
-        y: 9
-        width: 14
-        height: 14
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,10 +199,10 @@ TextureImporter:
       name: Charge Laser Blue_2
       rect:
         serializedVersion: 2
-        x: 40
-        y: 9
-        width: 15
-        height: 15
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,10 +221,10 @@ TextureImporter:
       name: Charge Laser Blue_3
       rect:
         serializedVersion: 2
-        x: 69
-        y: 7
-        width: 18
-        height: 16
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,10 +243,10 @@ TextureImporter:
       name: Charge Laser Blue_4
       rect:
         serializedVersion: 2
-        x: 83
-        y: 20
-        width: 7
-        height: 7
+        x: 128
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: Charge Laser Blue_5
       rect:
         serializedVersion: 2
-        x: 105
-        y: 9
-        width: 15
-        height: 14
+        x: 160
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,10 +287,10 @@ TextureImporter:
       name: Charge Laser Blue_6
       rect:
         serializedVersion: 2
-        x: 132
-        y: 20
-        width: 9
-        height: 8
+        x: 192
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,10 +309,10 @@ TextureImporter:
       name: Charge Laser Blue_7
       rect:
         serializedVersion: 2
-        x: 137
-        y: 9
-        width: 14
-        height: 14
+        x: 224
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,143 +327,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Charge Laser Blue_8
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 9
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59be14fe5899cad90800000000000000
-      internalID: -7085119313236857963
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Charge Laser Blue_9
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 5
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4affde5e2bf5cec10800000000000000
-      internalID: 2084145949532094372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Charge Laser Blue_10
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 20
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf614713391c02a20800000000000000
-      internalID: 3035638986781759227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Charge Laser Blue_11
-      rect:
-        serializedVersion: 2
-        x: 233
-        y: 9
-        width: 15
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3682940c3a1d47110800000000000000
-      internalID: 1257860697179105379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Charge Laser Blue_12
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 7
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 77813c8ee2ce8dd50800000000000000
-      internalID: 6762414526714550391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Charge Laser Blue_13
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 6
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 65b894cc1f13f0980800000000000000
-      internalID: -8570576651278513322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7600e35703967334b9651d75a91ea1bc
     internalID: 0
     vertices: []
     indices: 
@@ -472,7 +340,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Charge Laser Blue_0: -3361733499916243539
+      Charge Laser Blue_1: -7248916086441171126
+      Charge Laser Blue_2: 1926184014515975358
+      Charge Laser Blue_3: -7858173016687908111
+      Charge Laser Blue_4: -6460623561755995200
+      Charge Laser Blue_5: -8176831669009188451
+      Charge Laser Blue_6: 2385541700747355937
+      Charge Laser Blue_7: 12590455474600506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
