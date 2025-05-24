@@ -1,6 +1,7 @@
+using UnityEditor;
 using UnityEngine;
 
-public class StartMenu : MonoBehaviour
+public class StartMenu : MenuCanvasBase
 {
     public void OnStartClicked()
     {

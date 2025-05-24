@@ -34,6 +34,6 @@ public class BossWeapon : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        weaponHitpoints -= damage;
+        if (bossScript.isMoving) weaponHitpoints -= damage;
     }
 }

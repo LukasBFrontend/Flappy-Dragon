@@ -4,8 +4,9 @@ using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour
 {
-    private GameObject player, lvlMenu;
+    private GameObject player, lvlMenu, startMenu;
     private PlayerScript playerScript;
+    private StartMenu startMenuScript;
     private LvlMenu lvlMenuScript;
 
     private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
@@ -33,14 +34,31 @@ public class InputManager : MonoBehaviour
             {
                 lvlMenuScript = null;
             }
+
+            startMenu = null;
+            startMenuScript = null;
         }
         else
         {
+            startMenu = GameObject.FindGameObjectWithTag("StartMenu");
+
+            if (startMenu != null)
+            {
+                startMenuScript = startMenu.GetComponent<StartMenu>();
+            }
+            else
+            {
+                startMenuScript = null;
+            }
+
             player = null;
             playerScript = null;
             lvlMenu = null;
             lvlMenuScript = null;
+
         }
+
+        Debug.Log(startMenu);
     }
 
     void Update()
@@ -49,7 +67,8 @@ public class InputManager : MonoBehaviour
 
         if (verticalInput != 0 && EventSystem.current.currentSelectedGameObject == null)
         {
-            lvlMenuScript.SelectFirstButton();
+            startMenuScript?.SelectFirstButton();
+            lvlMenuScript?.SelectFirstButton();
         }
 
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)

@@ -69,11 +69,11 @@ public class Weapon : MonoBehaviour
 
         playerIsAlive = playerScript.playerIsAlive;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Return))
         {
             chargeTimer = chargeDuration;
         }
-        if (Input.GetKeyUp(KeyCode.Mouse0) && playerIsAlive && !LogicScript.Instance.isPaused && !EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.Return) && playerIsAlive && !LogicScript.Instance.isPaused && !EventSystem.current.IsPointerOverGameObject())
         {
             laserVortex.GetComponent<SpriteRenderer>().enabled = false;
             laserVortexAnimator.enabled = false;
@@ -88,7 +88,7 @@ public class Weapon : MonoBehaviour
             }
 
         }
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Return))
         {
             chargeTimer -= Time.deltaTime;
 
