@@ -125,6 +125,8 @@ public class BossScript : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (!isMoving) return;
+
         bossHitpoints -= damage;
         healthBarTransform.sizeDelta = new Vector2(healthBarWidth * bossHitpoints / maxHitpoints, healthBarHeight);
         healthText.text = bossHitpoints.ToString();

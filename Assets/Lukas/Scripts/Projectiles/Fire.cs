@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
-
+    [SerializeField] private AudioClip audioClip;
+    [Range(0, 100)][SerializeField] private float audioVolume;
     public float speed = 20;
     public int damage = 50;
     private Rigidbody2D rigidBody;
@@ -24,6 +25,7 @@ public class Fire : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);
+                SoundFXManager.Instance.playSoundFXClip(audioClip, transform, audioVolume);
             }
             else if (bossWeapon != null)
             {

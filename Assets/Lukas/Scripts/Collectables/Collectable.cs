@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    [SerializeField] private int points = 20;
-    [SerializeField] private AudioClip collectClip;
+    [SerializeField] private AudioClip[] audioClips;
     [SerializeField][Range(0, 100)] private int audioVolume = 50;
+    [SerializeField] private int points = 20;
     private LogicScript logic;
     void Start()
     {
@@ -15,7 +15,7 @@ public class Collectable : MonoBehaviour
     {
         if (IsPlayer(other))
         {
-            SoundFXManager.Instance.playSoundFXClip(collectClip, transform, audioVolume);
+            SoundFXManager.Instance.playRandomSoundFXClip(audioClips, transform, audioVolume);
 
             logic.AddScore(points);
 

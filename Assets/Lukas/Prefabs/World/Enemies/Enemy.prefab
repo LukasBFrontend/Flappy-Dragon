@@ -151,8 +151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   points: 50
-  deathClip: {fileID: 8300000, guid: d61368a8af60e914aae1d6327ae6ad33, type: 3}
-  audioVolume: 30
+  deathClip: {fileID: 8300000, guid: 017722ed8d6c68d4a860036c1326d680, type: 3}
+  audioVolume: 15
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   isActive: 0
   isDead: 0

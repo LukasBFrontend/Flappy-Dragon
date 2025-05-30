@@ -4,11 +4,12 @@ using UnityEngine.EventSystems;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] fireClips;
+    [SerializeField] private AudioClip laserClip;
+    [SerializeField][Range(0, 100)] private float audioVolume = 1f;
     [SerializeField] private GameObject ammoMeter;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject firePrefab;
-    [SerializeField] private AudioClip[] fireClips;
-    [SerializeField][Range(0, 100)] private float audioVolume = 1f;
     [SerializeField] private GameObject laser, laserVortex, laserImpact;
     [SerializeField] private LayerMask layersToHit;
     [SerializeField] private Texture[] textures;
@@ -69,11 +70,11 @@ public class Weapon : MonoBehaviour
 
         playerIsAlive = playerScript.playerIsAlive;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Return))
         {
             chargeTimer = chargeDuration;
         }
-        if (Input.GetKeyUp(KeyCode.Mouse0) && playerIsAlive && !LogicScript.Instance.isPaused && !EventSystem.current.IsPointerOverGameObject())
+        if ((Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.Return)) && playerIsAlive && !LogicScript.Instance.isPaused && !EventSystem.current.IsPointerOverGameObject())
         {
             laserVortex.GetComponent<SpriteRenderer>().enabled = false;
             laserVortexAnimator.enabled = false;
@@ -88,7 +89,7 @@ public class Weapon : MonoBehaviour
             }
 
         }
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Return))
         {
             chargeTimer -= Time.deltaTime;
 
@@ -158,6 +159,7 @@ public class Weapon : MonoBehaviour
     {
         if (currentAmmo >= 4f)
         {
+            SoundFXManager.Instance.playSoundFXClip(laserClip, transform, audioVolume);
             laserRecoveryTimer = 0f;
             currentAmmo -= 4f;
             rechargeTimer = 0.6f;

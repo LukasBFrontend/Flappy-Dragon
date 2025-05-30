@@ -170,5 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2601fa44a99352742b457150f5e7dfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2c7f8048cba89154c84e8d151639f563, type: 3}
+  audioVolume: 50
   powerUpDuration: 16
   spriteRenderer: {fileID: 7061081833248318032}
