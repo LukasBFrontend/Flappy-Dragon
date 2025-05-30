@@ -35,14 +35,14 @@ public class BluePower : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && spriteRenderer.enabled)
         {
             SoundFXManager.Instance.playSoundFXClip(audioClip, transform, audioVolume);
-            spriteRenderer.enabled = false;
             player = other.gameObject;
             powerUpTimer = powerUpDuration;
             playerScript = player.GetComponent<PlayerScript>();
             playerScript.activePowerUp = PowerUp.Blue;
+            spriteRenderer.enabled = false;
         }
     }
 }

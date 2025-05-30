@@ -11,4 +11,9 @@ public class StartMenu : MenuCanvasBase
     {
         ScreenManager.Instance.OpenSoundMenu();
     }
+
+    public void OnQuitClicked()
+    {
+        Application.Quit();
+    }
 }
