@@ -148,9 +148,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a022568b415a85c418e8c2963c209b6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 9d5b0c63bd4717448b3d917c93e89de2, type: 3}
+  - {fileID: 8300000, guid: 3bd8f3e686a27e94cad87261c0921728, type: 3}
+  - {fileID: 8300000, guid: c9b580b0956aa3d46a55b191d1fe50b3, type: 3}
+  audioVolume: 65
   points: 20
-  collectClip: {fileID: 8300000, guid: 5861dff1148da3548aacaa72f95768b7, type: 3}
-  audioVolume: 30
 --- !u!95 &8004670608102705541
 Animator:
   serializedVersion: 7

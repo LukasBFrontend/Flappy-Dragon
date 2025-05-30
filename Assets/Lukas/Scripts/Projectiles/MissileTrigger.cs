@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class MissileTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject missile, missileWarning;
-    [SerializeField] private AudioClip missileClip;
+    [SerializeField] private AudioClip missileClip, warningClip;
     [SerializeField] private int audioVolume = 50;
+    [SerializeField] private GameObject missile, missileWarning;
     [SerializeField] private float timer = 2f;
 
     private GameObject activeWarningInstance;
@@ -39,6 +39,7 @@ public class MissileTrigger : MonoBehaviour
     {
         if (IsPlayer(other))
         {
+            SoundFXManager.Instance.playSoundFXtimes(warningClip, transform, audioVolume, 3, 0.3f);
             activeWarningInstance = Instantiate(missileWarning, new Vector2(xPosition, missile.transform.position.y), Quaternion.identity);
             timerEnabled = true;
         }

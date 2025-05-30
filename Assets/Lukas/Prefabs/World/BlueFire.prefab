@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7006772e79133be48bc2d78d4226b70a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2fd3ab40277aee242b33cb82f1f390d7, type: 3}
+  audioVolume: 25
   speed: 10
   damage: 20
 --- !u!95 &2914452500419379617

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BluePower : MonoBehaviour
 {
+    [SerializeField] private AudioClip audioClip;
+    [SerializeField][Range(0, 100)] private float audioVolume = 50f;
     [SerializeField] private float powerUpDuration = 16f;
     [SerializeField] private SpriteRenderer spriteRenderer;
     public static float powerUpTimer;
@@ -35,6 +37,7 @@ public class BluePower : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            SoundFXManager.Instance.playSoundFXClip(audioClip, transform, audioVolume);
             spriteRenderer.enabled = false;
             player = other.gameObject;
             powerUpTimer = powerUpDuration;

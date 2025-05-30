@@ -6440,8 +6440,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1308329144379018163, guid: eaf8294f4d33eb84a9c49cb9ec8accbd, type: 2}
-  m_audioClip: {fileID: 8300000, guid: b4430d2d7871b8b4595d6ac9d940cade, type: 3}
-  m_Resource: {fileID: 8300000, guid: b4430d2d7871b8b4595d6ac9d940cade, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f66ff36ecf622ff4e8898ba1bab749b6, type: 3}
+  m_Resource: {fileID: 8300000, guid: f66ff36ecf622ff4e8898ba1bab749b6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.05
   m_Pitch: 1
@@ -14738,7 +14738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e16a8d6f8c12948abcb12503629fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 4
 --- !u!1001 &1280940949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44864,7 +44864,7 @@ MonoBehaviour:
   activePowerUp: 0
   deathClip: {fileID: 8300000, guid: 017722ed8d6c68d4a860036c1326d680, type: 3}
   audioVolume: 30
-  jumpForce: 7.036
+  jumpForce: 8
 --- !u!50 &2011919042
 Rigidbody2D:
   serializedVersion: 5
@@ -44880,7 +44880,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1.24
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -45024,14 +45024,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25cdfaee8cc58a49af8572d4da94682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireClips:
+  - {fileID: 8300000, guid: 1f52d132fef442642bc48f0c5e551e0b, type: 3}
+  - {fileID: 8300000, guid: 1f52d132fef442642bc48f0c5e551e0b, type: 3}
+  - {fileID: 8300000, guid: 1f52d132fef442642bc48f0c5e551e0b, type: 3}
+  laserClip: {fileID: 8300000, guid: 2fa659ff329fc0c498bfe17c2b3d8279, type: 3}
+  audioVolume: 25
   ammoMeter: {fileID: 1220497190}
   firePoint: {fileID: 1284266192}
   firePrefab: {fileID: 7281376222424760152, guid: 54fe3d93368407047a2d3161c42265b3, type: 3}
-  fireClips:
-  - {fileID: 8300000, guid: 3e534113e11e6f149925e302a2946f5f, type: 3}
-  - {fileID: 8300000, guid: 3e534113e11e6f149925e302a2946f5f, type: 3}
-  - {fileID: 8300000, guid: 3e534113e11e6f149925e302a2946f5f, type: 3}
-  audioVolume: 40
   laser: {fileID: 862425344}
   laserVortex: {fileID: 304527866}
   laserImpact: {fileID: 208014508}

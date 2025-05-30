@@ -91,10 +91,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34267c8c44b883f40ad3561dca861a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missileClip: {fileID: 8300000, guid: 95267fc43df50984096132c29cdc4a73, type: 3}
+  warningClip: {fileID: 8300000, guid: ee737f5def9cd8d43af84fba792a122a, type: 3}
+  audioVolume: 40
   missile: {fileID: 4452154090513651382}
   missileWarning: {fileID: 1849399177294858976, guid: a16d803b4ae64d844909d703e4574ea0, type: 3}
-  missileClip: {fileID: 8300000, guid: 559865f4a15456a419b252efc3250bea, type: 3}
-  audioVolume: 20
   timer: 1
 --- !u!1 &4452154090513651382
 GameObject:
