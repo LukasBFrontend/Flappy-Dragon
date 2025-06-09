@@ -6,8 +6,10 @@ public class LogicScript : Singleton<LogicScript>
 {
     [HideInInspector] public int playerScore = 0;
     [HideInInspector] public bool isGameOver, isPaused, isGameWon, isBossFight = false;
-    private GameObject scoreObject, player;
-    private Text scoreText;
+    [HideInInspector] public bool tutorialIsActive = true;
+    private GameObject scoreObject, deathCountObject, player;
+    [HideInInspector] public static int deathCount = 0;
+    private Text scoreText, deathCountText;
 
     void Start()
     {
@@ -33,7 +35,7 @@ public class LogicScript : Singleton<LogicScript>
 
     public void TickingScore()
     {
-        if (!isGameWon && !isGameOver && !isPaused && !isBossFight && SceneManager.GetActiveScene().name == "Lvl 1")
+        if (!tutorialIsActive && !isGameWon && !isGameOver && !isPaused && !isBossFight && SceneManager.GetActiveScene().name == "Lvl 1")
         {
             AddScore(1);
         }
@@ -68,6 +70,8 @@ public class LogicScript : Singleton<LogicScript>
         {
             player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
             playerScore = 0;
+            deathCount++;
+            deathCountText.text = "Deaths: " + deathCount.ToString();
             ScreenManager.Instance.ShowGameOver();
             isGameOver = true;
         }
@@ -89,6 +93,7 @@ public class LogicScript : Singleton<LogicScript>
     {
         if (scene.name == "Lvl 1")
         {
+            deathCountObject = GameObject.FindGameObjectWithTag("DeathCountText");
             scoreObject = GameObject.FindGameObjectWithTag("ScoreText");
 
             if (scoreObject != null)
@@ -98,6 +103,16 @@ public class LogicScript : Singleton<LogicScript>
             else
             {
                 scoreText = null;
+            }
+
+            if (deathCountObject != null)
+            {
+                deathCountText = deathCountObject.GetComponent<Text>();
+                deathCountText.text = "Deaths: " + deathCount.ToString();
+            }
+            else
+            {
+                deathCountText = null;
             }
         }
         else

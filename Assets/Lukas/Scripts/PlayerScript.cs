@@ -35,7 +35,7 @@ public class PlayerScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                rigidBody.linearVelocity = Vector2.up * jumpForce;
+                rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x, jumpForce);
                 animator.SetBool("IsJumping", true);
             }
 

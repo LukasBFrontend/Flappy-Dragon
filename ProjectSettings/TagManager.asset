@@ -25,6 +25,8 @@ TagManager:
   - PlayerCanvas
   - Background
   - StartSelectMenu
+  - DeathCountText
+  - Lvl
   layers:
   - Default
   - TransparentFX

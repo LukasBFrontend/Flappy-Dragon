@@ -10,6 +10,8 @@ public class BluePower : MonoBehaviour
     private GameObject player;
     private PlayerScript playerScript;
     private static BluePower instance;
+    private bool isOn, startedFlash = false;
+    [HideInInspector] public bool isPreview = false;
 
     void Awake()
     {
@@ -28,10 +30,40 @@ public class BluePower : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (this == instance && powerUpTimer > 0)
+        if (this == instance && powerUpTimer > 0 && !isPreview)
         {
             powerUpTimer -= Time.deltaTime;
+            if (powerUpTimer <= 2.5f)
+            {
+                Flash(2.6f, 11);
+            }
         }
+    }
+
+    public void SetTimer(float t)
+    {
+        powerUpTimer = t;
+    }
+    public void Flash(float t, int times)
+    {
+        if (!startedFlash)
+        {
+            startedFlash = true;
+            InvokeRepeating("OnOff", 0, t / times);
+        }
+    }
+
+    void OnOff()
+    {
+        if (!isOn)
+        {
+            playerScript.activePowerUp = PowerUp.None;
+        }
+        else
+        {
+            playerScript.activePowerUp = PowerUp.Blue;
+        }
+        isOn = !isOn;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

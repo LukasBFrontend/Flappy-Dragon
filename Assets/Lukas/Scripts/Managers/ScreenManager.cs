@@ -5,8 +5,9 @@ using UnityEngine.EventSystems;
 public class ScreenManager : Singleton<ScreenManager>
 {
     private GameObject startMenu, soundMenu, lvlMenu, gameOverMenu, gameWonMenu, bossCanvas, playerCanvas, scoreCanvas, startSelectMenu;
-    private GameObject moving;
+    private GameObject lvl;
     public bool startAtBoss = false;
+    public bool startAtTutorial = true;
     public void Start()
     {
         CacheMenus();
@@ -28,8 +29,16 @@ public class ScreenManager : Singleton<ScreenManager>
     {
         CacheMenus();
 
-        moving = GameObject.FindGameObjectWithTag("Moving");
-        if (moving != null && startAtBoss) moving.transform.position = new Vector2(-775, 0);
+        lvl = GameObject.FindGameObjectWithTag("Moving");
+
+        if (lvl != null)
+        {
+            if (startAtBoss) lvl.transform.position = new Vector2(-775, 0);
+            else if (startAtTutorial)
+            {
+                lvl.transform.position = new Vector2(28, 0);
+            }
+        }
 
         if (scene.name == "Lvl 1")
         {
@@ -135,6 +144,10 @@ public class ScreenManager : Singleton<ScreenManager>
         HideMenu(playerCanvas);
     }
 
+    public void ShowScoreCanvas()
+    {
+        ShowMenu(scoreCanvas);
+    }
     public void HideScoreCanvas()
     {
         HideMenu(scoreCanvas);
