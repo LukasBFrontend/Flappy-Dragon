@@ -30,10 +30,12 @@ public class Fire : MonoBehaviour
             else if (bossWeapon != null)
             {
                 bossWeapon.TakeDamage(damage);
+                SoundFXManager.Instance.playSoundFXClip(audioClip, transform, audioVolume);
             }
             else if (bossScript != null)
             {
                 bossScript.TakeDamage(damage);
+                SoundFXManager.Instance.playSoundFXClip(audioClip, transform, audioVolume);
             }
 
             Destroy(gameObject);
