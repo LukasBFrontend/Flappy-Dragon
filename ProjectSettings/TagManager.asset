@@ -27,6 +27,7 @@ TagManager:
   - StartSelectMenu
   - DeathCountText
   - Lvl
+  - InputManager
   layers:
   - Default
   - TransparentFX

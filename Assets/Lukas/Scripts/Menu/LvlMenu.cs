@@ -4,6 +4,7 @@ public class LvlMenu : MenuCanvasBase
 {
     public void OnResumeClicked()
     {
+        Cursor.visible = false;
         ScreenManager.Instance.CloseLvlMenu();
         LogicScript.Instance.UnPauseGame();
     }

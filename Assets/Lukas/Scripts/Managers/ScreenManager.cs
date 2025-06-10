@@ -77,6 +77,7 @@ public class ScreenManager : Singleton<ScreenManager>
         {
             EventSystem.current.SetSelectedGameObject(null);
 
+            Cursor.visible = true;
             ShowMenu(lvlMenu);
         }
     }
@@ -84,6 +85,7 @@ public class ScreenManager : Singleton<ScreenManager>
     public void CloseLvlMenu()
     {
         EventSystem.current.SetSelectedGameObject(null);
+
         HideMenu(lvlMenu);
     }
 
@@ -116,11 +118,13 @@ public class ScreenManager : Singleton<ScreenManager>
 
     public void ShowGameOver()
     {
+        Cursor.visible = true;
         ShowMenu(gameOverMenu);
     }
 
     public void ShowGameWon()
     {
+        Cursor.visible = true;
         ShowMenu(gameWonMenu);
     }
 

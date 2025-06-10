@@ -57,8 +57,6 @@ public class InputManager : MonoBehaviour
             lvlMenuScript = null;
 
         }
-
-        Debug.Log(startMenu);
     }
 
     void Update()

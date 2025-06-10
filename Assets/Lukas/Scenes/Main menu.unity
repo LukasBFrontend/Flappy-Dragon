@@ -463,6 +463,7 @@ MonoBehaviour:
   isPaused: 0
   isGameWon: 0
   isBossFight: 0
+  tutorialIsActive: 1
 --- !u!4 &465622180
 Transform:
   m_ObjectHideFlags: 0
@@ -1245,9 +1246,10 @@ GameObject:
   - component: {fileID: 1736317526}
   - component: {fileID: 1736317527}
   - component: {fileID: 1736317528}
+  - component: {fileID: 1736317529}
   m_Layer: 0
   m_Name: InputManager
-  m_TagString: Untagged
+  m_TagString: InputManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1291,6 +1293,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e1e99d9f0717654993cefb8c4fd1ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1736317529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736317524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25e8a6bb3e0ce84691a71dbeb470d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: cd527ac8f2b97d9488cf756b91df41a2, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
 --- !u!1 &1804459595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,6 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startAtBoss: 0
+  startAtTutorial: 1
 --- !u!114 &2067857888
 MonoBehaviour:
   m_ObjectHideFlags: 0
