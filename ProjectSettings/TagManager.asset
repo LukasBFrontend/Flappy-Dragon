@@ -28,6 +28,7 @@ TagManager:
   - DeathCountText
   - Lvl
   - InputManager
+  - HeartsText
   layers:
   - Default
   - TransparentFX

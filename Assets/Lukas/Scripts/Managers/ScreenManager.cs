@@ -38,6 +38,10 @@ public class ScreenManager : Singleton<ScreenManager>
             {
                 lvl.transform.position = new Vector2(28, 0);
             }
+            else
+            {
+                lvl.transform.position = LogicScript.Instance.GetRespawn();
+            }
         }
 
         if (scene.name == "Lvl 1")
