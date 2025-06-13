@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public enum PowerUp
 {
@@ -52,7 +53,7 @@ public class PlayerScript : MonoBehaviour
 
             if (transform.position.y <= -7 || transform.position.y >= 7)
             {
-                Die();
+                logic.GameOver();
             }
 
             animator.SetBool("HasBlue", activePowerUp == PowerUp.Blue);
@@ -61,30 +62,27 @@ public class PlayerScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Die();
+        LoseHeart();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (IsHostile(collision))
         {
-            Die();
+            LoseHeart();
         }
     }
 
-    private void Die()
+    private void LoseHeart()
     {
         animator.SetBool("IsDead", true);
-        //spriteRenderer.enabled = false;
-        logic.GameOver();
         playerIsAlive = false;
+        SoundFXManager.Instance.playSoundFXClip(deathClip, transform, audioVolume);
+
         hearts--;
         heartsText.text = "Hearts: " + hearts;
-        if (hearts <= 0)
-        {
-            logic.IncrementDeathCount();
-            logic.SetRespawn(new(0, 0));
-        }
-        SoundFXManager.Instance.playSoundFXClip(deathClip, transform, audioVolume);
+
+        if (hearts > 0) logic.Respawn();
+        else logic.GameOver();
     }
 
     private bool IsHostile(Collider2D collision)

@@ -10,7 +10,7 @@ public class GameOverMenu : MonoBehaviour
     public void OnQuitButtonClicked()
     {
         ScreenManager.Instance.QuitToMain();
-        LogicScript.Instance.playerScore = 0;
+        LogicScript.playerScore = 0;
         LogicScript.Instance.isGameOver = false;
     }
 }

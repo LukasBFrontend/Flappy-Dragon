@@ -1,9 +1,9 @@
-using Unity.Mathematics;
 using UnityEngine;
+using System.Collections;
 
 public class EnemyDrop : MonoBehaviour
 {
-    [SerializeField] private GameObject powerUpPrefab;
+    [SerializeField] private Drop[] drops;
     private GameObject moving;
 
     void Start()
@@ -12,6 +12,18 @@ public class EnemyDrop : MonoBehaviour
     }
     public void SpawnDrop()
     {
-        Instantiate(powerUpPrefab, transform.position, transform.rotation, moving.transform);
+        float random = Random.Range(0, 100);
+
+        foreach (Drop drop in drops)
+        {
+            if (random <= drop.dropChance) Instantiate(drop.dropPrefab, transform.position, transform.rotation, moving.transform);
+        }
+    }
+
+    [System.Serializable]
+    public class Drop
+    {
+        public GameObject dropPrefab;
+        [Range(0, 100)] public float dropChance;
     }
 }

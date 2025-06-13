@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Collectable : MonoBehaviour
+public class LogPickup : MonoBehaviour
 {
     [SerializeField] private AudioClip[] audioClips;
     [SerializeField][Range(0, 100)] private int audioVolume = 50;
@@ -18,7 +18,6 @@ public class Collectable : MonoBehaviour
             SoundFXManager.Instance.playRandomSoundFXClip(audioClips, transform, audioVolume);
 
             logic.AddScore(points);
-            TextSpawn.Instance.SpawnText('+' + points.ToString(), transform.position);
 
             Destroy(gameObject);
         }

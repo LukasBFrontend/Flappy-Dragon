@@ -19,7 +19,6 @@ public class Checkpoint : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             LogicScript.Instance.SetRespawn(moving.transform.position);
-            Debug.Log("Player hit");
         }
     }
 }

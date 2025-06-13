@@ -10,7 +10,7 @@ public class Tutorial : MonoBehaviour
     public bool tutorialIsActive = true;
     private bool hasJumped, hasShotFire, hasShotLaser, powerUpSpawned = false;
     private float chargeTimer;
-    private float chargeTime = 1f;
+    private float chargeTime = .7f;
     private bool hasIncremented = true;
     private int step = 1;
     private float delay = 1f;

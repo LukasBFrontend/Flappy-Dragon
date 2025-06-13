@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
         boxCollider.enabled = false;
         isDead = true;
 
-
+        TextSpawn.Instance.SpawnText('+' + points.ToString(), transform.position);
         logic.AddScore(points);
     }
 
