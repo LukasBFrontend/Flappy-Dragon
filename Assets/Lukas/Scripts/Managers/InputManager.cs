@@ -63,15 +63,37 @@ public class InputManager : MonoBehaviour
     {
         float verticalInput = Input.GetAxisRaw("Vertical");
 
-        if (verticalInput != 0 && EventSystem.current.currentSelectedGameObject == null)
+        if (verticalInput != 0)
         {
-            startMenuScript?.SelectFirstButton();
-            lvlMenuScript?.SelectFirstButton();
+            GameObject activeMenu = ScreenManager.Instance.activeMenu;
+
+            if (!activeMenu)
+            {
+                Debug.Log("activeMenu is null");
+                return;
+            }
+
+            Cursor.visible = false;
+
+            if (EventSystem.current.currentSelectedGameObject == null)
+            {
+                MenuCanvasBase script = activeMenu.GetComponent<MenuCanvasBase>();
+
+                if (!script)
+                {
+                    Debug.Log("No MenuCanvasBase found on " + activeMenu.name);
+                    return;
+                }
+
+                activeMenu.GetComponent<MenuCanvasBase>().SelectFirstButton();
+            }
         }
 
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
         {
-            EventSystem.current.SetSelectedGameObject(null);
+            GameObject activeMenu = ScreenManager.Instance.activeMenu;
+            if (activeMenu) Cursor.visible = true;
+            //EventSystem.current.SetSelectedGameObject(null);
         }
 
         if (playerScript == null) return;

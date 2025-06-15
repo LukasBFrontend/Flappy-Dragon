@@ -1,0 +1,425 @@
+fileFormatVersion: 2
+guid: b4fd8197726bad441a324f3fbd5ff1ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5176404959426274161
+    second: Red Drone Dead_0
+  - first:
+      213: 7778282880264401908
+    second: Red Drone Dead_1
+  - first:
+      213: 6189285609484212802
+    second: Red Drone Dead_2
+  - first:
+      213: 5421809363255816204
+    second: Red Drone Dead_3
+  - first:
+      213: 3808492926551451728
+    second: Red Drone Dead_4
+  - first:
+      213: -5476982157207783640
+    second: Red Drone Dead_5
+  - first:
+      213: 3035758398916510710
+    second: Red Drone Dead_6
+  - first:
+      213: 8869812951043953965
+    second: Red Drone Dead_7
+  - first:
+      213: 7434052427576181993
+    second: Red Drone Dead_8
+  - first:
+      213: -4374446803473096655
+    second: Red Drone Dead_9
+  - first:
+      213: 2739979510029249158
+    second: Red Drone Dead_10
+  - first:
+      213: -5971867597221242943
+    second: Red Drone Dead_11
+  - first:
+      213: -6612282548428443165
+    second: Red Drone Dead_12
+  - first:
+      213: 6222849116838125194
+    second: Red Drone Dead_13
+  - first:
+      213: 3876414622360371952
+    second: Red Drone Dead_14
+  - first:
+      213: 4640141234778674710
+    second: Red Drone Dead_15
+  - first:
+      213: 9109095343010414578
+    second: Red Drone Dead_16
+  - first:
+      213: -7877391075179917297
+    second: Red Drone Dead_17
+  - first:
+      213: 6240216339438537179
+    second: Red Drone Dead_18
+  - first:
+      213: -83822614869764351
+    second: Red Drone Dead_19
+  - first:
+      213: 6478600944445932666
+    second: Red Drone Dead_20
+  - first:
+      213: 5529300584959883142
+    second: Red Drone Dead_21
+  - first:
+      213: -2360431598287102295
+    second: Red Drone Dead_22
+  - first:
+      213: 1970676442927056990
+    second: Red Drone Dead_23
+  - first:
+      213: 2857946391118755531
+    second: Red Drone Dead_24
+  - first:
+      213: 3187684646685581115
+    second: Red Drone Dead_25
+  - first:
+      213: 4111934975265062918
+    second: Red Drone Dead_26
+  - first:
+      213: -1826912583977726444
+    second: Red Drone Dead_27
+  - first:
+      213: -8544682740171702524
+    second: Red Drone Dead_28
+  - first:
+      213: -8798527009794351641
+    second: Red Drone Dead_29
+  - first:
+      213: 8027498983937663856
+    second: Red Drone Dead_30
+  - first:
+      213: -4114165736815497539
+    second: Red Drone Dead_31
+  - first:
+      213: -4809499375550691933
+    second: Red Drone Dead_32
+  - first:
+      213: 7295535973011161653
+    second: Red Drone Dead_33
+  - first:
+      213: -3617212725000431807
+    second: Red Drone Dead_34
+  - first:
+      213: -293449744629185273
+    second: Red Drone Dead_35
+  - first:
+      213: -7934608098309659330
+    second: Red Drone Dead_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Red Drone Dead_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1736c2482e846d740800000000000000
+      internalID: 5176404959426274161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Dead_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f379a8811302fb60800000000000000
+      internalID: 7778282880264401908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Dead_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a5eb63872c4e550800000000000000
+      internalID: 6189285609484212802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Dead_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00ffb0d3e22e3b40800000000000000
+      internalID: 5421809363255816204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Dead_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058efa0732c7ad430800000000000000
+      internalID: 3808492926551451728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Dead_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8273a7e0fb9ddf3b0800000000000000
+      internalID: -5476982157207783640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Dead_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f3c35ffd2e212a20800000000000000
+      internalID: 3035758398916510710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Drone Dead_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25522b72e7e71b70800000000000000
+      internalID: 8869812951043953965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 22da982c12272bf4ca7f02bd5aa7ecb2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Red Drone Dead_0: 5176404959426274161
+      Red Drone Dead_1: 7778282880264401908
+      Red Drone Dead_2: 6189285609484212802
+      Red Drone Dead_3: 5421809363255816204
+      Red Drone Dead_4: 3808492926551451728
+      Red Drone Dead_5: -5476982157207783640
+      Red Drone Dead_6: 3035758398916510710
+      Red Drone Dead_7: 8869812951043953965
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

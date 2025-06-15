@@ -110,6 +110,8 @@ GameObject:
   - component: {fileID: 1959631514002531005}
   - component: {fileID: 2681629318874492586}
   - component: {fileID: 8156924008866348956}
+  - component: {fileID: 9220406418751995636}
+  - component: {fileID: 6992201837707088093}
   m_Layer: 0
   m_Name: MissilePayload
   m_TagString: Missile
@@ -271,6 +273,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9220406418751995636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452154090513651382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612dcd4de43fcdc419cf4f8e74125c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  points: 10
+  deathClip: {fileID: 8300000, guid: 173ed7b110e9c2042af46823b3b19653, type: 3}
+  audioVolume: 50
+  damageColor: {r: 0.6367924, g: 0.68107027, b: 1, a: 0.7529412}
+  isActive: 0
+  isDead: 0
+--- !u!114 &6992201837707088093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452154090513651382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1afe73c2cbe9bea44bd5e42db154271a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - entryName: Missile
+    dropPrefab: {fileID: 6800287839343630258, guid: 3c976f84a7d72794aaef3f0232bcb3aa, type: 3}
+    dropChance: 100
 --- !u!1 &6362572531398585812
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ public class LogPickup : MonoBehaviour
     [SerializeField] private AudioClip[] audioClips;
     [SerializeField][Range(0, 100)] private int audioVolume = 50;
     [SerializeField] private int points = 20;
+    [HideInInspector] public string entryName = "X";
     private LogicScript logic;
     void Start()
     {
@@ -17,6 +18,7 @@ public class LogPickup : MonoBehaviour
         {
             SoundFXManager.Instance.playRandomSoundFXClip(audioClips, transform, audioVolume);
 
+            Logbook.Instance.RecordEntry(entryName);
             logic.AddScore(points);
 
             Destroy(gameObject);

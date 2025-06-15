@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class LvlMenu : MenuCanvasBase
 {
+    [SerializeField] private GameObject onLogBookClicked;
+    public void OnLogbookClicked()
+    {
+        ScreenManager.Instance.HideMenu(gameObject);
+        ScreenManager.Instance.ShowMenu(onLogBookClicked);
+    }
     public void OnResumeClicked()
     {
         Cursor.visible = false;

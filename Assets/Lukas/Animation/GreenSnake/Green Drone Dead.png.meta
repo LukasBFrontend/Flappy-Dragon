@@ -1,0 +1,425 @@
+fileFormatVersion: 2
+guid: 0027f1beca11c1a49985385c8f6e89cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5172560425924467402
+    second: Green Drone Dead_0
+  - first:
+      213: -2767849244613088209
+    second: Green Drone Dead_1
+  - first:
+      213: -489106845773132959
+    second: Green Drone Dead_2
+  - first:
+      213: 4850861117695884700
+    second: Green Drone Dead_3
+  - first:
+      213: 4665158935291089184
+    second: Green Drone Dead_4
+  - first:
+      213: -6289842366469637302
+    second: Green Drone Dead_5
+  - first:
+      213: -8824907523102567369
+    second: Green Drone Dead_6
+  - first:
+      213: -2796724607185945173
+    second: Green Drone Dead_7
+  - first:
+      213: 7802257593663912881
+    second: Green Drone Dead_8
+  - first:
+      213: -6746728684281844961
+    second: Green Drone Dead_9
+  - first:
+      213: 7136008488022827492
+    second: Green Drone Dead_10
+  - first:
+      213: 274870977020377677
+    second: Green Drone Dead_11
+  - first:
+      213: 8996278541352572840
+    second: Green Drone Dead_12
+  - first:
+      213: -8058880880747327734
+    second: Green Drone Dead_13
+  - first:
+      213: 3547217792669874953
+    second: Green Drone Dead_14
+  - first:
+      213: 1363956004974959164
+    second: Green Drone Dead_15
+  - first:
+      213: 2184091607884317001
+    second: Green Drone Dead_16
+  - first:
+      213: 2357277310969383812
+    second: Green Drone Dead_17
+  - first:
+      213: -4071430487523213368
+    second: Green Drone Dead_18
+  - first:
+      213: 4837926127722042318
+    second: Green Drone Dead_19
+  - first:
+      213: -524063505121118958
+    second: Green Drone Dead_20
+  - first:
+      213: -1926131094993896527
+    second: Green Drone Dead_21
+  - first:
+      213: 1205230655683375
+    second: Green Drone Dead_22
+  - first:
+      213: -1724697332629570379
+    second: Green Drone Dead_23
+  - first:
+      213: -4144133902131873802
+    second: Green Drone Dead_24
+  - first:
+      213: 4584003267516277810
+    second: Green Drone Dead_25
+  - first:
+      213: -7414600190391702782
+    second: Green Drone Dead_26
+  - first:
+      213: -8248664115684436721
+    second: Green Drone Dead_27
+  - first:
+      213: 4214574084521821842
+    second: Green Drone Dead_28
+  - first:
+      213: -510443918971006457
+    second: Green Drone Dead_29
+  - first:
+      213: 2612500340157012864
+    second: Green Drone Dead_30
+  - first:
+      213: -4596746340067318079
+    second: Green Drone Dead_31
+  - first:
+      213: -5274378496307454457
+    second: Green Drone Dead_32
+  - first:
+      213: 2047699336266190864
+    second: Green Drone Dead_33
+  - first:
+      213: 4949947824891833409
+    second: Green Drone Dead_34
+  - first:
+      213: -499758218381318024
+    second: Green Drone Dead_35
+  - first:
+      213: 4095781466563108292
+    second: Green Drone Dead_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Green Drone Dead_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6356781b2bf5738b0800000000000000
+      internalID: -5172560425924467402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Drone Dead_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2ce007d6cf9699d0800000000000000
+      internalID: -2767849244613088209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Drone Dead_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16b0b784ae75639f0800000000000000
+      internalID: -489106845773132959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Drone Dead_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d740f4c78b15340800000000000000
+      internalID: 4850861117695884700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Drone Dead_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021d3c6a559fdb040800000000000000
+      internalID: 4665158935291089184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Drone Dead_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4bff5551bdf5b8a0800000000000000
+      internalID: -6289842366469637302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Drone Dead_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7349cc53d51a78580800000000000000
+      internalID: -8824907523102567369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Drone Dead_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad761699c90039d0800000000000000
+      internalID: -2796724607185945173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 074cc77a52e107e46899e99c19759c94
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Green Drone Dead_0: -5172560425924467402
+      Green Drone Dead_1: -2767849244613088209
+      Green Drone Dead_2: -489106845773132959
+      Green Drone Dead_3: 4850861117695884700
+      Green Drone Dead_4: 4665158935291089184
+      Green Drone Dead_5: -6289842366469637302
+      Green Drone Dead_6: -8824907523102567369
+      Green Drone Dead_7: -2796724607185945173
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

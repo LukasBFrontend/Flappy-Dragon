@@ -16,13 +16,19 @@ public class EnemyDrop : MonoBehaviour
 
         foreach (Drop drop in drops)
         {
-            if (random <= drop.dropChance) Instantiate(drop.dropPrefab, transform.position, transform.rotation, moving.transform);
+            if (random <= drop.dropChance)
+            {
+                GameObject obj = Instantiate(drop.dropPrefab, transform.position, transform.rotation, moving.transform);
+                LogPickup logScript = obj.GetComponent<LogPickup>();
+                if (logScript) logScript.entryName = drop.entryName;
+            }
         }
     }
 
     [System.Serializable]
     public class Drop
     {
+        public string entryName;
         public GameObject dropPrefab;
         [Range(0, 100)] public float dropChance;
     }
