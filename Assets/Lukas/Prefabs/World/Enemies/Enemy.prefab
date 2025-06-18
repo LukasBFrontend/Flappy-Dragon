@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drops:
-  - entryName: Snake
+  - entryName: Mecha Snake
     dropPrefab: {fileID: 6800287839343630258, guid: 3c976f84a7d72794aaef3f0232bcb3aa, type: 3}
     dropChance: 50
 --- !u!1 &7243781370973174510

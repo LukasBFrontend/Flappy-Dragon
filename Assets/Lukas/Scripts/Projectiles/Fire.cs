@@ -7,11 +7,21 @@ public class Fire : MonoBehaviour
     public float speed = 20;
     public int damage = 50;
     private Rigidbody2D rigidBody;
+    PlayerScript player;
+    Animator animator;
 
     void Start()
     {
+
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         rigidBody.linearVelocity = transform.right * speed;
+    }
+
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+        animator = gameObject.GetComponent<Animator>();
+        animator.SetBool("HasRedPower", player.activePowerUp == PowerUp.Red);
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)

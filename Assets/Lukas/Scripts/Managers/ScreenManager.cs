@@ -37,6 +37,7 @@ public class ScreenManager : Singleton<ScreenManager>
             if (startAtBoss) lvl.transform.position = new Vector2(-775, 0);
             else if (startAtTutorial)
             {
+                Tutorial.tutorialIsActive = true;
                 lvl.transform.position = new Vector2(28, 0);
             }
             else

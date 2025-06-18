@@ -20,8 +20,8 @@ public class BossScript : MonoBehaviour
     private float healthBarWidth, healthBarHeight;
     private int maxHitpoints;
     float speed;
-    public float missileInterval = 2f;
-    public float cannonInterval = .7f;
+    //public float missileInterval = 2f;
+    //public float cannonInterval = .7f;
 
     [SerializeField] private NextAttack[] attacks;
     private float attackTimer = 0;

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BluePower : MonoBehaviour
 {
+    [SerializeField] private PowerType power = PowerType.Bluepower;
     [SerializeField] private AudioClip audioClip;
     [SerializeField][Range(0, 100)] private float audioVolume = 50f;
     [SerializeField] private float powerUpDuration = 16f;
@@ -12,6 +13,12 @@ public class BluePower : MonoBehaviour
     private static BluePower instance;
     private bool isOn, startedFlash = false;
     [HideInInspector] public bool isPreview = false;
+    private enum PowerType
+    {
+        Bluepower,
+        Redpower,
+        Greenpower
+    }
 
     void Awake()
     {
@@ -27,6 +34,7 @@ public class BluePower : MonoBehaviour
         if (powerUpTimer <= 0)
         {
             playerScript.activePowerUp = PowerUp.None;
+            playerScript.flickerOn = false;
             Destroy(gameObject);
         }
 
@@ -37,6 +45,11 @@ public class BluePower : MonoBehaviour
             {
                 Flash(2.6f, 11);
             }
+        }
+
+        if (powerUpTimer <= 0)
+        {
+            playerScript.shieldActive = false;
         }
     }
 
@@ -53,15 +66,34 @@ public class BluePower : MonoBehaviour
         }
     }
 
+    private void ActivatePower()
+    {
+        switch (power)
+        {
+            case PowerType.Bluepower:
+                playerScript.activePowerUp = PowerUp.Blue;
+                break;
+            case PowerType.Redpower:
+                playerScript.activePowerUp = PowerUp.Red;
+                break;
+            case PowerType.Greenpower:
+                playerScript.activePowerUp = PowerUp.Green;
+                playerScript.shieldActive = true;
+                break;
+            default:
+                Debug.Log("Bad value for power");
+                break;
+        }
+    }
     void OnOff()
     {
         if (!isOn)
         {
-            playerScript.activePowerUp = PowerUp.None;
+            playerScript.flickerOn = true;
         }
         else
         {
-            playerScript.activePowerUp = PowerUp.Blue;
+            playerScript.flickerOn = false;
         }
         isOn = !isOn;
     }
@@ -73,7 +105,7 @@ public class BluePower : MonoBehaviour
             player = other.gameObject;
             powerUpTimer = powerUpDuration;
             playerScript = player.GetComponent<PlayerScript>();
-            playerScript.activePowerUp = PowerUp.Blue;
+            ActivatePower();
             spriteRenderer.enabled = false;
         }
     }

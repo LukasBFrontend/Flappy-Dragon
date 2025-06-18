@@ -12,11 +12,16 @@ public class LogicScript : Singleton<LogicScript>
     private static int latestScore = 0;
     [HideInInspector] public static int deathCount = 0;
     private Text scoreText, deathCountText;
+    // respawn transition variables
+    private bool respawnIsQued = false;
+    private GroundMoveScript moveScript;
+    private float respawnTimer = .75f;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         moving = GameObject.FindGameObjectWithTag("Moving");
+        moveScript = moving?.GetComponent<GroundMoveScript>();
 
         if (scoreText) scoreText.text = playerScore.ToString();
 
@@ -24,6 +29,11 @@ public class LogicScript : Singleton<LogicScript>
         {
             InvokeRepeating("TickingScore", 0f, 0.1f);
         }
+    }
+
+    void Update()
+    {
+        if (respawnIsQued) RespawnTransition();
     }
 
     public void SetRespawn(Vector2 respawn)
@@ -99,10 +109,21 @@ public class LogicScript : Singleton<LogicScript>
         }
     }
 
+    private void RespawnTransition()
+    {
+        if (respawnTimer > 0)
+        {
+            respawnTimer -= Time.deltaTime;
+        }
+        else
+        {
+            playerScore = latestScore;
+            ScreenManager.Instance.StartGame();
+        }
+    }
     public void Respawn()
     {
-        playerScore = latestScore;
-        ScreenManager.Instance.StartGame();
+        respawnIsQued = true;
     }
 
     public void PauseGame()

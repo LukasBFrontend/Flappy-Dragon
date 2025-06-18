@@ -8,9 +8,11 @@ public class BossWeapon : MonoBehaviour
     [SerializeField] private GameObject boss;
     [SerializeField] private int weaponNumber = 1;
     private BossScript bossScript;
+    private FlickerScript flickerScript;
     void Start()
     {
         bossScript = boss.GetComponent<BossScript>();
+        flickerScript = gameObject.GetComponent<FlickerScript>();
     }
 
     void Update()
@@ -34,6 +36,10 @@ public class BossWeapon : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (bossScript.isMoving) weaponHitpoints -= damage;
+        if (bossScript.isMoving)
+        {
+            flickerScript.Flicker(2, .5f);
+            weaponHitpoints -= damage;
+        }
     }
 }

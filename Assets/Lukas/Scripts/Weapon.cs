@@ -32,6 +32,7 @@ public class Weapon : MonoBehaviour
     private float fpsCounter, animationTimer, chargeTimer, groundMoveSpeed;
     private bool animationIsActive = false;
     private bool playerIsAlive;
+    private bool laserFired = false;
     private PlayerScript playerScript;
     private LineRenderer laserRenderer;
     void Start()
@@ -81,24 +82,37 @@ public class Weapon : MonoBehaviour
 
             if (chargeTimer > chargeDuration - .3f)
             {
-                Shoot();
+                if (playerScript.activePowerUp == PowerUp.Red)
+                {
+                    MultiShot(3, 1.75f);
+                }
+                else
+                {
+                    Shoot();
+                }
             }
             else if (playerScript.activePowerUp == PowerUp.Blue)
             {
-                ShootLaser();
+                //ShootLaser();
             }
-
+            laserFired = false;
         }
-        if (Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Return))
+        if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Return)) && playerScript.activePowerUp == PowerUp.Blue && !laserFired)
         {
             chargeTimer -= Time.deltaTime;
 
-            if (chargeTimer <= chargeDuration - .3f)
+            if (chargeTimer <= 0)
+            {
+                ShootLaser();
+            }
+            else if (chargeTimer <= chargeDuration - .3f)
             {
                 laserVortex.GetComponent<SpriteRenderer>().enabled = true;
                 laserVortexAnimator.enabled = true;
                 laserVortexAnimator.SetBool("IsCharging", true);
             }
+
+
         }
 
 
@@ -155,6 +169,30 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    void MultiShot(int projectileCount, float volleyHeight)
+    {
+        if (currentAmmo >= 1)
+        {
+            rechargeTimer = rechargeDelay / 2;
+            currentAmmo--;
+            SetAmmoBar();
+
+            int random = Random.Range(0, 3);
+            SoundFXManager.Instance.playSoundFXClip(fireClips[random], transform, audioVolume);
+
+            float startY = -volleyHeight / 2;
+            for (int i = 0; i < projectileCount; i++)
+            {
+                float deltaY = i * volleyHeight / projectileCount;
+
+                float posX = firePoint.position.x;
+                float posY = firePoint.position.y + startY + deltaY;
+
+                Instantiate(firePrefab, new Vector2(posX, posY), firePoint.rotation);
+            }
+        }
+    }
+
     void ShootLaser()
     {
         if (currentAmmo >= 4f)
@@ -170,6 +208,10 @@ public class Weapon : MonoBehaviour
             animationTimer = animationDuration;
             animationStep = 0;
             fpsCounter = 0;
+
+            laserVortex.GetComponent<SpriteRenderer>().enabled = false;
+            laserVortexAnimator.enabled = false;
+            laserFired = true;
 
             laserImpact.SetActive(true);
 

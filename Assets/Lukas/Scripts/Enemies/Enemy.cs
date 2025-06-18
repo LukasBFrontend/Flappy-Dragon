@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
         logic.AddScore(points);
     }
 
-    void Flicker(float currentTime, float targetTime)
+    void Flicker(float currentTime)
     {
         if (currentTime >= 0f)
         {
@@ -85,7 +85,7 @@ public class Enemy : MonoBehaviour
         if (timerEnabled)
         {
             currentTimer += Time.deltaTime;
-            Flicker(currentTimer, targetTime);
+            Flicker(currentTimer);
         }
         if (transform.position.x <= 12)
         {
