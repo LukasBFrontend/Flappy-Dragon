@@ -7,10 +7,10 @@ public class Tutorial : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private GameObject[] instructions;
     [SerializeField] private GameObject bluePower;
-    public bool tutorialIsActive = true;
+    public static bool tutorialIsActive = false;
     private bool hasJumped, hasShotFire, hasShotLaser, powerUpSpawned = false;
     private float chargeTimer;
-    private float chargeTime = 1f;
+    private float chargeTime = .7f;
     private bool hasIncremented = true;
     private int step = 1;
     private float delay = 1f;

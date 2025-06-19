@@ -5,7 +5,7 @@ public class Checkpoint : MonoBehaviour
     [SerializeField] private GameObject moving;
     void Start()
     {
-
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     // Update is called once per frame
@@ -19,7 +19,6 @@ public class Checkpoint : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             LogicScript.Instance.SetRespawn(moving.transform.position);
-            Debug.Log("Player hit");
         }
     }
 }

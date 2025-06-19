@@ -18,6 +18,7 @@ public class Collectable : MonoBehaviour
             SoundFXManager.Instance.playRandomSoundFXClip(audioClips, transform, audioVolume);
 
             logic.AddScore(points);
+            TextSpawn.Instance.SpawnText('+' + points.ToString(), transform.position);
 
             Destroy(gameObject);
         }

@@ -210,4 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1afe73c2cbe9bea44bd5e42db154271a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpPrefab: {fileID: 8854611032733776784, guid: 77fd77d7b8a8f944ba7aebc09e46f569, type: 3}
+  drops:
+  - entryName: 
+    dropPrefab: {fileID: 8854611032733776784, guid: 77fd77d7b8a8f944ba7aebc09e46f569, type: 3}
+    dropChance: 100
+  - entryName: Blue Snake
+    dropPrefab: {fileID: 6800287839343630258, guid: 3c976f84a7d72794aaef3f0232bcb3aa, type: 3}
+    dropChance: 50

@@ -8,13 +8,18 @@ public class BossWeapon : MonoBehaviour
     [SerializeField] private GameObject boss;
     [SerializeField] private int weaponNumber = 1;
     private BossScript bossScript;
+    private FlickerScript flickerScript;
+    private Animator animator;
     void Start()
     {
         bossScript = boss.GetComponent<BossScript>();
+        flickerScript = gameObject.GetComponent<FlickerScript>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
     void Update()
     {
+        animator.SetInteger("BossHealth", bossScript.HealthInPercent());
         if (weaponHitpoints <= 0)
         {
             SoundFXManager.Instance.playSoundFXClip(audioClip, transform, audioVolume);
@@ -28,12 +33,17 @@ public class BossWeapon : MonoBehaviour
             {
                 bossScript.animator.SetBool("DownCannonDestroyed", true);
             }
+            animator.SetBool("CannonDamaged", true);
             gameObject.SetActive(false);
         }
     }
 
     public void TakeDamage(int damage)
     {
-        if (bossScript.isMoving) weaponHitpoints -= damage;
+        if (bossScript.isMoving)
+        {
+            flickerScript.Flicker(2, .12f);
+            weaponHitpoints -= damage;
+        }
     }
 }

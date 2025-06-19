@@ -4,18 +4,24 @@ using UnityEngine.SceneManagement;
 
 public class LogicScript : Singleton<LogicScript>
 {
-    [HideInInspector] public int playerScore = 0;
+    [HideInInspector] public static int playerScore = 0;
     [HideInInspector] public static Vector2 respawnPoint = new(0, 0);
     [HideInInspector] public bool isGameOver, isPaused, isGameWon, isBossFight = false;
     [HideInInspector] public bool tutorialIsActive = true;
     private GameObject scoreObject, deathCountObject, player, moving;
+    private static int latestScore = 0;
     [HideInInspector] public static int deathCount = 0;
     private Text scoreText, deathCountText;
+    // respawn transition variables
+    private bool respawnIsQued = false;
+    private GroundMoveScript moveScript;
+    private float respawnTimer = .75f;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         moving = GameObject.FindGameObjectWithTag("Moving");
+        moveScript = moving?.GetComponent<GroundMoveScript>();
 
         if (scoreText) scoreText.text = playerScore.ToString();
 
@@ -25,9 +31,15 @@ public class LogicScript : Singleton<LogicScript>
         }
     }
 
+    void Update()
+    {
+        if (respawnIsQued) RespawnTransition();
+    }
+
     public void SetRespawn(Vector2 respawn)
     {
         respawnPoint = respawn;
+        latestScore = playerScore;
     }
 
     public Vector2 GetRespawn()
@@ -60,6 +72,8 @@ public class LogicScript : Singleton<LogicScript>
 
     public void RestartGame()
     {
+        playerScore = 0;
+        latestScore = 0;
         ScreenManager.Instance.StartGame();
         isGameOver = false;
     }
@@ -85,12 +99,31 @@ public class LogicScript : Singleton<LogicScript>
     {
         if (!isGameOver && !isGameWon)
         {
-            player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
             playerScore = 0;
+            IncrementDeathCount();
+            SetRespawn(new(0, 0));
+            player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
             deathCountText.text = "Variant: X" + deathCount.ToString();
             ScreenManager.Instance.ShowGameOver();
             isGameOver = true;
         }
+    }
+
+    private void RespawnTransition()
+    {
+        if (respawnTimer > 0)
+        {
+            respawnTimer -= Time.deltaTime;
+        }
+        else
+        {
+            playerScore = latestScore;
+            ScreenManager.Instance.StartGame();
+        }
+    }
+    public void Respawn()
+    {
+        respawnIsQued = true;
     }
 
     public void PauseGame()

@@ -9,7 +9,7 @@ public class BossScript : MonoBehaviour
     [HideInInspector] public Animator animator;
     [SerializeField] private int bossHitpoints = 700;
     [SerializeField]
-    private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, laserGun, missileLaunchers, healthTextObject, healthBar;
+    private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, firePointOne, firePointTwo, laserGun, missileLaunchers, healthTextObject, healthBar;
     private Animator launcherAnimator;
     private SpriteRenderer launcherRenderer;
     private BossLaser laserScript;
@@ -20,13 +20,17 @@ public class BossScript : MonoBehaviour
     private float healthBarWidth, healthBarHeight;
     private int maxHitpoints;
     float speed;
-    public float missileInterval = 2f;
-    public float cannonInterval = .7f;
+    //public float missileInterval = 2f;
+    //public float cannonInterval = .7f;
 
     [SerializeField] private NextAttack[] attacks;
     private float attackTimer = 0;
     private int attackIndex = 0;
 
+    public int HealthInPercent()
+    {
+        return 100 * bossHitpoints / maxHitpoints;
+    }
 
     void Start()
     {
@@ -98,15 +102,15 @@ public class BossScript : MonoBehaviour
 
     public void ShootCannons()
     {
-        if (cannonOne && cannonOne.GetComponent<BossWeapon>().weaponHitpoints > 0)
+        if (cannonOne?.GetComponent<BossWeapon>().weaponHitpoints > 0)
         {
-            Instantiate(cannonShotPrefab, cannonOne.transform);
+            Instantiate(cannonShotPrefab, firePointOne.transform);
             cannonOne.transform.DetachChildren();
         }
 
-        if (cannonTwo && cannonTwo.GetComponent<BossWeapon>().weaponHitpoints > 0)
+        if (cannonTwo?.GetComponent<BossWeapon>().weaponHitpoints > 0)
         {
-            Instantiate(cannonShotPrefab, cannonTwo.transform);
+            Instantiate(cannonShotPrefab, firePointTwo.transform);
             cannonTwo.transform.DetachChildren();
         }
     }

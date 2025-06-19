@@ -12,8 +12,10 @@ public class Crab : MonoBehaviour
     private bool isActive, missileFired, walkingBack = false;
     private Vector3 relativePosition;
     private Vector3 startPosition;
+    private GameObject moving;
     void Start()
     {
+        moving = GameObject.FindGameObjectWithTag("Moving");
         animator = gameObject.GetComponent<Animator>();
         startPosition = transform.localPosition;
         relativePosition = startPosition;
@@ -64,7 +66,7 @@ public class Crab : MonoBehaviour
 
     void FireMissile()
     {
-        Instantiate(homingMissilePrefab, firePoint.transform);
+        Instantiate(homingMissilePrefab, firePoint.transform.position, homingMissilePrefab.transform.rotation, moving.transform);
         missileFired = true;
     }
 }

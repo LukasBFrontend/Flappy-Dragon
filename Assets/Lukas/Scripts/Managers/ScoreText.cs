@@ -12,6 +12,6 @@ public class ScoreText : MonoBehaviour
 
     void Update()
     {
-        if (LogicScript.Instance.LvlIsActive() && SceneManager.GetActiveScene().name == "Lvl 1") text.text = LogicScript.Instance.playerScore.ToString();
+        if (LogicScript.Instance.LvlIsActive() && SceneManager.GetActiveScene().name == "Lvl 1") text.text = LogicScript.playerScore.ToString();
     }
 }

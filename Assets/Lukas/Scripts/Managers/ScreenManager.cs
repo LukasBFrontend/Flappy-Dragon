@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 
 public class ScreenManager : Singleton<ScreenManager>
 {
+    [HideInInspector] public GameObject activeMenu;
     private GameObject startMenu, soundMenu, lvlMenu, gameOverMenu, gameWonMenu, bossCanvas, playerCanvas, scoreCanvas, startSelectMenu;
     private GameObject lvl;
     public bool startAtBoss = false;
@@ -36,6 +37,7 @@ public class ScreenManager : Singleton<ScreenManager>
             if (startAtBoss) lvl.transform.position = new Vector2(-775, 0);
             else if (startAtTutorial)
             {
+                Tutorial.tutorialIsActive = true;
                 lvl.transform.position = new Vector2(28, 0);
             }
             else
@@ -67,6 +69,8 @@ public class ScreenManager : Singleton<ScreenManager>
         playerCanvas = GameObject.FindGameObjectWithTag("PlayerCanvas");
         scoreCanvas = GameObject.FindGameObjectWithTag("ScoreCanvas");
         startSelectMenu = GameObject.FindGameObjectWithTag("StartSelectMenu");
+
+        activeMenu = (SceneManager.GetActiveScene().name == "Main menu") ? startMenu : null;
     }
 
     public void QuitToMain()
@@ -171,8 +175,10 @@ public class ScreenManager : Singleton<ScreenManager>
         HideMenu(startSelectMenu);
         ShowMenu(startMenu);
     }
-    private void ShowMenu(GameObject menu)
+    public void ShowMenu(GameObject menu)
     {
+        activeMenu = menu;
+
         var canvasGroup = menu.GetComponent<CanvasGroup>();
         if (canvasGroup != null)
         {
@@ -186,8 +192,14 @@ public class ScreenManager : Singleton<ScreenManager>
         }
     }
 
-    private void HideMenu(GameObject menu)
+    public void HideMenu(GameObject menu)
     {
+        if (activeMenu == menu)
+        {
+            activeMenu = null;
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+
         var canvasGroup = menu.GetComponent<CanvasGroup>();
         if (canvasGroup != null)
         {
