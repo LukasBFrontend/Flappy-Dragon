@@ -13,26 +13,33 @@ public class FlickerScript : MonoBehaviour
     void Awake()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
-
-        OnOff();
     }
 
+    void Update()
+    {
+        OnOff();
+    }
     public void Flicker(int iterations, float interval)
     {
+        Debug.Log("It's flickering time!");
         this.interval = interval;
         this.iterations = iterations * 2;
+        isFlickering = true;
     }
     private void OnOff()
     {
-        if (!isFlickering || index == iterations)
+        if (!isFlickering || index >= iterations)
         {
             timer = 0;
+            index = 0;
+            isFlickering = false;
             return;
         }
 
-        if (timer % interval > interval / 2) index++;
+        Debug.Log("Index: " + index);
+        sprite.color = index % 2 == 0 ? damageColor : Color.white;
 
-        sprite.color = index % 0 == 0 ? damageColor : Color.white;
+        if (timer > (index + 1) * interval / 2) index++;
 
         timer += Time.deltaTime;
     }
