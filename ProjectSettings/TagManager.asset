@@ -75,6 +75,9 @@ TagManager:
   - name: Background
     uniqueID: 1554357795
     locked: 0
+  - name: VFXs
+    uniqueID: 3256328091
+    locked: 0
   - name: Foreground
     uniqueID: 4215469435
     locked: 0
