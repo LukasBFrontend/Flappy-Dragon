@@ -1,5 +1,10 @@
 using UnityEngine;
-
+[System.Serializable]
+public class SoundFXClip
+{
+    public AudioClip audioClip;
+    [Range(0, 100)] public float volume;
+}
 public class SoundFXManager : Singleton<SoundFXManager>
 {
 

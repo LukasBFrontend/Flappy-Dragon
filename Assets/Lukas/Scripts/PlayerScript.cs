@@ -16,8 +16,8 @@ public class PlayerScript : MonoBehaviour
     [HideInInspector] public bool playerIsAlive = true;
     [HideInInspector] public PowerUp activePowerUp = PowerUp.None;
     [HideInInspector] public bool shieldActive, flickerOn = false;
-    [SerializeField] private AudioClip deathClip;
-    [SerializeField][Range(0, 100)] private float audioVolume = 1f;
+    [SerializeField] private AudioClip deathClip, respawnClip;
+    [SerializeField][Range(0, 100)] private float deathClipVolume, respawnClipVolume = 1f;
     [SerializeField] private float jumpForce;
     [SerializeField] private static int hearts = 3;
     [SerializeField] private GameObject shield;
@@ -40,6 +40,10 @@ public class PlayerScript : MonoBehaviour
 
         if (hearts <= 0) hearts = 3;
         heartsText.text = "Hearts: " + hearts;
+
+        bool isRespawning = LogicScript.respawnPoint != new Vector2(0, 0);
+        animator.SetBool("IsRespawning", isRespawning);
+        if (isRespawning) SoundFXManager.Instance.playSoundFXClip(respawnClip, transform, respawnClipVolume);
     }
 
     void Update()
@@ -98,7 +102,7 @@ public class PlayerScript : MonoBehaviour
         animator.SetBool("IsDead", true);
         rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
         playerIsAlive = false;
-        SoundFXManager.Instance.playSoundFXClip(deathClip, transform, audioVolume);
+        SoundFXManager.Instance.playSoundFXClip(deathClip, transform, deathClipVolume);
 
         hearts--;
         heartsText.text = "Hearts: " + hearts;

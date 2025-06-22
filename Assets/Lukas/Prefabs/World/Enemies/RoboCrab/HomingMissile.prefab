@@ -108,6 +108,12 @@ MonoBehaviour:
   launchSpeed: 10
   flightSpeed: 15
   turnTime: 0.3
+  ascensionClip:
+    audioClip: {fileID: 8300000, guid: 0f77925d197030c4aa530f66ab7616af, type: 3}
+    volume: 50
+  flightClip:
+    audioClip: {fileID: 8300000, guid: 3bdc89afa70141143930d8582df0570e, type: 3}
+    volume: 55.6
 --- !u!61 &6489692662529237943
 BoxCollider2D:
   m_ObjectHideFlags: 0

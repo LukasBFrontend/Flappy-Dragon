@@ -8,6 +8,12 @@ public class BossScript : MonoBehaviour
     [HideInInspector] public float timer = 0;
     [HideInInspector] public Animator animator;
     [SerializeField] private int bossHitpoints = 700;
+    [SerializeField] private NextAttack[] attacks;
+    [Header("Audio")]
+    [SerializeField] private SoundFXClip cannonClip;
+    [SerializeField] private SoundFXClip laserChargeClip;
+    [SerializeField] private SoundFXClip laserClip;
+
     [SerializeField]
     private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, firePointOne, firePointTwo, laserGun, missileLaunchers, healthTextObject, healthBar;
     private Animator launcherAnimator;
@@ -23,7 +29,7 @@ public class BossScript : MonoBehaviour
     //public float missileInterval = 2f;
     //public float cannonInterval = .7f;
 
-    [SerializeField] private NextAttack[] attacks;
+
     private float attackTimer = 0;
     private int attackIndex = 0;
 
@@ -105,13 +111,15 @@ public class BossScript : MonoBehaviour
         if (cannonOne?.GetComponent<BossWeapon>().weaponHitpoints > 0)
         {
             Instantiate(cannonShotPrefab, firePointOne.transform);
-            cannonOne.transform.DetachChildren();
+            firePointOne.transform.DetachChildren();
+            SoundFXManager.Instance.playSoundFXClip(cannonClip.audioClip, transform, cannonClip.volume);
         }
 
         if (cannonTwo?.GetComponent<BossWeapon>().weaponHitpoints > 0)
         {
             Instantiate(cannonShotPrefab, firePointTwo.transform);
-            cannonTwo.transform.DetachChildren();
+            firePointTwo.transform.DetachChildren();
+            SoundFXManager.Instance.playSoundFXClip(cannonClip.audioClip, transform, cannonClip.volume);
         }
     }
 

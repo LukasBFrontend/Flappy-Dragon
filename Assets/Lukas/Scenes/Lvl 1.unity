@@ -9630,18 +9630,6 @@ MonoBehaviour:
   timer: 0
   animator: {fileID: 0}
   bossHitpoints: 1000
-  missilePrefab: {fileID: 4069436539317369221, guid: c79c1f84fa6cf6f4c9932c8fe7094401, type: 3}
-  bazookaOne: {fileID: 1538742489}
-  bazookaTwo: {fileID: 339160702}
-  cannonShotPrefab: {fileID: 7639927384369690437, guid: bcca250d971bda34eb3e99908e5930d2, type: 3}
-  cannonOne: {fileID: 1176283347}
-  cannonTwo: {fileID: 1182316561}
-  firePointOne: {fileID: 901214905}
-  firePointTwo: {fileID: 1945435677}
-  laserGun: {fileID: 1990473446}
-  missileLaunchers: {fileID: 638771981}
-  healthTextObject: {fileID: 451672239}
-  healthBar: {fileID: 339538679}
   attacks:
   - Attack: 0
     Delay: 0.5
@@ -9671,6 +9659,27 @@ MonoBehaviour:
     Delay: 2.5
   - Attack: 3
     Delay: 4
+  cannonClip:
+    audioClip: {fileID: 8300000, guid: 71c4eb55abff8dc44bc12334dae0d8f3, type: 3}
+    volume: 40
+  laserChargeClip:
+    audioClip: {fileID: 8300000, guid: 7399bc5428549fa42b5f41dfbce75d3a, type: 3}
+    volume: 52
+  laserClip:
+    audioClip: {fileID: 0}
+    volume: 0
+  missilePrefab: {fileID: 4069436539317369221, guid: c79c1f84fa6cf6f4c9932c8fe7094401, type: 3}
+  bazookaOne: {fileID: 1538742489}
+  bazookaTwo: {fileID: 339160702}
+  cannonShotPrefab: {fileID: 7639927384369690437, guid: bcca250d971bda34eb3e99908e5930d2, type: 3}
+  cannonOne: {fileID: 1176283347}
+  cannonTwo: {fileID: 1182316561}
+  firePointOne: {fileID: 901214905}
+  firePointTwo: {fileID: 1945435677}
+  laserGun: {fileID: 1990473446}
+  missileLaunchers: {fileID: 638771981}
+  healthTextObject: {fileID: 451672239}
+  healthBar: {fileID: 339538679}
 --- !u!95 &702406633
 Animator:
   serializedVersion: 7
@@ -11692,6 +11701,11 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!4 &894254804 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4017952639001251125, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+  m_PrefabInstance: {fileID: 1615843146}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &897761046 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5740631250644346507, guid: 30f41621211c6a247bcedb1573d046e9, type: 3}
@@ -20752,6 +20766,63 @@ Transform:
   - {fileID: 33779620}
   m_Father: {fileID: 118669189}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1615843146
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2010946175}
+    m_Modifications:
+    - target: {fileID: 4017952639001251125, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017952639001251125, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017952639001251125, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017952639001251125, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017952639001251125, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017952639001251125, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017952639001251125, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017952639001251125, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017952639001251125, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017952639001251125, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850693469827194919, guid: c0128eafdefee3b449bef93b05148655, type: 3}
+      propertyPath: m_Name
+      value: RoboCrab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c0128eafdefee3b449bef93b05148655, type: 3}
 --- !u!1001 &1617071792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48950,6 +49021,12 @@ MonoBehaviour:
   chargeDuration: 1.5
   fps: 30
   animationDuration: 1
+  chargeClip:
+    audioClip: {fileID: 8300000, guid: 7399bc5428549fa42b5f41dfbce75d3a, type: 3}
+    volume: 100
+  laserClip:
+    audioClip: {fileID: 8300000, guid: eb9345714e4f8d64ba525c36934fa544, type: 3}
+    volume: 48.2
 --- !u!224 &1993652916 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2768960491693958930, guid: fb41ed8fb1ef7c84982d7c5d19cd7e40, type: 3}
@@ -49169,6 +49246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 894254804}
   - {fileID: 15752055}
   - {fileID: 1894053127}
   - {fileID: 1750032923}
@@ -49215,7 +49293,9 @@ MonoBehaviour:
   shieldActive: 0
   flickerOn: 0
   deathClip: {fileID: 8300000, guid: 017722ed8d6c68d4a860036c1326d680, type: 3}
-  audioVolume: 30
+  respawnClip: {fileID: 8300000, guid: 9a4c08b39e8ee854482bf7abcd735692, type: 3}
+  deathClipVolume: 100
+  respawnClipVolume: 50
   jumpForce: 8
   shield: {fileID: 1775902056}
 --- !u!50 &2011919042
