@@ -203,3 +203,9 @@ MonoBehaviour:
   layersToHit:
     serializedVersion: 2
     m_Bits: 256
+  ascensionClip:
+    audioClip: {fileID: 8300000, guid: 0f77925d197030c4aa530f66ab7616af, type: 3}
+    volume: 90
+  flightClip:
+    audioClip: {fileID: 8300000, guid: 3bdc89afa70141143930d8582df0570e, type: 3}
+    volume: 70

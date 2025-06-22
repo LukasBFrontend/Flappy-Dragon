@@ -1,15 +1,15 @@
 using UnityEngine;
-
 public class HomingMissile : MonoBehaviour
 {
     [Range(1f, 20f)][SerializeField] private float launchSpeed, flightSpeed = 5f;
     [Range(0f, 1f)][SerializeField] private float turnTime = .5f;
     private GameObject player;
+    [SerializeField] private SoundFXClip ascensionClip, flightClip;
     private Vector3 relativePosition;
     private Rigidbody2D rigidbody;
     private Animator animator;
     private float turnTimer;
-    private bool targetHeightReached = false;
+    private bool targetHeightReached, hasBegunFlight = false;
 
     void Start()
     {
@@ -18,6 +18,8 @@ public class HomingMissile : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         relativePosition = transform.position;
         turnTimer = turnTime;
+
+        SoundFXManager.Instance.playSoundFXClip(ascensionClip.audioClip, transform, ascensionClip.volume);
     }
 
     void Update()
@@ -38,6 +40,11 @@ public class HomingMissile : MonoBehaviour
         else if (turnTimer >= 0f)
         {
             turnTimer -= Time.deltaTime;
+            if (turnTimer <= turnTime / 2)
+            {
+                if (!hasBegunFlight) SoundFXManager.Instance.playSoundFXClip(flightClip.audioClip, transform, flightClip.volume);
+                hasBegunFlight = true;
+            }
         }
         else
         {

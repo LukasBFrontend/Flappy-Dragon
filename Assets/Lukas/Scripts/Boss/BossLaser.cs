@@ -9,9 +9,10 @@ public class BossLaser : MonoBehaviour
     [SerializeField] private float fps = 30f;
     [SerializeField] private float animationDuration = .5f;
     Animator laserVortexAnimator;
+    [SerializeField] private SoundFXClip chargeClip, laserClip;
     private int animationStep = 0;
     private float fpsCounter, animationTimer, chargeTimer;
-    private bool animationIsActive, sequenceIsActive = false;
+    private bool animationIsActive, sequenceIsActive, animationHasStarted = false;
     private LineRenderer laserRenderer;
     private BoxCollider2D collider;
 
@@ -48,6 +49,12 @@ public class BossLaser : MonoBehaviour
         }
         if (animationIsActive)
         {
+            if (!animationHasStarted)
+            {
+                SoundFXManager.Instance.playSoundFXClip(laserClip.audioClip, transform, laserClip.volume);
+                animationHasStarted = true;
+            }
+
             animationTimer -= Time.deltaTime;
             fpsCounter += Time.deltaTime;
 
@@ -69,6 +76,7 @@ public class BossLaser : MonoBehaviour
         }
         if (animationTimer <= 0)
         {
+            animationHasStarted = false;
             animationIsActive = false;
             laserRenderer.enabled = false;
             collider.enabled = false;
@@ -79,6 +87,7 @@ public class BossLaser : MonoBehaviour
 
     public void StartLaserSequence()
     {
+        SoundFXManager.Instance.playSoundFXClip(chargeClip.audioClip, transform, chargeClip.volume);
         sequenceIsActive = true;
 
         chargeTimer = chargeDuration;
