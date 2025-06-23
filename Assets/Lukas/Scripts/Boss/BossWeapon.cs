@@ -6,6 +6,7 @@ public class BossWeapon : MonoBehaviour
     [SerializeField] private AudioClip audioClip;
     [Range(0, 100)][SerializeField] private int audioVolume = 50;
     [SerializeField] private GameObject boss;
+    [SerializeField] private Animator otherCannon, missileLaunchers;
     [SerializeField] private int weaponNumber = 1;
     private BossScript bossScript;
     private FlickerScript flickerScript;
@@ -34,6 +35,8 @@ public class BossWeapon : MonoBehaviour
                 bossScript.animator.SetBool("DownCannonDestroyed", true);
             }
             animator.SetBool("CannonDamaged", true);
+            otherCannon.SetBool("DoNextState", !otherCannon.GetBool("DoNextState"));
+            missileLaunchers.SetBool("DoNextState", !missileLaunchers.GetBool("DoNextState"));
             gameObject.SetActive(false);
         }
     }

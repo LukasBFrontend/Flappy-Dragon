@@ -94,6 +94,5 @@ public class BossLaser : MonoBehaviour
         animationTimer = animationDuration;
 
         laserVortexAnimator.SetBool("IsCharging", true);
-        Debug.Log(laserVortexAnimator.GetBool("IsCharging"));
     }
 }
