@@ -29,6 +29,8 @@ TagManager:
   - Lvl
   - InputManager
   - HeartsText
+  - BackgroundMusic
+  - BossMusic
   layers:
   - Default
   - TransparentFX

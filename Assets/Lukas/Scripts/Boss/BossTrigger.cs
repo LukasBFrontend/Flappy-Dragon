@@ -19,6 +19,7 @@ public class BossTrigger : MonoBehaviour
             ScreenManager.Instance.ShowBossCanvas();
             ScreenManager.Instance.HideScoreCanvas();
             LogicScript.Instance.isBossFight = true;
+            gameObject.SetActive(false);
         }
     }
 

@@ -3464,7 +3464,7 @@ ParticleSystem:
     range: {x: 0.2, y: 0.5}
     separateAxes: 0
   RotationBySpeedModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 0

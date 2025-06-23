@@ -26,7 +26,7 @@ public class Crab : MonoBehaviour
         animatorinfo = this.animator.GetCurrentAnimatorClipInfo(0);
         current_animation = animatorinfo[0].clip.name;
 
-        if (!isActive) isActive = transform.position.x < 10;
+        if (!isActive) isActive = transform.position.x < 10 && transform.position.x > -10;
 
         if (isActive)
         {

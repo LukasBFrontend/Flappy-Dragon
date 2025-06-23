@@ -5,6 +5,7 @@ public class HomingMissile : MonoBehaviour
     [Range(0f, 1f)][SerializeField] private float turnTime = .5f;
     private GameObject player;
     [SerializeField] private SoundFXClip ascensionClip, flightClip;
+    [SerializeField] private GameObject trailObject;
     private Vector3 relativePosition;
     private Rigidbody2D rigidbody;
     private Animator animator;
@@ -39,6 +40,7 @@ public class HomingMissile : MonoBehaviour
         }
         else if (turnTimer >= 0f)
         {
+            trailObject.SetActive(false);
             turnTimer -= Time.deltaTime;
             if (turnTimer <= turnTime / 2)
             {
@@ -48,7 +50,11 @@ public class HomingMissile : MonoBehaviour
         }
         else
         {
+            trailObject.SetActive(true);
             rigidbody.linearVelocityX = -flightSpeed;
+            trailObject.transform.localRotation = Quaternion.Euler(-90, 90, 0);
+            trailObject.transform.localScale = new Vector3(.75f, .5f, 1f);
+            trailObject.transform.localPosition = new Vector3(0f, .5f, 0f);
         }
     }
 }

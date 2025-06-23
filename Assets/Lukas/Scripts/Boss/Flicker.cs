@@ -21,7 +21,6 @@ public class FlickerScript : MonoBehaviour
     }
     public void Flicker(int iterations, float interval)
     {
-        Debug.Log("It's flickering time!");
         this.interval = interval;
         this.iterations = iterations * 2;
         isFlickering = true;
@@ -36,7 +35,6 @@ public class FlickerScript : MonoBehaviour
             return;
         }
 
-        Debug.Log("Index: " + index);
         sprite.color = index % 2 == 0 ? damageColor : Color.white;
 
         if (timer > (index + 1) * interval / 2) index++;
