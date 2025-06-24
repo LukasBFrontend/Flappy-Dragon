@@ -111,6 +111,7 @@ public class LogicScript : Singleton<LogicScript>
             playerScore = 0;
             IncrementDeathCount();
             SetRespawn(new(0, 0));
+            if (ScreenManager.Instance.startAtBoss) SetRespawn(new(-775, 0));
             player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
             deathCountText.text = "Variant: X" + deathCount.ToString();
             ScreenManager.Instance.ShowGameOver();

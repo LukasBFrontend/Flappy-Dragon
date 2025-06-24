@@ -17,6 +17,11 @@ public class Fire : MonoBehaviour
         rigidBody.linearVelocity = transform.right * speed;
     }
 
+    void Update()
+    {
+        if (gameObject.transform.position.x > 24) Destroy(gameObject);
+    }
+
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
@@ -35,27 +40,30 @@ public class Fire : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);
-                SoundFXManager.Instance.playSoundFXClip(audioClip, transform, audioVolume);
             }
             else if (bossWeapon != null)
             {
                 bossWeapon.TakeDamage(damage);
-                SoundFXManager.Instance.playSoundFXClip(audioClip, transform, audioVolume);
             }
             else if (bossScript != null)
             {
                 bossScript.TakeDamage(damage);
-                SoundFXManager.Instance.playSoundFXClip(audioClip, transform, audioVolume);
             }
 
+            SoundFXManager.Instance.playSoundFXClip(audioClip, transform, audioVolume);
+
             Destroy(gameObject);
+        }
+        else if (hitInfo.tag == "Ground")
+        {
+
         }
 
     }
 
     private bool IsHostile(Collider2D collision)
     {
-        string[] tagToFind = new string[] { "Ground", "Robot", "Missile", "Enemy" };
+        string[] tagToFind = new string[] { "Ground", "Robot", "Missile", "Enemy", "Boss" };
 
         for (int i = 0; i < tagToFind.Length; i++)
         {

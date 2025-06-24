@@ -34,7 +34,11 @@ public class ScreenManager : Singleton<ScreenManager>
 
         if (lvl != null)
         {
-            if (startAtBoss) lvl.transform.position = new Vector2(-775, 0);
+            if (startAtBoss)
+            {
+                lvl.transform.position = new Vector2(-775, 0);
+                LogicScript.Instance.SetRespawn(new Vector2(-775, 0));
+            }
             else if (startAtTutorial)
             {
                 Tutorial.tutorialIsActive = true;
@@ -178,6 +182,7 @@ public class ScreenManager : Singleton<ScreenManager>
     public void ShowMenu(GameObject menu)
     {
         activeMenu = menu;
+        if (menu == bossCanvas) activeMenu = null;
 
         var canvasGroup = menu.GetComponent<CanvasGroup>();
         if (canvasGroup != null)

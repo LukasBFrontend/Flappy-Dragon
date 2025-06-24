@@ -32,6 +32,7 @@ TagManager:
   - BackgroundMusic
   - BossMusic
   - HeartsManager
+  - Boss
   layers:
   - Default
   - TransparentFX

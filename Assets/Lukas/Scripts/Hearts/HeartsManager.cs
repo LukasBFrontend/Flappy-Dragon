@@ -27,7 +27,6 @@ public class HeartsManager : MonoBehaviour
                 if (i < currentHearts) hearts[i].SetHeartFraction(1f);
                 else if (i == currentHearts)
                 {
-                    Debug.Log(accumalatedPoints + " " + pointsForHeart);
                     hearts[i].SetHeartFraction(accumalatedPoints / pointsForHeart);
                 }
                 else hearts[i].SetHeartFraction(0f);

@@ -17,7 +17,7 @@ public class Heart : MonoBehaviour
     {
         currentColor = toneImage.color;
         startAlpha = toneImage.color.a;
-        targetAlpha = .3f;
+        targetAlpha = .5f;
         shadowRect = shadowImage.GetComponent<RectTransform>();
         shadowMaxHeight = shadowRect.rect.height;
         shadowSize = shadowRect.sizeDelta;
