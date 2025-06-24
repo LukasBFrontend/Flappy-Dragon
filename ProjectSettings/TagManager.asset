@@ -31,6 +31,7 @@ TagManager:
   - HeartsText
   - BackgroundMusic
   - BossMusic
+  - HeartsManager
   layers:
   - Default
   - TransparentFX

@@ -15,6 +15,7 @@ public class LogicScript : Singleton<LogicScript>
     // respawn transition variables
     private bool respawnIsQued = false;
     private GroundMoveScript moveScript;
+    [HideInInspector] public HeartsManager heartsManager;
     private float respawnTimer = .75f;
 
     void Start()
@@ -22,6 +23,7 @@ public class LogicScript : Singleton<LogicScript>
         player = GameObject.FindGameObjectWithTag("Player");
         moving = GameObject.FindGameObjectWithTag("Moving");
         moveScript = moving?.GetComponent<GroundMoveScript>();
+        heartsManager = GameObject.FindGameObjectWithTag("HeartsManager")?.GetComponent<HeartsManager>();
 
         if (scoreText) scoreText.text = playerScore.ToString();
 
@@ -59,6 +61,13 @@ public class LogicScript : Singleton<LogicScript>
     public void AddScore(int points)
     {
         playerScore += points;
+        //heartsManager.Progress(points);
+        scoreText.text = playerScore.ToString();
+    }
+
+    public void ScoreTick(int points)
+    {
+        playerScore += points;
         scoreText.text = playerScore.ToString();
     }
 
@@ -66,7 +75,7 @@ public class LogicScript : Singleton<LogicScript>
     {
         if (!tutorialIsActive && !isGameWon && !isGameOver && !isPaused && !isBossFight && SceneManager.GetActiveScene().name == "Lvl 1")
         {
-            AddScore(1);
+            ScoreTick(1);
         }
     }
 

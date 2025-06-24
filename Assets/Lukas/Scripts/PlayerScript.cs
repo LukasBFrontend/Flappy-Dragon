@@ -19,9 +19,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private AudioClip deathClip, respawnClip;
     [SerializeField][Range(0, 100)] private float deathClipVolume, respawnClipVolume = 1f;
     [SerializeField] private float jumpForce;
-    [SerializeField] private static int hearts = 3;
+    public static int hearts = 3;
     [SerializeField] private GameObject shield;
-    private Text heartsText;
+    private HeartsManager heartsManager;
     private Rigidbody2D rigidBody;
     private Animator animator, shieldAnimator;
     private SpriteRenderer spriteRenderer, shieldSprite;
@@ -36,10 +36,9 @@ public class PlayerScript : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         shieldSprite = shield.GetComponent<SpriteRenderer>();
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-        heartsText = GameObject.FindGameObjectWithTag("HeartsText").GetComponent<Text>();
+        heartsManager = GameObject.FindGameObjectWithTag("HeartsManager")?.GetComponent<HeartsManager>();
 
         if (hearts <= 0) hearts = 3;
-        heartsText.text = "Hearts: " + hearts;
 
         bool isRespawning = LogicScript.respawnPoint != new Vector2(0, 0);
         animator.SetBool("IsRespawning", isRespawning);
@@ -105,7 +104,7 @@ public class PlayerScript : MonoBehaviour
         SoundFXManager.Instance.playSoundFXClip(deathClip, transform, deathClipVolume);
 
         hearts--;
-        heartsText.text = "Hearts: " + hearts;
+        heartsManager.ResetProgress();
 
         if (hearts > 0) logic.Respawn();
         else logic.GameOver();

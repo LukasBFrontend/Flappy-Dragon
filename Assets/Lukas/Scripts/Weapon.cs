@@ -152,7 +152,7 @@ public class Weapon : MonoBehaviour
 
     private void SetAmmoBar()
     {
-        ammoMeterTransform.sizeDelta = new Vector2(ammoMeterWidth * currentAmmo / maxAmmo, ammoMeterHeight);
+        ammoMeterTransform.sizeDelta = new Vector2(Mathf.Clamp(ammoMeterWidth * currentAmmo / maxAmmo, 0, ammoMeterWidth), ammoMeterHeight);
     }
 
     void Shoot()
