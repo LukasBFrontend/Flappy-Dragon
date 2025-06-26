@@ -13,9 +13,14 @@ public class BossScript : MonoBehaviour
     [SerializeField] private SoundFXClip cannonClip;
     [SerializeField] private SoundFXClip laserChargeClip;
     [SerializeField] private SoundFXClip laserClip;
+    [SerializeField] private SoundFXClip scream1Clip;
+    [SerializeField] private SoundFXClip scream2Clip;
+    [SerializeField] private SoundFXClip scream3Clip;
+    [SerializeField] private SoundFXClip explosionClip;
 
     [SerializeField]
     private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, firePointOne, firePointTwo, laserGun, missileLaunchers, healthTextObject, healthBar;
+    private AudioSource backgroundMusic;
     private Animator launcherAnimator;
     private SpriteRenderer launcherRenderer;
     private BossLaser laserScript;
@@ -26,6 +31,9 @@ public class BossScript : MonoBehaviour
     private float healthBarWidth, healthBarHeight;
     private int maxHitpoints;
     float speed;
+    private bool bossStarted, isSecondPhase = false;
+    private float deathTimer = 3f;
+    private float backgroundStartVolume;
     //public float missileInterval = 2f;
     //public float cannonInterval = .7f;
 
@@ -48,18 +56,31 @@ public class BossScript : MonoBehaviour
         laserScript = laserGun.GetComponent<BossLaser>();
         groundMoveScript = GameObject.FindGameObjectWithTag("Moving").GetComponent<GroundMoveScript>();
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        backgroundMusic = GameObject.FindGameObjectWithTag("BossMusic").GetComponent<AudioSource>();
 
         healthBarWidth = healthBarTransform.sizeDelta.x;
         healthBarHeight = healthBarTransform.sizeDelta.y;
         maxHitpoints = bossHitpoints;
         speed = groundMoveScript.moveSpeed;
         healthText.text = bossHitpoints.ToString();
+        backgroundStartVolume = backgroundMusic.volume;
     }
 
     void Update()
     {
         if (isMoving)
         {
+            if (!isSecondPhase && bossHitpoints <= 500)
+            {
+                SoundFXManager.Instance.playSoundFXClip(scream2Clip.audioClip, transform, scream2Clip.volume);
+                isSecondPhase = true;
+            }
+
+            if (!bossStarted)
+            {
+                SoundFXManager.Instance.playSoundFXClip(scream1Clip.audioClip, transform, scream1Clip.volume);
+                bossStarted = true;
+            }
             if (attackTimer <= .5f)
             {
                 AttackType comingAttack = attacks[attackIndex].Attack;
@@ -100,9 +121,40 @@ public class BossScript : MonoBehaviour
         }
         if (bossHitpoints <= 0)
         {
+            gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+
             ScreenManager.Instance.HideBossCanvas();
-            gameObject.SetActive(false);
-            logicScript.GameWon();
+            ScreenManager.Instance.HidePlayerCanvas();
+
+            if (isMoving) SoundFXManager.Instance.playSoundFXClip(scream3Clip.audioClip, transform, scream3Clip.volume);
+
+            isMoving = false;
+
+            float t = 1f - (deathTimer / 3f);
+            backgroundMusic.volume = backgroundStartVolume * Mathf.Pow(10f, -2f * t);
+            LogicScript.Instance.isGameWon = true;
+
+            if (deathTimer <= 0)
+            {
+                if (backgroundMusic.enabled) SoundFXManager.Instance.playSoundFXClip(explosionClip.audioClip, transform, explosionClip.volume);
+                backgroundMusic.enabled = false;
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                SpriteRenderer[] childSprites = GetComponentsInChildren<SpriteRenderer>();
+
+                foreach (SpriteRenderer sprite in childSprites) sprite.enabled = false;
+
+            }
+
+            if (deathTimer <= -2)
+            {
+                Debug.Log("deathTimer <= -2");
+                logicScript.GameWon();
+                gameObject.SetActive(false);
+            }
+
+
+            deathTimer -= Time.deltaTime;
         }
     }
 

@@ -93,6 +93,7 @@ public class InputManager : MonoBehaviour
         {
             GameObject activeMenu = ScreenManager.Instance.activeMenu;
             if (activeMenu) Cursor.visible = true;
+            if (!activeMenu) Cursor.visible = false;
             //EventSystem.current.SetSelectedGameObject(null);
         }
 
@@ -102,7 +103,7 @@ public class InputManager : MonoBehaviour
         {
             ScreenManager.Instance.OpenSoundMenu();
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && playerScript.playerIsAlive && !LogicScript.Instance.isPaused)
+        if (Input.GetKeyDown(KeyCode.Escape) && playerScript.playerIsAlive && !LogicScript.Instance.isPaused && !LogicScript.Instance.isGameWon)
         {
             ScreenManager.Instance.OpenLvlMenu();
             LogicScript.Instance.PauseGame();

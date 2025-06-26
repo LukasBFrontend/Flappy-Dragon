@@ -35,8 +35,8 @@ public class BossWeapon : MonoBehaviour
                 bossScript.animator.SetBool("DownCannonDestroyed", true);
             }
             animator.SetBool("CannonDamaged", true);
-            otherCannon.SetBool("DoNextState", !otherCannon.GetBool("DoNextState"));
-            missileLaunchers.SetBool("DoNextState", !missileLaunchers.GetBool("DoNextState"));
+            otherCannon.SetBool("DoNextState", true);
+            missileLaunchers.SetBool("DoNextState", true);
             gameObject.SetActive(false);
         }
     }

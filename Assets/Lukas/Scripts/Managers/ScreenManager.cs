@@ -19,30 +19,23 @@ public class ScreenManager : Singleton<ScreenManager>
         SceneManager.LoadScene("Lvl 1");
     }
 
-    public void StartAtBoss()
-    {
-        startAtBoss = true;
-        SceneManager.sceneLoaded += OnLevelFinishedLoading;
-        SceneManager.LoadScene("Lvl 1");
-    }
-
     private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         CacheMenus();
+        Cursor.visible = false;
 
         lvl = GameObject.FindGameObjectWithTag("Moving");
 
         if (lvl != null)
         {
-            if (startAtBoss) lvl.transform.position = new Vector2(-775, 0);
+            if (startAtBoss)
+            {
+                LogicScript.Instance.SetRespawn(new Vector2(-775, 0));
+            }
             else if (startAtTutorial)
             {
                 Tutorial.tutorialIsActive = true;
-                lvl.transform.position = new Vector2(28, 0);
-            }
-            else
-            {
-                lvl.transform.position = LogicScript.Instance.GetRespawn();
+                LogicScript.Instance.SetRespawn(new Vector2(28, 0));
             }
         }
 
@@ -148,6 +141,7 @@ public class ScreenManager : Singleton<ScreenManager>
 
     public void ShowPlayerCanvas()
     {
+        Cursor.visible = false;
         ShowMenu(playerCanvas);
     }
 
@@ -158,6 +152,7 @@ public class ScreenManager : Singleton<ScreenManager>
 
     public void ShowScoreCanvas()
     {
+        Cursor.visible = false;
         ShowMenu(scoreCanvas);
     }
     public void HideScoreCanvas()
@@ -178,6 +173,7 @@ public class ScreenManager : Singleton<ScreenManager>
     public void ShowMenu(GameObject menu)
     {
         activeMenu = menu;
+        if (menu == bossCanvas || menu == playerCanvas || menu == scoreCanvas) activeMenu = null;
 
         var canvasGroup = menu.GetComponent<CanvasGroup>();
         if (canvasGroup != null)

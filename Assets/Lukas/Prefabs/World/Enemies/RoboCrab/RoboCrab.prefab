@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 3726319335402532583}
   - component: {fileID: -1367095983001156906}
   - component: {fileID: 4064292162946460870}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: RoboCrab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -79497861
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2925507715981675053, guid: 2e73b84e772d3c04fac127958a63f02d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -229,6 +229,8 @@ MonoBehaviour:
   damageColor: {r: 0, g: 0, b: 0, a: 0}
   isActive: 0
   isDead: 0
+  isFireTarget: 0
+  isLaserTarget: 0
 --- !u!114 &4064292162946460870
 MonoBehaviour:
   m_ObjectHideFlags: 0

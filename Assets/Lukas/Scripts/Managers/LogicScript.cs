@@ -13,15 +13,18 @@ public class LogicScript : Singleton<LogicScript>
     [HideInInspector] public static int deathCount = 0;
     private Text scoreText, deathCountText;
     // respawn transition variables
-    private bool respawnIsQued = false;
+    private bool respawnIsQued, hasShownGameWon = false;
     private GroundMoveScript moveScript;
+    [HideInInspector] public HeartsManager heartsManager;
     private float respawnTimer = .75f;
 
     void Start()
     {
+        Debug.Log(respawnPoint);
         player = GameObject.FindGameObjectWithTag("Player");
         moving = GameObject.FindGameObjectWithTag("Moving");
         moveScript = moving?.GetComponent<GroundMoveScript>();
+        heartsManager = GameObject.FindGameObjectWithTag("HeartsManager")?.GetComponent<HeartsManager>();
 
         if (scoreText) scoreText.text = playerScore.ToString();
 
@@ -29,10 +32,32 @@ public class LogicScript : Singleton<LogicScript>
         {
             InvokeRepeating("TickingScore", 0f, 0.1f);
         }
+
+
+        if (ScreenManager.Instance.startAtBoss)
+        {
+            tutorialIsActive = false;
+        }
+        if (ScreenManager.Instance.startAtTutorial)
+        {
+
+            tutorialIsActive = true;
+        }
+
+        if (Tutorial.tutorialCompleted)
+        {
+            if (!ScreenManager.Instance.startAtBoss && respawnPoint.x > 0) SetRespawn(new(0, 0));
+            ScreenManager.Instance.startAtTutorial = false;
+            tutorialIsActive = false;
+        }
+
+        if (moveScript) moveScript.gameObject.transform.position = respawnPoint;
     }
 
     void Update()
     {
+
+
         if (respawnIsQued) RespawnTransition();
     }
 
@@ -40,6 +65,7 @@ public class LogicScript : Singleton<LogicScript>
     {
         respawnPoint = respawn;
         latestScore = playerScore;
+        isGameWon = false;
     }
 
     public Vector2 GetRespawn()
@@ -59,6 +85,13 @@ public class LogicScript : Singleton<LogicScript>
     public void AddScore(int points)
     {
         playerScore += points;
+        //heartsManager.Progress(points);
+        scoreText.text = playerScore.ToString();
+    }
+
+    public void ScoreTick(int points)
+    {
+        playerScore += points;
         scoreText.text = playerScore.ToString();
     }
 
@@ -66,7 +99,7 @@ public class LogicScript : Singleton<LogicScript>
     {
         if (!tutorialIsActive && !isGameWon && !isGameOver && !isPaused && !isBossFight && SceneManager.GetActiveScene().name == "Lvl 1")
         {
-            AddScore(1);
+            ScoreTick(1);
         }
     }
 
@@ -87,9 +120,10 @@ public class LogicScript : Singleton<LogicScript>
 
     public void GameWon()
     {
-        if (!isGameOver && !isGameWon)
+        if (!isGameOver)
         {
             player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+            PlayerScript.hearts = 3;
             ScreenManager.Instance.ShowGameWon();
             isGameWon = true;
         }
@@ -97,15 +131,17 @@ public class LogicScript : Singleton<LogicScript>
 
     public void GameOver()
     {
-        if (!isGameOver && !isGameWon)
+        if (!isGameOver && !hasShownGameWon)
         {
             playerScore = 0;
             IncrementDeathCount();
             SetRespawn(new(0, 0));
+            if (ScreenManager.Instance.startAtBoss) SetRespawn(new(-775, 0));
             player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
             deathCountText.text = "Variant: X" + deathCount.ToString();
             ScreenManager.Instance.ShowGameOver();
             isGameOver = true;
+            hasShownGameWon = true;
         }
     }
 

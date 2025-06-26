@@ -1,20 +1,27 @@
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Timeline;
+using System.Collections.Generic;
+using System;
+using System.Linq;
 
 public class Tutorial : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private GameObject[] instructions;
     [SerializeField] private GameObject bluePower;
+    [SerializeField] private Enemy firstTarget;
+    [SerializeField] private Enemy[] consecutiveTargets;
     public static bool tutorialIsActive = false;
-    private bool hasJumped, hasShotFire, hasShotLaser, powerUpSpawned = false;
+    [HideInInspector] public static bool tutorialCompleted = false;
+    private bool hasJumped, hasShotFire, hasShotLaser, powerUpSpawned, firstTargetSpawned, consecutiveTargetsSpawned = false;
     private float chargeTimer;
     private float chargeTime = .7f;
     private bool hasIncremented = true;
     private int step = 1;
     private float delay = 1f;
     private float timer = 0f;
+
     private GameObject lvl, player, moving, background, powerUpInstance;
     private Rigidbody2D rb;
     private Vector3 startPos;
@@ -26,7 +33,6 @@ public class Tutorial : MonoBehaviour
         background = GameObject.FindGameObjectWithTag("Background");
 
         chargeTimer = chargeTime;
-
         if (player)
         {
             rb = player.GetComponent<Rigidbody2D>();
@@ -66,13 +72,19 @@ public class Tutorial : MonoBehaviour
                 }
                 break;
             case 2:
+                if (!firstTargetSpawned)
+                {
+                    firstTarget.transform.gameObject.SetActive(true);
+                    firstTargetSpawned = true;
+                }
+
                 instructions[0].GetComponent<SpriteRenderer>().enabled = false;
                 instructions[1].GetComponent<SpriteRenderer>().enabled = true;
                 ScreenManager.Instance.ShowPlayerCanvas();
 
                 if (!hasShotFire)
                 {
-                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    if (!firstTarget.transform.gameObject.activeSelf)
                     {
                         timer = delay;
                         hasShotFire = true;
@@ -91,24 +103,24 @@ public class Tutorial : MonoBehaviour
                     bluePowerScript.isPreview = true;
                     powerUpSpawned = true;
                 }
+
+
+                if (GameObject.FindGameObjectWithTag("Player")?.GetComponent<PlayerScript>().activePowerUp == PowerUp.Blue && !consecutiveTargetsSpawned)
+                {
+                    consecutiveTargets[0].transform.parent.gameObject.SetActive(true);
+                    consecutiveTargetsSpawned = true;
+                }
+
+
                 if (!hasShotLaser)
                 {
-                    if (Input.GetKey(KeyCode.Mouse0))
+                    if (consecutiveTargets.All(enemy => !enemy.transform.gameObject.activeSelf))
                     {
-                        chargeTimer -= Time.deltaTime;
-                    }
-                    if (Input.GetKeyUp(KeyCode.Mouse0))
-                    {
-                        if (chargeTimer <= 0 && player.GetComponent<PlayerScript>().activePowerUp == PowerUp.Blue)
-                        {
-                            timer = delay;
-                            hasShotLaser = true;
-                            bluePowerScript.isPreview = false;
-                            bluePowerScript.SetTimer(3f);
-                        }
-                        chargeTimer = chargeTime;
+                        timer = delay;
+                        hasShotLaser = true;
                     }
                 }
+
                 break;
             default:
                 instructions[2].GetComponent<SpriteRenderer>().enabled = false;
@@ -117,8 +129,13 @@ public class Tutorial : MonoBehaviour
                 rb.constraints = RigidbodyConstraints2D.None;
                 LogicScript.Instance.AddScore(-1);
                 rb.linearVelocityX = -3f;
+                bluePowerScript.isPreview = false;
+
+                bluePowerScript.SetTimer(2.6f);
                 tutorialIsActive = false;
                 ScreenManager.Instance.startAtTutorial = false;
+                tutorialCompleted = true;
+                LogicScript.Instance.SetRespawn(new(0, 0));
                 ScreenManager.Instance.ShowScoreCanvas();
                 break;
         }

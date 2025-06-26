@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 8156924008866348956}
   - component: {fileID: 9220406418751995636}
   - component: {fileID: 6992201837707088093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MissilePayload
   m_TagString: Missile
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -79497861
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 9
   m_Sprite: {fileID: 3415909720577417287, guid: 1d188715147960f4cae1eee34de6dd99, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -293,6 +293,8 @@ MonoBehaviour:
   damageColor: {r: 0.6367924, g: 0.68107027, b: 1, a: 0.7529412}
   isActive: 0
   isDead: 0
+  isFireTarget: 0
+  isLaserTarget: 0
 --- !u!114 &6992201837707088093
 MonoBehaviour:
   m_ObjectHideFlags: 0

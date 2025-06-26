@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Color damageColor;
 
     [HideInInspector] public bool isActive, isDead = false;
+    public bool isFireTarget, isLaserTarget = false;
     private int health;
     private LogicScript logic;
     private SpriteRenderer sprite;

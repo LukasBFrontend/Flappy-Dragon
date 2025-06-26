@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4539529568457848042}
   - component: {fileID: -4255827944406210984}
   - component: {fileID: -4568981065086312549}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: HomingMissile
   m_TagString: Missile
   m_Icon: {fileID: 0}
@@ -230,6 +230,8 @@ MonoBehaviour:
   damageColor: {r: 0.38020647, g: 0.5680162, b: 0.9056604, a: 0.80784315}
   isActive: 0
   isDead: 0
+  isFireTarget: 0
+  isLaserTarget: 0
 --- !u!114 &-4568981065086312549
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class LogPickup : MonoBehaviour
 
             Logbook.Instance.RecordEntry(entryName);
             logic.AddScore(points);
+            TextSpawn.Instance.SpawnText('+' + points.ToString(), transform.position);
 
             Destroy(gameObject);
         }

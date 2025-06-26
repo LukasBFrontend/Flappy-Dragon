@@ -6,9 +6,11 @@ public class Collectable : MonoBehaviour
     [SerializeField][Range(0, 100)] private int audioVolume = 50;
     [SerializeField] private int points = 20;
     private LogicScript logic;
+    private HeartsManager heartsManager;
     void Start()
     {
-        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        logic = GameObject.FindGameObjectWithTag("Logic")?.GetComponent<LogicScript>();
+        heartsManager = GameObject.FindGameObjectWithTag("HeartsManager")?.GetComponent<HeartsManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -18,6 +20,7 @@ public class Collectable : MonoBehaviour
             SoundFXManager.Instance.playRandomSoundFXClip(audioClips, transform, audioVolume);
 
             logic.AddScore(points);
+            heartsManager.Progress(points);
             TextSpawn.Instance.SpawnText('+' + points.ToString(), transform.position);
 
             Destroy(gameObject);
