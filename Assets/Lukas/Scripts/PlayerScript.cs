@@ -38,7 +38,10 @@ public class PlayerScript : MonoBehaviour
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         heartsManager = GameObject.FindGameObjectWithTag("HeartsManager")?.GetComponent<HeartsManager>();
 
-        if (hearts <= 0) hearts = 3;
+        if (hearts <= 0)
+        {
+            hearts = 3;
+        }
 
         bool isRespawning = LogicScript.respawnPoint != new Vector2(0, 0);
         animator.SetBool("IsRespawning", isRespawning);

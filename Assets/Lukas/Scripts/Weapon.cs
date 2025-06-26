@@ -226,7 +226,7 @@ public class Weapon : MonoBehaviour
 
                 if (enemy != null)
                 {
-                    enemy.TakeDamage(damage);
+                    if (!enemy.isFireTarget) enemy.TakeDamage(damage);
                 }
                 else if (bossWeapon != null)
                 {
@@ -263,7 +263,7 @@ public class Weapon : MonoBehaviour
 
                 if (enemy != null)
                 {
-                    enemy.TakeDamage(damage);
+                    if (!enemy.isFireTarget) enemy.TakeDamage(damage);
                 }
                 else if (bossWeapon != null)
                 {

@@ -8,12 +8,14 @@ public class StartSelect : MenuCanvasBase
     public void OnBeginningClicked()
     {
         ScreenManager.Instance.startAtBoss = false;
+        ScreenManager.Instance.startAtTutorial = true;
         ScreenManager.Instance.StartGame();
     }
 
     public void OnBossClicked()
     {
         ScreenManager.Instance.startAtBoss = true;
+        ScreenManager.Instance.startAtTutorial = false;
         ScreenManager.Instance.StartGame();
     }
 

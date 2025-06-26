@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &723623311631153609
+--- !u!1 &7695003417549738800
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,74 +8,61 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8006164722583594551}
-  m_Layer: 6
-  m_Name: FirePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8006164722583594551
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723623311631153609}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4017952639001251125}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8850693469827194919
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4017952639001251125}
-  - component: {fileID: 8746897670058968133}
-  - component: {fileID: 6664173568401040082}
-  - component: {fileID: 4241347477686078653}
-  - component: {fileID: 3726319335402532583}
-  - component: {fileID: -1367095983001156906}
-  - component: {fileID: 4064292162946460870}
-  m_Layer: 3
-  m_Name: RoboCrab
+  - component: {fileID: 1247993184676800923}
+  - component: {fileID: 5553957592886338560}
+  - component: {fileID: 3658588388620784947}
+  - component: {fileID: 3613617283482412390}
+  - component: {fileID: 1558268838185037578}
+  m_Layer: 0
+  m_Name: PracticeTarget
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4017952639001251125
+--- !u!4 &1247993184676800923
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8850693469827194919}
+  m_GameObject: {fileID: 7695003417549738800}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8006164722583594551}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8746897670058968133
+--- !u!114 &5553957592886338560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7695003417549738800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612dcd4de43fcdc419cf4f8e74125c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  points: 10
+  deathClip: {fileID: 8300000, guid: d61368a8af60e914aae1d6327ae6ad33, type: 3}
+  audioVolume: 50
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  isActive: 0
+  isDead: 0
+  isFireTarget: 0
+  isLaserTarget: 0
+--- !u!212 &3658588388620784947
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8850693469827194919}
+  m_GameObject: {fileID: 7695003417549738800}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -113,7 +100,7 @@ SpriteRenderer:
   m_SortingLayerID: -79497861
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2925507715981675053, guid: 2e73b84e772d3c04fac127958a63f02d, type: 3}
+  m_Sprite: {fileID: -8032273571675042711, guid: 008865e50920e4f40a44839e4da93352, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,17 +111,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6664173568401040082
+--- !u!95 &3613617283482412390
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8850693469827194919}
+  m_GameObject: {fileID: 7695003417549738800}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 53fb1ecab6d9df74bba37f6dc78d0380, type: 2}
+  m_Controller: {fileID: 9100000, guid: a6220471e5adf9347b732d083428350c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -146,31 +133,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4241347477686078653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8850693469827194919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b3a5d49b3d397b4f9be2ea286c86dd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  homingMissilePrefab: {fileID: 4069436539317369221, guid: 887164e0ab6f7a348946f6dc7177e9cc, type: 3}
-  firePoint: {fileID: 723623311631153609}
-  walkDistance: 3
-  speed: 3.25
-  countDownTimer: 0.6
-  launchTimer: 1.2
---- !u!61 &3726319335402532583
+--- !u!61 &1558268838185037578
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8850693469827194919}
+  m_GameObject: {fileID: 7695003417549738800}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -194,7 +163,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -210,40 +179,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-1367095983001156906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8850693469827194919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612dcd4de43fcdc419cf4f8e74125c38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  points: 10
-  deathClip: {fileID: 8300000, guid: 017722ed8d6c68d4a860036c1326d680, type: 3}
-  audioVolume: 50
-  damageColor: {r: 0, g: 0, b: 0, a: 0}
-  isActive: 0
-  isDead: 0
-  isFireTarget: 0
-  isLaserTarget: 0
---- !u!114 &4064292162946460870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8850693469827194919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1afe73c2cbe9bea44bd5e42db154271a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drops:
-  - entryName: Crab
-    dropPrefab: {fileID: 6800287839343630258, guid: 3c976f84a7d72794aaef3f0232bcb3aa, type: 3}
-    dropChance: 100

@@ -39,7 +39,7 @@ public class Fire : MonoBehaviour
         {
             if (enemy != null)
             {
-                enemy.TakeDamage(damage);
+                if (!enemy.isLaserTarget) enemy.TakeDamage(damage);
             }
             else if (bossWeapon != null)
             {

@@ -148,9 +148,9 @@ public class BossScript : MonoBehaviour
 
             if (deathTimer <= -2)
             {
-                Debug.Log("You won!!");
-                gameObject.SetActive(false);
+                Debug.Log("deathTimer <= -2");
                 logicScript.GameWon();
+                gameObject.SetActive(false);
             }
 
 
