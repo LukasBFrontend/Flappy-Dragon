@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5582ef0217d5de940aab9db84014f97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  name: MechaSnake
   description: 
   nameOutput: {fileID: 0}
   descriptionOutput: {fileID: 0}
