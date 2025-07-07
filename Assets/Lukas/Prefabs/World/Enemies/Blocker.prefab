@@ -78,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -79497861
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -3367965877373376732, guid: 21dbe3c01f6320740a4f902e9384d024, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -150,12 +150,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  points: 25
+  points: 15
   deathClip: {fileID: 8300000, guid: 017722ed8d6c68d4a860036c1326d680, type: 3}
   audioVolume: 35
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   isActive: 0
   isDead: 0
+  isFireTarget: 0
+  isLaserTarget: 0
 --- !u!95 &5972658790937816377
 Animator:
   serializedVersion: 7
