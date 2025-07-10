@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int points = 10;
+    [SerializeField] private GameObject deathVFX;
     [SerializeField] private AudioClip deathClip;
     [SerializeField][Range(0, 100)] private int audioVolume = 50;
     [SerializeField] private Color damageColor;
@@ -15,6 +16,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator animator;
     private BoxCollider2D boxCollider;
+    private GameObject moving;
     private float currentTimer = 0f;
     private float targetTime = 2f;
     private bool timerEnabled = false;
@@ -46,6 +48,7 @@ public class Enemy : MonoBehaviour
         isDead = true;
 
         TextSpawn.Instance.SpawnText('+' + points.ToString(), transform.position);
+        if (deathVFX) Instantiate(deathVFX, transform.position, Quaternion.identity, moving.transform);
         logic.AddScore(points);
     }
 
@@ -74,6 +77,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        moving = GameObject.FindGameObjectWithTag("Moving");
         sprite = gameObject.GetComponent<SpriteRenderer>();
         animator = gameObject.GetComponent<Animator>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();

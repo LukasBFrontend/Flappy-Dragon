@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -79497861
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 5176404959426274161, guid: b4fd8197726bad441a324f3fbd5ff1ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -124,12 +124,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  points: 10
+  points: 75
+  deathVFX: {fileID: 0}
   deathClip: {fileID: 8300000, guid: 173ed7b110e9c2042af46823b3b19653, type: 3}
   audioVolume: 30
-  damageColor: {r: 1, g: 0, b: 0, a: 0}
+  damageColor: {r: 1, g: 0.3764706, b: 0.3764706, a: 1}
   isActive: 0
   isDead: 0
+  isFireTarget: 0
+  isLaserTarget: 0
 --- !u!61 &8587550814033338625
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -216,4 +219,4 @@ MonoBehaviour:
     dropChance: 100
   - entryName: Red Snake
     dropPrefab: {fileID: 6800287839343630258, guid: 3c976f84a7d72794aaef3f0232bcb3aa, type: 3}
-    dropChance: 50
+    dropChance: 5

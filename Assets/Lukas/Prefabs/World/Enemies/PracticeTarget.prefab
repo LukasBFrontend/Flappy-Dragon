@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3658588388620784947}
   - component: {fileID: 3613617283482412390}
   - component: {fileID: 1558268838185037578}
+  - component: {fileID: -8151347391569059533}
   m_Layer: 0
   m_Name: PracticeTarget
   m_TagString: Enemy
@@ -49,9 +50,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   points: 10
+  deathVFX: {fileID: 0}
   deathClip: {fileID: 8300000, guid: d61368a8af60e914aae1d6327ae6ad33, type: 3}
   audioVolume: 50
-  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageColor: {r: 1, g: 0.3764706, b: 0.3764706, a: 1}
   isActive: 0
   isDead: 0
   isFireTarget: 0
@@ -179,3 +181,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-8151347391569059533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7695003417549738800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1afe73c2cbe9bea44bd5e42db154271a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - entryName: Practice Drone
+    dropPrefab: {fileID: 6800287839343630258, guid: 3c976f84a7d72794aaef3f0232bcb3aa, type: 3}
+    dropChance: 100

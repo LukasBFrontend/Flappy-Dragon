@@ -5,7 +5,10 @@ public class StartMenu : MenuCanvasBase
 {
     public void OnStartClicked()
     {
-        ScreenManager.Instance.OpenStartSelectMenu();
+        //ScreenManager.Instance.OpenStartSelectMenu();
+        ScreenManager.Instance.startAtBoss = false;
+        ScreenManager.Instance.startAtTutorial = true;
+        ScreenManager.Instance.StartGame();
     }
     public void OnOptionsClicked()
     {

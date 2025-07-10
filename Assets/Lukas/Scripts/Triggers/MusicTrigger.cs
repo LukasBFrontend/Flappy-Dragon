@@ -7,9 +7,8 @@ public class MusicTrigger : MonoBehaviour
 
     private AudioSource backgroundAudio, bossAudio;
     private float fadeOutTimer, fadeInTimer;
-    private bool isTriggered = false;
+    private static bool isTriggered, bossStarted, musicFaded = false;
     private float backgroundStartVolume, bossStartVolume;
-    private bool bossStarted = false;
 
     void Start()
     {
@@ -24,12 +23,26 @@ public class MusicTrigger : MonoBehaviour
         fadeOutTimer = fadeOutTime;
         fadeInTimer = fadeInTime;
 
-        // Start boss audio muted and inactive
+        if (LogicScript.Instance.GetRespawn().x == 0f)
+        {
+            if (isTriggered)
+            {
+                bossAudio.volume = 0f;
+                backgroundAudio.volume = backgroundStartVolume;
+                bossAudio.Stop();
+                backgroundAudio.Play();
+            }
+
+            isTriggered = false;
+            bossStarted = false;
+            musicFaded = false;
+        }
     }
 
     void Update()
     {
-        if (!isTriggered) return;
+
+        if (!isTriggered || musicFaded) return;
 
         if (fadeOutTimer > 0f)
         {
@@ -42,6 +55,7 @@ public class MusicTrigger : MonoBehaviour
             if (!bossStarted)
             {
                 backgroundAudio.Stop();
+                backgroundAudio.volume = backgroundStartVolume;
                 bossAudio.Play();
                 bossAudio.volume = 0f;
                 bossStarted = true;
@@ -56,6 +70,7 @@ public class MusicTrigger : MonoBehaviour
             else
             {
                 bossAudio.volume = bossStartVolume;
+                musicFaded = true;
             }
         }
     }

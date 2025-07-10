@@ -65,7 +65,7 @@ public class PlayerScript : MonoBehaviour
 
             if (transform.position.y <= -7 || transform.position.y >= 7)
             {
-                logic.GameOver();
+                LoseHeart();
             }
 
             animator.SetBool("HasBlue", !flickerOn && activePowerUp == PowerUp.Blue);
@@ -91,6 +91,7 @@ public class PlayerScript : MonoBehaviour
                 activePowerUp = PowerUp.None;
                 shieldAnimator.SetBool("IsBroken", true);
                 BluePower.powerUpTimer = 0;
+                Debug.Log("sheild damaged");
             }
             else
             {
@@ -101,6 +102,7 @@ public class PlayerScript : MonoBehaviour
 
     private void LoseHeart()
     {
+        if (LogicScript.Instance.isGameWon) return;
         animator.SetBool("IsDead", true);
         rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
         playerIsAlive = false;
