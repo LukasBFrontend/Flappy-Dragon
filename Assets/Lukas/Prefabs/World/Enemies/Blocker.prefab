@@ -157,7 +157,7 @@ MonoBehaviour:
   damageColor: {r: 1, g: 0.3726415, b: 0.3726415, a: 1}
   isActive: 0
   isDead: 0
-  isFireTarget: 1
+  isFireTarget: 0
   isLaserTarget: 0
 --- !u!95 &5972658790937816377
 Animator:
