@@ -4,15 +4,18 @@ public class Fire : MonoBehaviour
 {
     [SerializeField] private AudioClip audioClip;
     [Range(0, 100)][SerializeField] private float audioVolume;
+    [SerializeField] private GameObject splashVFX, redSplashVFX;
     public float speed = 20;
     public int damage = 50;
     private Rigidbody2D rigidBody;
     PlayerScript player;
     Animator animator;
+    private GameObject moving, lvl;
 
     void Start()
     {
-
+        moving = GameObject.FindGameObjectWithTag("Moving");
+        lvl = GameObject.FindGameObjectWithTag("Lvl");
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         rigidBody.linearVelocity = transform.right * speed;
     }
@@ -34,9 +37,22 @@ public class Fire : MonoBehaviour
         Enemy enemy = hitInfo.GetComponent<Enemy>();
         BossWeapon bossWeapon = hitInfo.GetComponent<BossWeapon>();
         BossScript bossScript = hitInfo.GetComponent<BossScript>();
+        bool hasRed = animator.GetBool("HasRedPower");
+
+
 
         if (IsHostile(hitInfo))
         {
+            Vector3 currentPos = transform.localPosition;
+            currentPos.z = -1;
+            Instantiate(
+                hasRed ?
+                    redSplashVFX : splashVFX,
+                currentPos,
+                splashVFX.transform.rotation,
+                BossScript.bossStarted ?
+                    lvl.transform : moving.transform
+            );
             if (enemy != null)
             {
                 if (!enemy.isLaserTarget) enemy.TakeDamage(damage);

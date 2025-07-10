@@ -223,11 +223,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612dcd4de43fcdc419cf4f8e74125c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  points: 10
+  maxHealth: 40
+  points: 50
+  deathVFX: {fileID: 7928419589560512030, guid: a55fad69d342af74698652eb0126958f, type: 3}
   deathClip: {fileID: 8300000, guid: 017722ed8d6c68d4a860036c1326d680, type: 3}
   audioVolume: 50
-  damageColor: {r: 0.38020647, g: 0.5680162, b: 0.9056604, a: 0.80784315}
+  damageColor: {r: 0.9622642, g: 0.37334085, b: 0.30411178, a: 0.80784315}
   isActive: 0
   isDead: 0
   isFireTarget: 0
@@ -247,7 +248,7 @@ MonoBehaviour:
   drops:
   - entryName: Homing Missile
     dropPrefab: {fileID: 6800287839343630258, guid: 3c976f84a7d72794aaef3f0232bcb3aa, type: 3}
-    dropChance: 100
+    dropChance: 5
 --- !u!1001 &7990083460317804135
 PrefabInstance:
   m_ObjectHideFlags: 0

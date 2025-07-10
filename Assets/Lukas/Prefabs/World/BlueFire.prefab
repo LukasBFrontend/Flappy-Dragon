@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -79497861
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: -4899618973926494893, guid: 3ab2780c839868c4091cc22a351ff547, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -168,6 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: fd9c1048eba5f494eb934ace73e05526, type: 3}
   audioVolume: 35
+  splashVFX: {fileID: 2012359847041019275, guid: d7286049e4c493a4291b3a8b76e2a2a6, type: 3}
+  redSplashVFX: {fileID: 2012359847041019275, guid: 69a19d22555dcf44aa2cea7c4485581e, type: 3}
   speed: 10
   damage: 20
 --- !u!95 &2914452500419379617

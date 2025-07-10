@@ -224,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   points: 150
+  deathVFX: {fileID: 0}
   deathClip: {fileID: 8300000, guid: 017722ed8d6c68d4a860036c1326d680, type: 3}
   audioVolume: 50
   damageColor: {r: 0, g: 0, b: 0, a: 0}
@@ -244,6 +245,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drops:
-  - entryName: Crab
+  - entryName: Mecha-Crab
     dropPrefab: {fileID: 6800287839343630258, guid: 3c976f84a7d72794aaef3f0232bcb3aa, type: 3}
-    dropChance: 100
+    dropChance: 10

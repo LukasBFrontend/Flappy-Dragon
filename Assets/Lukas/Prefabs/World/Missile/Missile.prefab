@@ -286,11 +286,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612dcd4de43fcdc419cf4f8e74125c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 45
   points: 15
+  deathVFX: {fileID: 7928419589560512030, guid: a55fad69d342af74698652eb0126958f, type: 3}
   deathClip: {fileID: 8300000, guid: 173ed7b110e9c2042af46823b3b19653, type: 3}
   audioVolume: 50
-  damageColor: {r: 0.6367924, g: 0.68107027, b: 1, a: 0.7529412}
+  damageColor: {r: 0.9811321, g: 0.33428577, b: 0.28230685, a: 0.7529412}
   isActive: 0
   isDead: 0
   isFireTarget: 0
@@ -310,7 +311,7 @@ MonoBehaviour:
   drops:
   - entryName: Missile
     dropPrefab: {fileID: 6800287839343630258, guid: 3c976f84a7d72794aaef3f0232bcb3aa, type: 3}
-    dropChance: 100
+    dropChance: 5
 --- !u!1 &6362572531398585812
 GameObject:
   m_ObjectHideFlags: 0

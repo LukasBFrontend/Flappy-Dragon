@@ -83,7 +83,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -79497861
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -6251355560420696667, guid: d1c36dc8583d2264785d0fb23fd4d102, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -156,11 +156,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   points: 10
+  deathVFX: {fileID: 0}
   deathClip: {fileID: 8300000, guid: 173ed7b110e9c2042af46823b3b19653, type: 3}
   audioVolume: 50
-  damageColor: {r: 0, g: 0, b: 0, a: 0}
+  damageColor: {r: 1, g: 0.3764706, b: 0.3764706, a: 1}
   isActive: 0
   isDead: 0
+  isFireTarget: 0
+  isLaserTarget: 0
 --- !u!95 &2509205345963109572
 Animator:
   serializedVersion: 7
@@ -217,4 +220,4 @@ MonoBehaviour:
   drops:
   - entryName: Drone
     dropPrefab: {fileID: 6800287839343630258, guid: 3c976f84a7d72794aaef3f0232bcb3aa, type: 3}
-    dropChance: 50
+    dropChance: 5

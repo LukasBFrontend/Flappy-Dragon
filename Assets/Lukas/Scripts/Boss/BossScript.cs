@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,7 +20,7 @@ public class BossScript : MonoBehaviour
     [SerializeField] private SoundFXClip explosionClip;
 
     [SerializeField]
-    private GameObject missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, firePointOne, firePointTwo, laserGun, missileLaunchers, healthTextObject, healthBar;
+    private GameObject VFX, missilePrefab, bazookaOne, bazookaTwo, cannonShotPrefab, cannonOne, cannonTwo, firePointOne, firePointTwo, laserGun, missileLaunchers, healthTextObject, healthBar;
     private AudioSource backgroundMusic;
     private Animator launcherAnimator;
     private SpriteRenderer launcherRenderer;
@@ -31,7 +32,8 @@ public class BossScript : MonoBehaviour
     private float healthBarWidth, healthBarHeight;
     private int maxHitpoints;
     float speed;
-    private bool bossStarted, isSecondPhase = false;
+    public static bool bossStarted, isSecondPhase = false;
+    private bool musicIsPaused = false;
     private float deathTimer = 3f;
     private float backgroundStartVolume;
     //public float missileInterval = 2f;
@@ -64,6 +66,8 @@ public class BossScript : MonoBehaviour
         speed = groundMoveScript.moveSpeed;
         healthText.text = bossHitpoints.ToString();
         backgroundStartVolume = backgroundMusic.volume;
+        bossStarted = false;
+        isSecondPhase = false;
     }
 
     void Update()
@@ -135,22 +139,29 @@ public class BossScript : MonoBehaviour
             backgroundMusic.volume = backgroundStartVolume * Mathf.Pow(10f, -2f * t);
             LogicScript.Instance.isGameWon = true;
 
-            if (deathTimer <= 0)
+            if (deathTimer <= -2)
             {
-                if (backgroundMusic.enabled) SoundFXManager.Instance.playSoundFXClip(explosionClip.audioClip, transform, explosionClip.volume);
-                backgroundMusic.enabled = false;
+                musicIsPaused = false;
+                backgroundMusic.volume = backgroundStartVolume;
+                logicScript.GameWon();
+                Logbook.Instance.RecordEntry("Leviathan");
+                gameObject.SetActive(false);
+            }
+            else if (deathTimer <= 0)
+            {
+                if (!musicIsPaused)
+                {
+                    SoundFXManager.Instance.playSoundFXClip(explosionClip.audioClip, transform, explosionClip.volume);
+                    musicIsPaused = true;
+                    backgroundMusic.volume = 0;
+                    Instantiate(VFX, transform.position, VFX.transform.rotation);
+                }
+
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 SpriteRenderer[] childSprites = GetComponentsInChildren<SpriteRenderer>();
 
                 foreach (SpriteRenderer sprite in childSprites) sprite.enabled = false;
 
-            }
-
-            if (deathTimer <= -2)
-            {
-                Debug.Log("deathTimer <= -2");
-                logicScript.GameWon();
-                gameObject.SetActive(false);
             }
 
 

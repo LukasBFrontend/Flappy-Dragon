@@ -122,6 +122,7 @@ public class LogicScript : Singleton<LogicScript>
     {
         if (!isGameOver)
         {
+            SetRespawn(new(0, 0));
             player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
             PlayerScript.hearts = 3;
             ScreenManager.Instance.ShowGameWon();
