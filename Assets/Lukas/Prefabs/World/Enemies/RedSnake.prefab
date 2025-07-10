@@ -217,6 +217,6 @@ MonoBehaviour:
   - entryName: 
     dropPrefab: {fileID: 444972822237588463, guid: 8c1479193d6c3ad48b68a6ee71fe3f7b, type: 3}
     dropChance: 100
-  - entryName: Red Snake
+  - entryName: M-RedSnake
     dropPrefab: {fileID: 6800287839343630258, guid: 3c976f84a7d72794aaef3f0232bcb3aa, type: 3}
     dropChance: 5
