@@ -47,7 +47,15 @@ public class Enemy : MonoBehaviour
         boxCollider.enabled = false;
         isDead = true;
 
-        TextSpawn.Instance.SpawnText('+' + points.ToString(), transform.position);
+        if (isFireTarget || isLaserTarget)
+        {
+            TextSpawn.Instance.SpawnStaticText('+' + points.ToString(), transform.position);
+        }
+        else
+        {
+            TextSpawn.Instance.SpawnText('+' + points.ToString(), transform.position);
+        }
+
         if (deathVFX) Instantiate(deathVFX, transform.position, Quaternion.identity, moving.transform);
         logic.AddScore(points);
     }

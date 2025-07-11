@@ -5,6 +5,7 @@ public class GameOverMenu : MonoBehaviour
     public void OnRestartButtonClicked()
     {
         ScreenManager.Instance.StartGame();
+        LogicScript.playerScore = 0;
         LogicScript.Instance.isGameOver = false;
     }
     public void OnQuitButtonClicked()

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PopupText : MonoBehaviour
 {
-    [SerializeField] bool moveWithLvl;
+    public bool moveWithLvl;
     [SerializeField] private float timer = 2f;
     private GroundMoveScript moveScript;
     private float moveSpeed;

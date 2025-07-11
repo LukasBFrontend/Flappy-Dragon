@@ -11,4 +11,11 @@ public class TextSpawn : Singleton<TextSpawn>
         GameObject obj = Instantiate(textPrefab, point, quaternion.identity, transform);
         obj.GetComponent<Text>().text = text;
     }
+
+    public void SpawnStaticText(string text, Vector2 point)
+    {
+        GameObject obj = Instantiate(textPrefab, point, quaternion.identity, transform);
+        obj.GetComponent<Text>().text = text;
+        obj.GetComponent<PopupText>().moveWithLvl = false;
+    }
 }

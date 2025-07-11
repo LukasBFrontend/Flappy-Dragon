@@ -33,6 +33,7 @@ TagManager:
   - BossMusic
   - HeartsManager
   - Boss
+  - CreditsCanvas
   layers:
   - Default
   - TransparentFX

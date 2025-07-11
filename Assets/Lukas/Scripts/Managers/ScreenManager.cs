@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 public class ScreenManager : Singleton<ScreenManager>
 {
     [HideInInspector] public GameObject activeMenu;
-    private GameObject startMenu, soundMenu, lvlMenu, gameOverMenu, gameWonMenu, bossCanvas, playerCanvas, scoreCanvas, startSelectMenu;
+    private GameObject startMenu, soundMenu, lvlMenu, gameOverMenu, gameWonMenu, bossCanvas, playerCanvas, scoreCanvas, startSelectMenu, creditsCanvas;
     private GameObject lvl;
     public bool startAtBoss = false;
     public bool startAtTutorial = true;
@@ -62,6 +62,7 @@ public class ScreenManager : Singleton<ScreenManager>
         playerCanvas = GameObject.FindGameObjectWithTag("PlayerCanvas");
         scoreCanvas = GameObject.FindGameObjectWithTag("ScoreCanvas");
         startSelectMenu = GameObject.FindGameObjectWithTag("StartSelectMenu");
+        creditsCanvas = GameObject.FindGameObjectWithTag("CreditsCanvas");
 
         activeMenu = (SceneManager.GetActiveScene().name == "Main menu") ? startMenu : null;
     }
@@ -72,6 +73,14 @@ public class ScreenManager : Singleton<ScreenManager>
         SceneManager.LoadScene("Main menu");
     }
 
+    public void OpenCreditsCanvas()
+    {
+        ShowMenu(creditsCanvas);
+    }
+    public void CloseCreditsCanvas()
+    {
+        HideMenu(creditsCanvas);
+    }
     public void OpenLvlMenu()
     {
         if (SceneManager.GetActiveScene().name == "Lvl 1")
@@ -168,6 +177,16 @@ public class ScreenManager : Singleton<ScreenManager>
     public void CloseStartSelectMenu()
     {
         HideMenu(startSelectMenu);
+        ShowMenu(startMenu);
+    }
+
+    public void CloseStartMenu()
+    {
+        HideMenu(startMenu);
+    }
+
+    public void OpenStartMenu()
+    {
         ShowMenu(startMenu);
     }
     public void ShowMenu(GameObject menu)

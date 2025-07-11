@@ -19,4 +19,10 @@ public class StartMenu : MenuCanvasBase
     {
         Application.Quit();
     }
+
+    public void OnCreditsClicked()
+    {
+        ScreenManager.Instance.CloseStartMenu();
+        ScreenManager.Instance.OpenCreditsCanvas();
+    }
 }

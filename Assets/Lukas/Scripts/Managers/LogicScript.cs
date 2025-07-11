@@ -20,7 +20,6 @@ public class LogicScript : Singleton<LogicScript>
 
     void Start()
     {
-        Debug.Log(respawnPoint);
         player = GameObject.FindGameObjectWithTag("Player");
         moving = GameObject.FindGameObjectWithTag("Moving");
         moveScript = moving?.GetComponent<GroundMoveScript>();
